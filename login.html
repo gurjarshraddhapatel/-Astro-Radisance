@@ -204,7 +204,7 @@
     </style>
 </head>
 
-<body class="min-h-screen gradient-bg relative overflow-hidden">
+<body class="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 relative overflow-hidden">
     <!-- Floating Background Elements -->
     <div class="floating-element"></div>
     <div class="floating-element"></div>
@@ -216,7 +216,7 @@
         <div class="main-container h-[90dvh] sm:w-[90%] lg:w-[95%] xl:w-[85%] w-full p-6 gap-8 rounded-3xl z-20 flex items-center justify-center lg:justify-between">
             
             <!-- Left Side - Image Carousel -->
-            <div class="hidden w-[48%] h-full relative lg:block">
+            <div class="hidden w-[50%] h-full relative lg:block">
                 <div class="slide-container h-full bg-gradient-to-br from-blue-50 to-purple-50">
                     <div class="flex h-full" id="carouselContainer">
                         <!-- Slide 1 -->
@@ -224,11 +224,8 @@
                             <div class="w-full max-w-md mx-auto">
                                 <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=500&h=400&fit=crop" 
                                      alt="Astrology Consultation" 
-                                     class="slide-image w-full h-80 object-cover mb-6">
-                                <div class="px-4">
-                                    <h3 class="text-3xl font-bold text-gray-800 mb-3">Professional Astrology Services</h3>
-                                    <p class="text-lg text-gray-600 leading-relaxed">Expert guidance for your life's journey with personalized insights and spiritual wisdom</p>
-                                </div>
+                                     class="slide-image w-full h-100 object-cover mb-6">
+                              
                             </div>
                         </div>
                         
@@ -238,23 +235,17 @@
                                 <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=400&fit=crop" 
                                      alt="Personalized Reading" 
                                      class="slide-image w-full h-80 object-cover mb-6">
-                                <div class="px-4">
-                                    <h3 class="text-3xl font-bold text-gray-800 mb-3">Personalized Consultations</h3>
-                                    <p class="text-lg text-gray-600 leading-relaxed">Tailored insights for your unique path with detailed astrological analysis</p>
-                                </div>
+                                
                             </div>
                         </div>
                         
                         <!-- Slide 3 -->
                         <div class="slide-item">
                             <div class="w-full max-w-md mx-auto">
-                                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=500&h=400&fit=crop" 
-                                     alt="Spiritual Guidance" 
-                                     class="slide-image w-full h-80 object-cover mb-6">
-                                <div class="px-4">
-                                    <h3 class="text-3xl font-bold text-gray-800 mb-3">Spiritual Guidance</h3>
-                                    <p class="text-lg text-gray-600 leading-relaxed">Connect with your inner wisdom through ancient astrological practices</p>
-                                </div>
+                                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=500&h=400&fit=crop" 
+                                     alt="Astrology Consultation" 
+                                     class="slide-image w-full h-100 object-cover mb-6">
+                              
                             </div>
                         </div>
                     </div>
@@ -273,37 +264,20 @@
                 <div class="w-full flex items-center flex-col form-container">
                     <!-- Logo Section -->
                     <div class="logo-container mb-8">
-                        <div class="w-64 mx-auto mb-6">
-                            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=120&fit=crop" 
+                        <div class="w-64 mx-auto ">
+                            <img src="./imges/logo-removebg-preview.png" 
                                  alt="Astro Radisance Logo" 
-                                 class="w-full h-auto rounded-lg shadow-lg">
+                                 class="w-full h-auto rounded-lg ">
                         </div>
                         
                         <!-- Brand Name -->
-                        <div class="w-full max-w-sm mx-auto px-6 py-4 bg-gradient-to-r from-[#010042] to-[#1a1a5e] rounded-2xl shadow-lg">
-                            <h1 class="text-white text-2xl font-bold text-center tracking-wide">ASTRO RADIANCE</h1>
-                            <p class="text-blue-200 text-sm text-center mt-1">Your Gateway to Cosmic Wisdom</p>
-                        </div>
+                       
                     </div>
 
                     <!-- Login Form -->
                     <div class="w-full max-w-md mx-auto">
                         <form class="space-y-4" id="loginForm">
-                            <!-- Role Selection -->
-                            <div class="relative">
-                                <div class="form-input rounded-xl p-3 flex items-center gap-3">
-                                    <i class="fas fa-user text-gray-500 text-base"></i>
-                                    <div class="flex-1">
-                                        <select class="w-full bg-transparent text-gray-700 text-base focus:outline-none cursor-pointer" required>
-                                            <option value="">Select Your Role</option>
-                                            <option value="client">Client</option>
-                                            <option value="astrologer">Astrologer</option>
-                                            <option value="admin">Administrator</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
+                        
                             <!-- Username -->
                             <div class="relative">
                                 <div class="form-input rounded-xl p-3 flex items-center gap-3">
@@ -377,23 +351,7 @@
                 </div>
 
                 <!-- Footer -->
-                <div class="w-full max-w-4xl mx-auto mt-8">
-                    <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
-                        <div class="text-gray-700">
-                            <h3 class="text-xl font-bold text-gray-800 mb-1">BRINGING COSMIC WISDOM</h3>
-                            <p class="text-sm text-gray-600">Making Astrology Accessible to Everyone</p>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <img class="w-16 h-16 rounded-full shadow-lg" 
-                                 src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=100&h=100&fit=crop" 
-                                 alt="Cosmic Symbol" />
-                            <div class="text-right">
-                                <p class="text-sm text-gray-600">Trusted by</p>
-                                <p class="text-lg font-semibold text-gray-800">10,000+ Users</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               
             </div>
         </div>
     </div>
