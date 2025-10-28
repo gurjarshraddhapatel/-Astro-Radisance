@@ -298,9 +298,8 @@
                     <li>
                         <a href="./Blog.html"
                             class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                            <img src="./imges/Blog.jpg"
-                                alt="Skanda Shasti 2025" class="w-16 h-12 sm:w-20 sm:h-14 object-cover rounded"
-                                loading="lazy">
+                            <img src="./imges/Blog.jpg" alt="Skanda Shasti 2025"
+                                class="w-16 h-12 sm:w-20 sm:h-14 object-cover rounded" loading="lazy">
                             <span class="text-sm font-medium text-gray-900">Blogs</span>
                         </a>
                     </li>
@@ -446,26 +445,36 @@
     </div>
 
     <!-- carousel -->
-    <main class="w-full">
+    <main class="w-full ">
         <section id="heroCarousel" class="relative w-full" style="height:80vh;">
             <div class="absolute inset-0 overflow-hidden">
                 <div id="carouselSlides" class="flex h-full transition-transform duration-700">
-                    <div class="w-full flex-shrink-0 bg-cover bg-center"
-                        style="background-image:url('https://picsum.photos/1600/900?random=1')">
-                        <div class="h-full bg-black bg-opacity-30 flex items-center justify-center">
-                            <h2 class="text-white text-3xl md:text-5xl font-semibold">Slide One</h2>
+
+                    <div class="w-full flex-shrink-0 relative">
+                        <video class="w-full h-full object-cover" autoplay muted loop playsinline>
+                            <source src="./imges/carousel/WhatsApp Video 2025-10-28 at 15.13.16_cc2b1e7f.mp4"
+                                type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
                         </div>
                     </div>
+
                     <div class="w-full flex-shrink-0 bg-cover bg-center"
-                        style="background-image:url('https://picsum.photos/1600/900?random=2')">
+                        style="background-image:url('./imges/carousel/screen01-Lewitt-DTP340REX-gradient-hirez-01-2912-02\ \(1\).jpg') ; background-size: cover; ">
                         <div class="h-full bg-black bg-opacity-30 flex items-center justify-center">
-                            <h2 class="text-white text-3xl md:text-5xl font-semibold">Slide Two</h2>
                         </div>
                     </div>
+
                     <div class="w-full flex-shrink-0 bg-cover bg-center"
-                        style="background-image:url('https://picsum.photos/1600/900?random=3')">
+                        style="background-image:url('./imges/carousel/872-1600x900.jpg') ; background-size: cover; ">
                         <div class="h-full bg-black bg-opacity-30 flex items-center justify-center">
-                            <h2 class="text-white text-3xl md:text-5xl font-semibold">Slide Three</h2>
+                        </div>
+                    </div>
+
+                    <div class="w-full flex-shrink-0 bg-cover bg-center"
+                        style="background-image:url('./imges/carousel/872-1600x900.jpg') ; background-size: cover; ">
+                        <div class="h-full bg-black bg-opacity-30 flex items-center justify-center">
                         </div>
                     </div>
                 </div>
@@ -503,15 +512,17 @@
     <!-- Consultation Banner Section -->
     <section class="bg-[#FFF8ED] py-2 ">
         <div class="max-w-[1320px] px-3 mx-auto w-full">
-            <a href="./Astro-about.html" class=" grid grid-cols-[450px_auto_150px] bg-cover bg-center bg-no-repeat h-[170px] z-[99]"
+            <a href="./Astro-about.html"
+                class=" grid grid-cols-[450px_auto_150px] bg-cover bg-center bg-no-repeat h-[170px] z-[99]"
                 style="background-image: url('https://cdn.astroved.com/images/images-av/consult-counsel-with-vijayalakshmi-lg.jpg');">
                 <div class="flex flex-col items-center justify-center p-2.5 col-start-2 relative">
-                    <p class="text-[26px] text-[#000] font-semibold text-center leading-[27.2px] mb-0">
-                        CONSULT & COUNSEL WITH SANTHANA JOHARI
+                    <p class="text-[24px] text-[#000] font-semibold text-center leading-[27.2px] mb-0">
+                        CONSULT & COUNSEL WITH OUR AKASHIK READER EXPERT
                     </p>
                     <p class="text-black text-base text-center font-semibold m-0 leading-[27.2px]">
-                        Online Astrology Consultation With Vedic Expert<br />
-                        To Identify Problems and Solutions for Health, Wealth, Relationship & Career
+                        Online Consultation with our Akashik Reader Take Solutions of your undergoing life
+                        problems<br />
+                        <!-- To Identify Problems and Solutions for Health, Wealth, Relationship & Career -->
                     </p>
                     <span class="bg-[#FEA500] text-white rounded-[5px] text-base font-semibold px-2 py-1 mt-1">
                         BOOK NOW
@@ -706,7 +717,7 @@
     </section>
 
 
-    <!--  Services  -->
+    <!--  Services Consult With Our Astrologers -->
     <section class="max-w-8xl bg-[#fff8edbe] mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="max-w-[1320px] mx-auto">
             <h2 class="text-3xl font-bold  mb-3">Consult With Our Astrologers</h2>
@@ -718,201 +729,182 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
                 <!-- Team Card 1 -->
-                <div
-                    class="relative w-[300px] h-[400px] bg-gradient-to-b from-white shadow-lg to-[#FFF8ED] to-[30%] to-indgo-800 from-[30%] rounded-[20px] overflow-hidden group cursor-pointer">
-                    <!-- Image Container -->
+                <div>
                     <div
-                        class=" top-0 left-0 w-full h-full transition-all duration-500 z-[100000] rounded-[20px] overflow-hidden transform-origin-top group-hover:translate-y-[-60px] group-hover:scale-50">
-                        <img src="https://images.unsplash.com/photo-1595211877493-41a4e5f236b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=716&q=80"
-                            alt="Cleo McDowell" class="absolute top-0 left-0 w-full h-full object-cover" />
-                    </div>
-
-                    <!-- Content -->
-                    <div
-                        class="absolute top-0 left-0 w-full h-full flex justify-center items-end pb-[30px] transform translate-y-full transition-all duration-500 group-hover:translate-y-0">
-                        <div class="flex justify-center items-center flex-col text-center">
-                            <h2 class=" text-2xl font-medium">
-                                Cleo McDowell <br />
-                                <span class="text-lg font-normal ">Senior Designer</span>
-                            </h2>
-                            <ul class="relative flex mt-1">
-                                <li class="list-none mx-1">
-                                    <a href="#"
-                                        class="w-[45px] h-[45px] flex justify-center items-center bg-slate-700 rounded-full text-white text-2xl no-underline transition-all duration-500 hover:rotate-360 hover:bg-cyan-400">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                </li>
-                                <li class="list-none mx-1">
-                                    <a href="#"
-                                        class="w-[45px] h-[45px] flex justify-center items-center bg-slate-700 rounded-full text-white text-2xl no-underline transition-all duration-500 hover:rotate-360 hover:bg-cyan-400">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li class="list-none mx-1">
-                                    <a href="#"
-                                        class="w-[45px] h-[45px] flex justify-center items-center bg-slate-700 rounded-full text-white text-2xl no-underline transition-all duration-500 hover:rotate-360 hover:bg-cyan-400">
-                                        <i class="fab fa-linkedin"></i>
-                                    </a>
-                                </li>
-                                <li class="list-none mx-1">
-                                    <a href="#"
-                                        class="w-[45px] h-[45px] flex justify-center items-center bg-slate-700 rounded-full text-white text-2xl no-underline transition-all duration-500 hover:rotate-360 hover:bg-cyan-400">
-                                        <i class="fab fa-instagram"></i>
-                                    </a>
-                                </li>
-                            </ul>
+                        class="relative w-[300px] h-[400px] bg-gradient-to-b from-white shadow-lg to-[#FFF8ED] to-[30%] to-indgo-800 from-[30%] rounded-[20px] overflow-hidden group cursor-pointer">
+                        <!-- Image Container -->
+                        <div class=" top-0 left-0 w-full h-full">
+                            <img src="./imges/Consult-img1.jpg" alt="Cleo McDowell"
+                                class="absolute top-0 left-0 w-full h-full object-cover" />
                         </div>
+
+
+                    </div>
+                    <!-- Content -->
+                    <div class="text-center">
+                        <h1 class="text-[#000] text-2xl font-medium">AKASHIK READER</h1>
+
                     </div>
                 </div>
-
                 <!-- Team Card 2 -->
-                <div
-                    class="relative w-[300px] h-[400px] bg-gradient-to-b from-white shadow-lg to-[#FFF8ED] to-[30%] to-ind-800 from-[30%] rounded-[20px] overflow-hidden group cursor-pointer">
-                    <!-- Image Container -->
+                <div>
                     <div
-                        class=" top-0 left-0 w-full h-full transition-all duration-500 z-[100000] rounded-[20px] overflow-hidden transform-origin-top group-hover:translate-y-[-60px] group-hover:scale-50">
-                        <img src="https://images.unsplash.com/photo-1614317226858-a2bcad5498c0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"
-                            alt="Sheree Sampson" class="absolute top-0 left-0 w-full h-full object-cover" />
-                    </div>
-
-                    <!-- Content -->
-                    <div
-                        class="absolute top-0 left-0 w-full h-full flex justify-center items-end pb-[30px] transform translate-y-full transition-all duration-500 group-hover:translate-y-0">
-                        <div class="flex justify-center items-center flex-col text-center">
-                            <h2 class="text-[#000] text-2xl font-medium">
-                                Sheree Sampson <br />
-                                <span class="text-lg font-normal text-[#FEA500]0">Senior Developer</span>
-                            </h2>
-                            <ul class="relative flex mt-1">
-                                <li class="list-none mx-1">
-                                    <a href="#"
-                                        class="w-[45px] h-[45px] flex justify-center items-center bg-slate-700 rounded-full text-white text-2xl no-underline transition-all duration-500 hover:rotate-360 hover:bg-cyan-400">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                </li>
-                                <li class="list-none mx-1">
-                                    <a href="#"
-                                        class="w-[45px] h-[45px] flex justify-center items-center bg-slate-700 rounded-full text-white text-2xl no-underline transition-all duration-500 hover:rotate-360 hover:bg-cyan-400">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li class="list-none mx-1">
-                                    <a href="#"
-                                        class="w-[45px] h-[45px] flex justify-center items-center bg-slate-700 rounded-full text-white text-2xl no-underline transition-all duration-500 hover:rotate-360 hover:bg-cyan-400">
-                                        <i class="fab fa-linkedin"></i>
-                                    </a>
-                                </li>
-                                <li class="list-none mx-1">
-                                    <a href="#"
-                                        class="w-[45px] h-[45px] flex justify-center items-center bg-slate-700 rounded-full text-white text-2xl no-underline transition-all duration-500 hover:rotate-360 hover:bg-cyan-400">
-                                        <i class="fab fa-instagram"></i>
-                                    </a>
-                                </li>
-                            </ul>
+                        class="relative w-[300px] h-[400px] bg-gradient-to-b from-white shadow-lg to-[#FFF8ED] to-[30%] to-indgo-800 from-[30%] rounded-[20px] overflow-hidden group cursor-pointer">
+                        <!-- Image Container -->
+                        <div class=" top-0 left-0 w-full h-full">
+                            <img src="./imges/Consult-img1.jpg" alt="Cleo McDowell"
+                                class="absolute top-0 left-0 w-full h-full object-cover" />
                         </div>
+
+
+                    </div>
+                    <!-- Content -->
+                    <div class="text-center">
+                        <h1 class="text-[#000] text-2xl font-medium">Cleo McDowell</h1>
+
                     </div>
                 </div>
 
                 <!-- Team Card 3 -->
-                <div
-                    class="relative w-[300px] h-[400px] bg-gradient-to-b from-white shadow-lg to-[#FFF8ED] to-[30%] to-indgo-800 from-[30%] rounded-[20px] overflow-hidden group cursor-pointer">
-                    <!-- Image Container -->
+                <div>
                     <div
-                        class=" top-0 left-0 w-full h-full transition-all duration-500 z-[100000] rounded-[20px] overflow-hidden transform-origin-top group-hover:translate-y-[-60px] group-hover:scale-50">
-                        <img src="https://images.unsplash.com/photo-1606596556957-f6566cc865a9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=666&q=80"
-                            alt="Amani Nation" class="absolute top-0 left-0 w-full h-full object-cover" />
-                    </div>
-
-                    <!-- Content -->
-                    <div
-                        class="absolute top-0 left-0 w-full h-full flex justify-center items-end pb-[30px] transform translate-y-full transition-all duration-500 group-hover:translate-y-0">
-                        <div class="flex justify-center items-center flex-col text-center">
-                            <h2 class=" text-2xl font-medium">
-                                Amani Nation <br />
-                                <span class="text-lg font-normal ">Software Engineer</span>
-                            </h2>
-                            <ul class="relative flex mt-1">
-                                <li class="list-none mx-1">
-                                    <a href="#"
-                                        class="w-[45px] h-[45px] flex justify-center items-center bg-slate-700 rounded-full text-white text-2xl no-underline transition-all duration-500 hover:rotate-360 hover:bg-cyan-400">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                </li>
-                                <li class="list-none mx-1">
-                                    <a href="#"
-                                        class="w-[45px] h-[45px] flex justify-center items-center bg-slate-700 rounded-full text-white text-2xl no-underline transition-all duration-500 hover:rotate-360 hover:bg-cyan-400">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li class="list-none mx-1">
-                                    <a href="#"
-                                        class="w-[45px] h-[45px] flex justify-center items-center bg-slate-700 rounded-full text-white text-2xl no-underline transition-all duration-500 hover:rotate-360 hover:bg-cyan-400">
-                                        <i class="fab fa-linkedin"></i>
-                                    </a>
-                                </li>
-                                <li class="list-none mx-1">
-                                    <a href="#"
-                                        class="w-[45px] h-[45px] flex justify-center items-center bg-slate-700 rounded-full text-white text-2xl no-underline transition-all duration-500 hover:rotate-360 hover:bg-cyan-400">
-                                        <i class="fab fa-instagram"></i>
-                                    </a>
-                                </li>
-                            </ul>
+                        class="relative w-[300px] h-[400px] bg-gradient-to-b from-white shadow-lg to-[#FFF8ED] to-[30%] to-indgo-800 from-[30%] rounded-[20px] overflow-hidden group cursor-pointer">
+                        <!-- Image Container -->
+                        <div class=" top-0 left-0 w-full h-full">
+                            <img src="./imges/Consult-img1.jpg" alt="Cleo McDowell"
+                                class="absolute top-0 left-0 w-full h-full object-cover" />
                         </div>
+
+
+                    </div>
+                    <!-- Content -->
+                    <div class="text-center">
+                        <h1 class="text-[#000] text-2xl font-medium">Cleo McDowell</h1>
+
                     </div>
                 </div>
 
                 <!-- Team Card 4 -->
-                <div
-                    class="relative w-[300px] h-[400px] bg-gradient-to-b from-white shadow-lg to-[#FFF8ED] to-[30%] to-indgo-800 from-[30%] rounded-[20px] overflow-hidden group cursor-pointer">
-                    <!-- Image Container -->
+                <div>
                     <div
-                        class=" top-0 left-0 w-full h-full transition-all duration-500 z-[100000] rounded-[20px] overflow-hidden transform-origin-top group-hover:translate-y-[-60px] group-hover:scale-50">
-                        <img src="https://images.unsplash.com/photo-1609436132311-e4b0c9370469?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"
-                            alt="Andrea Styles" class="absolute top-0 left-0 w-full h-full object-cover" />
-                    </div>
-
-                    <!-- Content -->
-                    <div
-                        class="absolute top-0 left-0 w-full h-full flex justify-center items-end pb-[30px] transform translate-y-full transition-all duration-500 group-hover:translate-y-0">
-                        <div class="flex justify-center items-center flex-col text-center">
-                            <h2 class=" text-2xl font-medium">
-                                Andrea Styles <br />
-                                <span class="text-lg font-normal ">Senior Web Developer</span>
-                            </h2>
-                            <ul class="relative flex mt-1">
-                                <li class="list-none mx-1">
-                                    <a href="#"
-                                        class="w-[45px] h-[45px] flex justify-center items-center bg-slate-700 rounded-full text-white text-2xl no-underline transition-all duration-500 hover:rotate-360 hover:bg-cyan-400">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                </li>
-                                <li class="list-none mx-1">
-                                    <a href="#"
-                                        class="w-[45px] h-[45px] flex justify-center items-center bg-slate-700 rounded-full text-white text-2xl no-underline transition-all duration-500 hover:rotate-360 hover:bg-cyan-400">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li class="list-none mx-1">
-                                    <a href="#"
-                                        class="w-[45px] h-[45px] flex justify-center items-center bg-slate-700 rounded-full text-white text-2xl no-underline transition-all duration-500 hover:rotate-360 hover:bg-cyan-400">
-                                        <i class="fab fa-linkedin"></i>
-                                    </a>
-                                </li>
-                                <li class="list-none mx-1">
-                                    <a href="#"
-                                        class="w-[45px] h-[45px] flex justify-center items-center bg-slate-700 rounded-full text-white text-2xl no-underline transition-all duration-500 hover:rotate-360 hover:bg-cyan-400">
-                                        <i class="fab fa-instagram"></i>
-                                    </a>
-                                </li>
-                            </ul>
+                        class="relative w-[300px] h-[400px] bg-gradient-to-b from-white shadow-lg to-[#FFF8ED] to-[30%] to-indgo-800 from-[30%] rounded-[20px] overflow-hidden group cursor-pointer">
+                        <!-- Image Container -->
+                        <div class=" top-0 left-0 w-full h-full">
+                            <img src="./imges/Consult-img1.jpg" alt="Cleo McDowell"
+                                class="absolute top-0 left-0 w-full h-full object-cover" />
                         </div>
+
+
+                    </div>
+                    <!-- Content -->
+                    <div class="text-center">
+                        <h1 class="text-[#000] text-2xl font-medium">Cleo McDowell</h1>
+
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Container for 4 cards in a row -->
+    <!-- <section class="min-h-screen flex items-center justify-center p-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl">
 
+            Profile Card 1
+            <div
+                class="profile-card bg-white/10 backdrop-blur-md rounded-3xl px-10 py-8 text-center w-80 text-white shadow-2xl transition-all duration-300 ease-in-out hover:-translate-y-3">
+                <div class="profile-image mb-4">
+                    <img src="https://i.pravatar.cc/150?img=32" alt="User"
+                        class="w-24 h-24 rounded-full border-4 border-white mx-auto mb-4" />
+                </div>
+                <h2 class="text-2xl font-bold text-[#000] mb-2">Lily Wilson</h2>
+                <p class="text-lg text-[#000] mb-4">Frontend Developer</p>
+                <p class="text-[#000]"> Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <div class="social-icons text-[#000] flex justify-center space-x-4">
+                <a href="#" class=" text-lg transition-colors duration-300 hover:text-cyan-400">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class=" text-lg transition-colors duration-300 hover:text-cyan-400">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class=" text-lg transition-colors duration-300 hover:text-cyan-400">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+            </div>
+
+            Profile Card 2
+            <div
+                class="profile-card bg-white/10 backdrop-blur-md rounded-3xl px-10 py-8 text-center w-80 text-white shadow-2xl transition-all duration-300 ease-in-out hover:-translate-y-3">
+                <div class="profile-image mb-4">
+                    <img src="https://i.pravatar.cc/150?img=25" alt="User"
+                        class="w-24 h-24 rounded-full border-4 border-white mx-auto mb-4" />
+                </div>
+                <h2 class="text-2xl font-bold mb-2">John Smith</h2>
+                <p class="text-lg font-light mb-4">Backend Developer</p>
+                <div class="social-icons flex justify-center space-x-4">
+                    <a href="#" class="text-white text-lg transition-colors duration-300 hover:text-cyan-400">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-white text-lg transition-colors duration-300 hover:text-cyan-400">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-white text-lg transition-colors duration-300 hover:text-cyan-400">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+            Profile Card 3
+            <div
+                class="profile-card bg-white/10 backdrop-blur-md rounded-3xl px-10 py-8 text-center w-80 text-white shadow-2xl transition-all duration-300 ease-in-out hover:-translate-y-3">
+                <div class="profile-image mb-4">
+                    <img src="https://i.pravatar.cc/150?img=15" alt="User"
+                        class="w-24 h-24 rounded-full border-4 border-white mx-auto mb-4" />
+                </div>
+                <h2 class="text-2xl font-bold mb-2">Sarah Johnson</h2>
+                <p class="text-lg font-light mb-4">UI/UX Designer</p>
+                <div class="social-icons flex justify-center space-x-4">
+                    <a href="#" class="text-white text-lg transition-colors duration-300 hover:text-cyan-400">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-white text-lg transition-colors duration-300 hover:text-cyan-400">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-white text-lg transition-colors duration-300 hover:text-cyan-400">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+            Profile Card 4
+            <div
+                class="profile-card bg-white/10 backdrop-blur-md rounded-3xl px-10 py-8 text-center w-80 text-white shadow-2xl transition-all duration-300 ease-in-out hover:-translate-y-3">
+                <div class="profile-image mb-4">
+                    <img src="https://i.pravatar.cc/150?img=8" alt="User"
+                        class="w-24 h-24 rounded-full border-4 border-white mx-auto mb-4" />
+                </div>
+                <h2 class="text-2xl font-bold mb-2">Mike Davis</h2>
+                <p class="text-lg font-light mb-4">DevOps Engineer</p>
+                <div class="social-icons flex justify-center space-x-4">
+                    <a href="#" class="text-white text-lg transition-colors duration-300 hover:text-cyan-400">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-white text-lg transition-colors duration-300 hover:text-cyan-400">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-white text-lg transition-colors duration-300 hover:text-cyan-400">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+
+    </section> -->
+
+    
     <!-- Features strip  -->
     <section class="bg-gradient-to-r from-[#1298f784] to-[#1298f784] text-white py-4 sm:py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1101,7 +1093,7 @@
                 </div>
             </div>
 
-          
+
         </div>
     </section>
 
@@ -1944,7 +1936,8 @@
                         <li><a href="/consultation" class="hover:text-[#FEA500] text-[#000]">Book Consultation</a></li>
                         <li><a href="/remedies" class="hover:text-[#FEA500] text-[#000]">Vedic Remedies</a></li>
                         <li><a href="/blog" class="hover:text-[#FEA500] text-[#000]">Astrology Blog</a></li>
-                        <li><a href="./tearms&codition.html" class="hover:text-[#FEA500] text-[#000]">Tearms & Codition</a></li>
+                        <li><a href="./tearms&codition.html" class="hover:text-[#FEA500] text-[#000]">Tearms &
+                                Codition</a></li>
                     </ul>
                 </div>
 

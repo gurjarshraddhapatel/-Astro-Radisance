@@ -116,3 +116,74 @@
   place-items: center;
   gap: 2rem;
 }
+
+/* Responsive Carousel Styles */
+.responsive-carousel {
+  height: 60vh; /* Mobile default */
+}
+
+.responsive-video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.responsive-image {
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+.carousel-control {
+  transition: all 0.3s ease;
+}
+
+.carousel-control:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Tablet breakpoint */
+@media (min-width: 768px) {
+  .responsive-carousel {
+    height: 80vh;
+  }
+}
+
+/* Desktop breakpoint */
+@media (min-width: 1024px) {
+  .responsive-carousel {
+    height: 100vh;
+  }
+}
+
+/* Large desktop breakpoint */
+@media (min-width: 1440px) {
+  .responsive-carousel {
+    height: 110vh;
+  }
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1920px) {
+  .responsive-carousel {
+    height: 100vh;
+  }
+}
+
+/* Mobile portrait optimization */
+@media (max-width: 480px) {
+  .responsive-carousel {
+    height: 50vh;
+  }
+  
+  .carousel-control {
+    opacity: 0.7;
+  }
+}
+
+/* Mobile landscape optimization */
+@media (max-width: 768px) and (orientation: landscape) {
+  .responsive-carousel {
+    height: 100vh;
+  }
+}
