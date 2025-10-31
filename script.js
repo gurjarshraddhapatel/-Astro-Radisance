@@ -260,71 +260,122 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Carousel behavior
 (function () {
-    const slidesContainer = document.getElementById('carouselSlides');
-    const indicators = Array.from(document.querySelectorAll('.carousel-indicator'));
-    const prevBtn = document.getElementById('carouselPrev');
-    const nextBtn = document.getElementById('carouselNext');
-    if (!slidesContainer || indicators.length === 0) return;
+    function initCarousel() {
+        const slidesContainer = document.getElementById('carouselSlides');
+        const indicators = Array.from(document.querySelectorAll('.carousel-indicator'));
+        const prevBtn = document.getElementById('carouselPrev');
+        const nextBtn = document.getElementById('carouselNext');
+        
+        if (!slidesContainer) {
+            console.warn('Carousel: slidesContainer not found');
+            return;
+        }
 
-    const slideCount = indicators.length;
-    let current = 0;
-    let autoplayInterval = null;
-    const AUTOPLAY_MS = 4000;
+        // Count actual slides instead of relying on indicators
+        const slides = slidesContainer.querySelectorAll('> div');
+        const slideCount = slides.length || (indicators.length > 0 ? indicators.length : 2);
+        let current = 0;
+        let autoplayInterval = null;
+        const AUTOPLAY_MS = 4000;
 
-    function goTo(index) {
-        current = (index + slideCount) % slideCount;
-        const offset = -current * 100;
-        slidesContainer.style.transform = `translateX(${offset}%)`;
-        indicators.forEach((btn, i) => {
-            if (i === current) {
-                btn.classList.remove('bg-opacity-40');
-                btn.classList.add('bg-opacity-60');
-                btn.setAttribute('aria-current', 'true');
-            } else {
-                btn.classList.remove('bg-opacity-60');
-                btn.classList.add('bg-opacity-40');
-                btn.removeAttribute('aria-current');
-            }
-        });
-    }
+        function goTo(index) {
+            current = (index + slideCount) % slideCount;
+            const offset = -current * 100;
+            slidesContainer.style.transform = `translateX(${offset}%)`;
+            slidesContainer.style.transition = 'transform 0.7s ease';
+            indicators.forEach((btn, i) => {
+                if (i === current) {
+                    btn.classList.remove('bg-opacity-40');
+                    btn.classList.add('bg-opacity-60');
+                    btn.setAttribute('aria-current', 'true');
+                } else {
+                    btn.classList.remove('bg-opacity-60');
+                    btn.classList.add('bg-opacity-40');
+                    btn.removeAttribute('aria-current');
+                }
+            });
+        }
 
-    function next() { goTo(current + 1); }
-    function prev() { goTo(current - 1); }
+        function next() { 
+            goTo(current + 1); 
+        }
+        
+        function prev() { 
+            goTo(current - 1); 
+        }
 
-    indicators.forEach(btn => {
-        btn.addEventListener('click', function () {
-            const idx = Number(btn.dataset.index);
-            goTo(idx);
-            resetAutoplay();
-        });
-    });
+        // Add event listeners to indicators if they exist
+        if (indicators.length > 0) {
+            indicators.forEach(btn => {
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const idx = Number(btn.dataset.index);
+                    goTo(idx);
+                    resetAutoplay();
+                });
+            });
+        }
 
-    nextBtn && nextBtn.addEventListener('click', function () { next(); resetAutoplay(); });
-    prevBtn && prevBtn.addEventListener('click', function () { prev(); resetAutoplay(); });
+        // Add event listeners to navigation buttons
+        if (nextBtn) {
+            nextBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                next();
+                resetAutoplay();
+            });
+            console.log('Carousel: Next button event listener attached');
+        } else {
+            console.warn('Carousel: Next button not found');
+        }
+        
+        if (prevBtn) {
+            prevBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                prev();
+                resetAutoplay();
+            });
+            console.log('Carousel: Prev button event listener attached');
+        } else {
+            console.warn('Carousel: Prev button not found');
+        }
 
-    function startAutoplay() {
-        if (autoplayInterval) return;
-        autoplayInterval = setInterval(next, AUTOPLAY_MS);
-    }
+        function startAutoplay() {
+            if (autoplayInterval) return;
+            autoplayInterval = setInterval(next, AUTOPLAY_MS);
+        }
 
-    function stopAutoplay() {
-        if (!autoplayInterval) return;
-        clearInterval(autoplayInterval);
-        autoplayInterval = null;
-    }
+        function stopAutoplay() {
+            if (!autoplayInterval) return;
+            clearInterval(autoplayInterval);
+            autoplayInterval = null;
+        }
 
-    function resetAutoplay() {
-        stopAutoplay();
+        function resetAutoplay() {
+            stopAutoplay();
+            startAutoplay();
+        }
+
+        const carouselEl = document.getElementById('heroCarousel');
+        if (carouselEl) {
+            carouselEl.addEventListener('mouseenter', stopAutoplay);
+            carouselEl.addEventListener('mouseleave', startAutoplay);
+        }
+
+        // startup
+        goTo(0);
         startAutoplay();
     }
 
-    const carouselEl = document.getElementById('heroCarousel');
-    carouselEl && carouselEl.addEventListener('mouseenter', stopAutoplay);
-    carouselEl && carouselEl.addEventListener('mouseleave', startAutoplay);
-
-    // startup
-    goTo(0);
-    startAutoplay();
+    // Wait for DOM to be ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCarousel);
+    } else {
+        // DOM already loaded, run immediately
+        setTimeout(initCarousel, 100);
+    }
 })();
 
 // FAQ Accordion functionality

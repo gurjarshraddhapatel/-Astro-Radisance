@@ -16,20 +16,20 @@
 
 <body>
 
-    <header class="shadow-[0_2px_8px_0_rgba(99,99,99,0.2)] py-3 bg-[#fff] sticky top-0 z-50">
+    <header class="shadow-[0_2px_8px_0_rgba(99,99,99,0.2)] pt-3 bg-[#fff] sticky top-0 z-50">
         <div class="max-w-[1320px] px-3 mx-auto w-full">
             <!-- Main Header Row -->
             <div class="flex items-center justify-between">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
                     <a href="/" class="text-blue-600">
-                        <img src="./imges/logo-removebg-preview.png" fetchpriority="high" width="136" height="48"
+                        <img src="./imges/logo-removebg-preview.png" fetchpriority="high" width="186" height="48"
                             alt="Astro Radisance" title="Astro Radisance" class="max-w-full h-auto align-middle" />
                     </a>
                 </div>
 
                 <!-- Desktop Search Bar -->
-                <div class="hidden lg:block flex-1 max-w-2xl mx-0 ">
+                <div class="hidden lg:block w-[40%] mx-0 ">
                     <form id="searchForm" class="relative">
                         <input id="searchInput" name="search" type="text" autofocus
                             placeholder="Search for Destinations"
@@ -128,7 +128,7 @@
             <div id="mobileSearch" class="hidden lg:hidden mt-4">
                 <form id="mobileSearchForm" class="relative">
                     <input id="mobileSearchInput" name="search" type="text" placeholder="Search for Destinations"
-                        class="w-full pl-4 pr-12 py-3 rounded-full bg-gray-100 text-sm focus:outline-none focus:ring-2 focus:ring-[#FEA501] focus:bg-white transition-all" />
+                        class=" pl-4 pr-12 py-3 rounded-full bg-gray-100 text-sm focus:outline-none focus:ring-2 focus:ring-[#FEA501] focus:bg-white transition-all" />
                     <button id="mobileSearchSubmit" type="submit" disabled
                         class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#FEA501] text-white rounded-full p-2 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[#e69400] transition-colors">
                         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -140,7 +140,7 @@
             </div>
 
             <!-- Navigation Bar -->
-            <nav class="hidden md:block border-t border-gray-200 mt-4 pt-4">
+            <nav class="hidden md:block border-t border-gray-200 mt-4 py-4">
                 <ul class="flex items-center justify-center space-x-8">
                     <li>
                         <a href="./index.html"
@@ -300,7 +300,7 @@
                         </div>
                     </div>
 
-                    <div class="w-full  flex-shrink-0  bg-center">
+                    <div class="w-full flex-shrink-0  bg-center h-full transition-transform duration-700">
                         <img src="./imges/carousel/slide2.jpg" alt="">
 
                     </div>

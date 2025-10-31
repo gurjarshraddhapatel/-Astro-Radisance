@@ -294,33 +294,52 @@
                                         required type="text" name="email" />
                                 </div>
                             </div>
-                            <!-- Username -->
-                            <div class="relative">
-                                <div class="form-input rounded-xl p-3 flex items-center gap-3">
-                                    <i class="fas fa-user-circle text-gray-500 text-base"></i>
-                                    <input placeholder="Enter your username"
-                                        class="flex-1 bg-transparent text-gray-700 text-base focus:outline-none placeholder:text-gray-500"
-                                        required type="text" name="userName" />
-                                </div>
-                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
 
-                            <!-- Date of Birth -->
-                            <div class="relative">
-                                <div class="form-input rounded-xl p-3 flex items-center gap-3">
-                                    <i class="fas fa-calendar-alt text-gray-500 text-base"></i>
-                                    <input placeholder="Date of Birth"
-                                        class="flex-1 bg-transparent text-gray-700 text-base focus:outline-none placeholder:text-gray-500"
-                                        required type="date" name="dob" id="dob" onchange="calculateAge()" />
+                                <!-- Username -->
+                                <div class="relative">
+                                    <div class="form-input rounded-xl p-3 flex items-center gap-3">
+                                        <i class="fas fa-user-circle text-gray-500 text-base"></i>
+                                        <input placeholder="Enter your username"
+                                            class="flex-1 bg-transparent text-gray-700 text-base focus:outline-none placeholder:text-gray-500"
+                                            required type="text" name="userName" />
+                                    </div>
                                 </div>
-                            </div>
 
-                            <!-- Age -->
-                            <div class="relative">
-                                <div class="form-input rounded-xl p-3 flex items-center gap-3">
-                                    <i class="fas fa-birthday-cake text-gray-500 text-base"></i>
-                                    <input placeholder="Age"
-                                        class="flex-1 bg-transparent text-gray-700 text-base focus:outline-none placeholder:text-gray-500"
-                                        required type="number" name="age" id="age" min="1" max="120" readonly />
+
+                                <!-- Phone Number -->
+                                <div class="relative">
+                                    <div class="form-input rounded-xl p-3 flex items-center gap-3">
+                                        <i class="fas fa-phone text-gray-500 text-base"></i>
+                                        <input placeholder="Enter your no"
+                                            class="flex-1 bg-transparent text-gray-700 text-base focus:outline-none placeholder:text-gray-500"
+                                            required type="tel" name="phone" id="phone" pattern="[0-9]{10,15}"
+                                            minlength="10" maxlength="15"
+                                            oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Date of Birth and Age in Single Row -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <!-- Date of Birth -->
+                                <div class="relative">
+                                    <div class="form-input rounded-xl p-3 flex items-center gap-3">
+                                        <i class="fas fa-calendar-alt text-gray-500 text-base"></i>
+                                        <input placeholder="Date of Birth"
+                                            class="flex-1 bg-transparent text-gray-700 text-base focus:outline-none placeholder:text-gray-500"
+                                            required type="date" name="dob" id="dob" onchange="calculateAge()" />
+                                    </div>
+                                </div>
+
+                                <!-- Age -->
+                                <div class="relative">
+                                    <div class="form-input rounded-xl p-3 flex items-center gap-3">
+                                        <i class="fas fa-birthday-cake text-gray-500 text-base"></i>
+                                        <input placeholder="Age"
+                                            class="flex-1 bg-transparent text-gray-700 text-base focus:outline-none placeholder:text-gray-500"
+                                            required type="number" name="age" id="age" min="1" max="120" readonly />
+                                    </div>
                                 </div>
                             </div>
 
@@ -338,23 +357,40 @@
                                 </div>
                             </div>
 
-                            <!-- Remember Me & Forgot -->
-                            <div class="flex items-center justify-between text-sm">
-                                <label class="flex items-center gap-2 text-gray-600 cursor-pointer">
-                                    <input type="checkbox" class="rounded border-gray-300">
-                                    <span>Remember me</span>
-                                </label>
-                                <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline transition-colors">
-                                    Forgot password?
-                                </a>
+                            <!-- OTP Verification Section (Initially Hidden) -->
+                            <div id="otpSection" class="hidden">
+                                <div class="relative">
+                                    <div class="form-input rounded-xl p-3 flex items-center gap-3">
+                                        <i class="fas fa-key text-gray-500 text-base"></i>
+                                        <input placeholder="Enter 6-digit OTP"
+                                            class="flex-1 bg-transparent text-gray-700 text-base focus:outline-none placeholder:text-gray-500 text-center text-xl tracking-widest font-semibold"
+                                            type="text" name="otp" id="otp" maxlength="6" 
+                                            pattern="[0-9]{6}" 
+                                            oninput="validateOtp(this)" />
+                                    </div>
+                                </div>
+                                <div class="text-sm text-gray-600 mt-2 text-center">
+                                    <p>Didn't receive OTP? <button type="button" id="resendOtpBtn" 
+                                        class="text-[#FEA501] hover:text-[#e69400] font-medium cursor-pointer">
+                                        Resend OTP</button></p>
+                                </div>
                             </div>
-
-                            <!-- Login Button -->
-                            <button type="submit"
+                           
+                            <!-- Send OTP Button (Initially shown) -->
+                            <button type="button" id="sendOtpBtn"
                                 class="btn-primary w-full py-3 px-6 rounded-2xl text-white text-base font-medium shadow-lg">
                                 <div class="flex items-center justify-center gap-2">
+                                    <i class="fas fa-paper-plane"></i>
+                                    <span>Send OTP to Email</span>
+                                </div>
+                            </button>
+
+                            <!-- Submit Button (Initially hidden) -->
+                            <button type="submit" id="submitBtn"
+                                class="btn-primary w-full py-3 px-6 rounded-2xl text-white text-base font-medium shadow-lg hidden">
+                                <div class="flex items-center justify-center gap-2">
                                     <i class="fas fa-sign-in-alt"></i>
-                                    <span>Sign Up to Your Account</span>
+                                    <span>Complete Registration</span>
                                 </div>
                             </button>
 
@@ -437,32 +473,153 @@
             }
         }
 
-        // Enhanced form submission with loading state
-        document.getElementById('loginForm').addEventListener('submit', function (e) {
+        // Store OTP and form data
+        let storedOtp = null;
+        let formDataCache = null;
+        let otpSent = false;
+
+        // Validate OTP input in real-time
+        function validateOtp(input) {
+            // Remove non-numeric characters and limit to 6 digits
+            input.value = input.value.replace(/[^0-9]/g, '').slice(0, 6);
+            
+            // Auto-focus submit button when 6 digits are entered (optional)
+            if (input.value.length === 6) {
+                const submitBtn = document.getElementById('submitBtn');
+                if (submitBtn && !submitBtn.classList.contains('hidden')) {
+                    // Optional: Auto-verify after 6 digits
+                    // You can uncomment this if you want auto-submit
+                    // submitBtn.click();
+                }
+            }
+        }
+
+        // Send OTP Button Handler
+        document.getElementById('sendOtpBtn').addEventListener('click', function (e) {
             e.preventDefault();
 
-            const formData = new FormData(this);
+            const form = document.getElementById('loginForm');
+            const formData = new FormData(form);
             const email = formData.get('email');
             const username = formData.get('userName');
+            const phone = formData.get('phone');
             const dob = formData.get('dob');
             const age = formData.get('age');
             const password = formData.get('password');
 
             // Validation
-            if (!email || !username || !dob || !age || !password) {
+            if (!email || !username || !phone || !dob || !age || !password) {
                 showNotification('Please fill in all fields', 'error');
                 return;
             }
 
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showNotification('Please enter a valid email address', 'error');
+                return;
+            }
+
+            // Phone number validation
+            const phoneRegex = /^[0-9]{10,15}$/;
+            if (!phoneRegex.test(phone)) {
+                showNotification('Please enter a valid phone number (10-15 digits)', 'error');
+                return;
+            }
+
             // Show loading state
-            const submitBtn = this.querySelector('button[type="submit"]');
+            const sendOtpBtn = document.getElementById('sendOtpBtn');
+            const originalText = sendOtpBtn.innerHTML;
+            sendOtpBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending OTP...';
+            sendOtpBtn.disabled = true;
+
+            // Simulate sending OTP to email
+            setTimeout(() => {
+                // Generate a 6-digit OTP
+                storedOtp = Math.floor(100000 + Math.random() * 900000).toString();
+                formDataCache = { email, username, phone, dob, age, password };
+
+                // In production, send OTP to email via backend
+                console.log('OTP sent to email:', email, 'OTP:', storedOtp);
+
+                showNotification('OTP sent to your email! Please check your inbox.', 'success');
+
+                // Show OTP section
+                document.getElementById('otpSection').classList.remove('hidden');
+                document.getElementById('otpSection').classList.add('block');
+
+                // Hide send OTP button and show submit button
+                sendOtpBtn.classList.add('hidden');
+                document.getElementById('submitBtn').classList.remove('hidden');
+
+                // Reset button
+                sendOtpBtn.innerHTML = originalText;
+                sendOtpBtn.disabled = false;
+                otpSent = true;
+            }, 2000);
+        });
+
+        // Resend OTP Button Handler
+        document.getElementById('resendOtpBtn').addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            if (!formDataCache) {
+                showNotification('Please fill the form and send OTP first', 'error');
+                return;
+            }
+
+            // Show loading state
+            this.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Resending...';
+            this.disabled = true;
+
+            setTimeout(() => {
+                // Generate new OTP
+                storedOtp = Math.floor(100000 + Math.random() * 900000).toString();
+                
+                // In production, send OTP to email via backend
+                console.log('OTP resent to email:', formDataCache.email, 'New OTP:', storedOtp);
+                
+                showNotification('OTP resent to your email!', 'success');
+                
+                // Reset button
+                this.innerHTML = 'Resend OTP';
+                this.disabled = false;
+            }, 1500);
+        });
+
+        // Enhanced form submission with OTP verification
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const otpInput = document.getElementById('otp').value;
+
+            // Check if OTP was sent
+            if (!otpSent) {
+                showNotification('Please send OTP first', 'error');
+                return;
+            }
+
+            // Validate OTP
+            if (!otpInput || otpInput.length !== 6) {
+                showNotification('Please enter a valid 6-digit OTP', 'error');
+                return;
+            }
+
+            // Verify OTP
+            if (otpInput !== storedOtp) {
+                showNotification('Invalid OTP! Please check and try again.', 'error');
+                return;
+            }
+
+            // Show loading state
+            const submitBtn = document.getElementById('submitBtn');
             const originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Signing In...';
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Registering...';
             submitBtn.disabled = true;
 
-            // Simulate login process
+            // Simulate registration process after OTP verification
             setTimeout(() => {
-                showNotification('Login successful! Welcome to Astro Radiance.', 'success');
+                showNotification('Registration successful! Welcome to Astro Radiance.', 'success');
 
                 // Reset button
                 submitBtn.innerHTML = originalText;
@@ -475,24 +632,155 @@
             }, 2000);
         });
 
-        // Notification system
-        function showNotification(message, type) {
-            const notification = document.createElement('div');
-            notification.className = `fixed top-4 right-4 z-50 p-4 rounded-lg shadow-lg text-white ${type === 'success' ? 'bg-green-500' : 'bg-red-500'
-                }`;
-            notification.innerHTML = `
-                <div class="flex items-center gap-3">
-                    <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'}"></i>
-                    <span>${message}</span>
-                </div>
-            `;
+        // Toast/Toaster Notification System
+        class ToastNotification {
+            constructor() {
+                this.container = null;
+                this.init();
+            }
 
-            document.body.appendChild(notification);
+            init() {
+                // Create toast container if it doesn't exist
+                if (!document.getElementById('toast-container')) {
+                    this.container = document.createElement('div');
+                    this.container.id = 'toast-container';
+                    this.container.className = 'fixed top-4 right-4 z-[9999] flex flex-col gap-3 pointer-events-none';
+                    document.body.appendChild(this.container);
+                } else {
+                    this.container = document.getElementById('toast-container');
+                }
+            }
 
-            // Auto remove after 3 seconds
-            setTimeout(() => {
-                notification.remove();
-            }, 3000);
+            show(message, type = 'info', duration = 3000) {
+                const toast = document.createElement('div');
+                const toastId = 'toast-' + Date.now();
+                toast.id = toastId;
+
+                // Toast type configuration
+                const types = {
+                    success: {
+                        bg: 'bg-green-500',
+                        icon: 'fa-check-circle',
+                        border: 'border-green-600',
+                        progress: 'bg-green-400'
+                    },
+                    error: {
+                        bg: 'bg-red-500',
+                        icon: 'fa-exclamation-circle',
+                        border: 'border-red-600',
+                        progress: 'bg-red-400'
+                    },
+                    warning: {
+                        bg: 'bg-yellow-500',
+                        icon: 'fa-exclamation-triangle',
+                        border: 'border-yellow-600',
+                        progress: 'bg-yellow-400'
+                    },
+                    info: {
+                        bg: 'bg-blue-500',
+                        icon: 'fa-info-circle',
+                        border: 'border-blue-600',
+                        progress: 'bg-blue-400'
+                    }
+                };
+
+                const config = types[type] || types.info;
+
+                toast.className = `${config.bg} ${config.border} text-white px-4 py-3 rounded-lg shadow-2xl min-w-[300px] max-w-[400px] border-l-4 pointer-events-auto transform translate-x-full opacity-0 transition-all duration-500 ease-in-out`;
+                
+                    toast.innerHTML = `
+                    <div class="flex items-start gap-3">
+                        <div class="flex-shrink-0 mt-0.5">
+                            <i class="fas ${config.icon} text-xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-sm font-medium leading-relaxed">${message}</p>
+                        </div>
+                        <button type="button" class="toast-close-btn flex-shrink-0 text-white hover:text-gray-200 transition-colors ml-2 focus:outline-none">
+                            <i class="fas fa-times text-sm"></i>
+                        </button>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 h-1 ${config.bg} rounded-b-lg overflow-hidden">
+                        <div class="${config.progress} h-full toast-progress"></div>
+                    </div>
+                `;
+
+                this.container.appendChild(toast);
+
+                // Add close button event listener
+                const closeBtn = toast.querySelector('.toast-close-btn');
+                if (closeBtn) {
+                    closeBtn.addEventListener('click', () => {
+                        this.remove(toast);
+                    });
+                }
+
+                // Trigger animation
+                setTimeout(() => {
+                    toast.classList.remove('translate-x-full', 'opacity-0');
+                    toast.classList.add('translate-x-0', 'opacity-100');
+                }, 10);
+
+                // Progress bar animation
+                const progressBar = toast.querySelector('.toast-progress');
+                if (progressBar) {
+                    progressBar.style.width = '100%';
+                    progressBar.style.transition = `width ${duration}ms linear`;
+                    setTimeout(() => {
+                        progressBar.style.width = '0%';
+                    }, 10);
+                }
+
+                // Auto remove
+                setTimeout(() => {
+                    this.remove(toast);
+                }, duration);
+
+                return toast;
+            }
+
+            remove(toast) {
+                if (!toast) return;
+                
+                toast.classList.remove('translate-x-0', 'opacity-100');
+                toast.classList.add('translate-x-full', 'opacity-0');
+                
+                setTimeout(() => {
+                    if (toast.parentNode) {
+                        toast.remove();
+                    }
+                }, 500);
+            }
+
+            success(message, duration = 3000) {
+                return this.show(message, 'success', duration);
+            }
+
+            error(message, duration = 4000) {
+                return this.show(message, 'error', duration);
+            }
+
+            warning(message, duration = 3000) {
+                return this.show(message, 'warning', duration);
+            }
+
+            info(message, duration = 3000) {
+                return this.show(message, 'info', duration);
+            }
+        }
+
+        // Initialize toast system
+        const toast = new ToastNotification();
+
+        // Notification wrapper function for backward compatibility
+        function showNotification(message, type, duration = 3000) {
+            const typeMap = {
+                'success': 'success',
+                'error': 'error',
+                'warning': 'warning',
+                'info': 'info'
+            };
+            toast.show(message, typeMap[type] || 'info', duration);
         }
 
         // Enhanced carousel functionality
