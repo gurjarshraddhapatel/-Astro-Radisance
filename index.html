@@ -86,22 +86,29 @@
                     </div> -->
 
                     <!-- Account -->
-                    <div class="relative">
-                        <a href="./login.html"
-                            class="flex items-center py-2 px-3 bg-[#FEA501] text-white rounded-lg hover:bg-[#e69400] transition-colors cursor-pointer">
+                    <div id="accountToggle" class="relative cursor-pointer" aria-haspopup="true" aria-expanded="false"
+                        role="button" tabindex="0">
+                        <div
+                            class="flex items-center py-2 px-3 bg-[#FEA501] text-white rounded-lg hover:bg-[#e69400] transition-colors">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                             </svg>
                             <span class="ml-2 text-sm font-medium">Account</span>
-                        </a>
-                        <div
-                            class="hidden absolute border border-gray-200 rounded-lg p-2 top-full mt-1 bg-white w-40 shadow-lg z-50 right-0">
+                            <svg class="w-3 h-3 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </div>
+                        <div id="accountDropdown"
+                            class="hidden absolute border border-gray-200 rounded-lg p-2 top-full mt-1 bg-white w-40 shadow-lg z-50 right-0"
+                            role="menu" aria-labelledby="accountToggle">
                             <ul class="space-y-1">
                                 <li class="px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">
-                                    Sign In</li>
+                                    <a href="./login.html" class="block">Sign In</a>
+                                </li>
                                 <li class="px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">
-                                    <a href="/Register.aspx?ReturnUrl=Default.aspx" class="block">Register</a>
+                                    <a href="./Registration.html" class="block">Sign Up</a>
                                 </li>
                             </ul>
                         </div>
@@ -131,6 +138,48 @@
                     </button>
                 </form>
             </div>
+
+            <!-- Navigation Bar -->
+            <nav class="hidden md:block border-t border-gray-200 mt-4 pt-4">
+                <ul class="flex items-center justify-center space-x-8">
+                    <li>
+                        <a href="./index.html"
+                            class="text-gray-700 hover:text-[#fff] hover:bg-[#FEA501] px-2 py-2 rounded transition-colors font-medium text-sm">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./About.html"
+                            class="text-gray-700 hover:text-[#fff] hover:bg-[#FEA501] px-2 py-2 rounded transition-colors font-medium text-sm">
+                            About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./Blog.html"
+                            class="text-gray-700 hover:text-[#fff] hover:bg-[#FEA501] px-2 py-2 rounded transition-colors font-medium text-sm">
+                            Blog
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="text-gray-700 hover:text-[#fff] hover:bg-[#FEA501] px-2 py-2 rounded transition-colors font-medium text-sm">
+                            Services
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="text-gray-700 hover:text-[#fff] hover:bg-[#FEA501] px-2 py-2 rounded transition-colors font-medium text-sm">
+                            Consultation
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="text-gray-700 hover:text-[#fff] hover:bg-[#FEA501] px-2 py-2 rounded transition-colors font-medium text-sm">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
 
         <!-- Mobile Menu Overlay -->
@@ -189,11 +238,12 @@
                     <div class="border-b border-gray-200 pb-4">
                         <h4 class="text-sm font-semibold text-gray-700 mb-3">Account</h4>
                         <div class="space-y-2">
-                            <button
-                                class="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">Sign
-                                In</button>
-                            <button
-                                class="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">Register</button>
+                            <a href="./login.html"
+                                class="block w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">Sign
+                                In</a>
+                            <a href="./Registration.html"
+                                class="block w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">Sign
+                                Up</a>
                         </div>
                     </div>
 
@@ -232,217 +282,7 @@
         </div>
     </header>
 
-    <!-- Sidebar -->
-    <div class="flex">
-        <!-- Sidebar backdrop overlay -->
-        <div id="sidebarOverlay"
-            class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300"></div>
 
-        <!-- Desktop sidebar toggle button -->
-        <button id="sidebarToggleBtn" aria-expanded="false" aria-controls="sidebar"
-            class="hidden lg:fixed top-5 right-12 inline-flex items-center px-3 py-2 bg-white border border-[#FEA501] rounded shadow-sm z-50 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                </path>
-            </svg>
-            <!-- <span class="ml-2 text-sm font-medium">Menu</span> -->
-        </button>
-
-        <!-- Mobile sidebar toggle button -->
-        <button id="mobileSidebarToggleBtn" aria-expanded="false" aria-controls="sidebar"
-            class="lg:hidden fixed top-6 right-4 inline-flex items-center px-3 py-2 bg-white border border-[#FEA501] rounded shadow-sm z-50 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                </path>
-            </svg>
-            <span class="ml-2 text-sm font-medium">Menu</span>
-        </button>
-
-        <aside id="sidebar"
-            class="fixed right-0 w-80 sm:w-96 bg-white shadow-xl h-full overflow-auto transform transition-all duration-300 ease-in-out translate-x-full z-50">
-            <!-- Sidebar Header -->
-            <div class="flex items-center justify-between p-4 border-b border-gray-200">
-                <h3 class="text-lg font-semibold text-gray-900">Navigation Menu</h3>
-                <button id="sidebarCloseBtn" class="p-2 rounded-lg hover:bg-gray-100 transition-colors lg:hidden">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
-
-            <nav class="p-4">
-                <ul class="space-y-2">
-                    <li>
-                        <a href="/us/specials?promo=SL_MM_Specials"
-                            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                            <img src="https://cdn.astroved.com/images/images-av/monthly-specials.jpg"
-                                alt="Special Events" class="w-16 h-12 sm:w-20 sm:h-14 object-cover rounded"
-                                loading="lazy">
-                            <span class="text-sm font-medium text-gray-900">Special Events</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="./About.html"
-                            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                            <img src="https://cdn.astroved.com/images/images-av/monthly-specials.jpg"
-                                alt="Special Events" class="w-16 h-12 sm:w-20 sm:h-14 object-cover rounded"
-                                loading="lazy">
-                            <span class="text-sm font-medium text-gray-900">About Us</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="./Blog.html"
-                            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                            <img src="./imges/Blog.jpg" alt="Skanda Shasti 2025"
-                                class="w-16 h-12 sm:w-20 sm:h-14 object-cover rounded" loading="lazy">
-                            <span class="text-sm font-medium text-gray-900">Blogs</span>
-                        </a>
-                    </li>
-
-                    <!-- Item with submenu -->
-                    <li>
-                        <button class="w-full flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                            data-toggle="submenu" aria-expanded="false">
-                            <img src="https://cdn.astroved.com/images/images-av/astrospeaks.jpg"
-                                alt="Astrology Services" class="w-16 h-12 sm:w-20 sm:h-14 object-cover rounded"
-                                loading="lazy">
-                            <span class="text-sm font-medium text-gray-900">Astrology Services</span>
-                            <svg class="ml-auto w-4 h-4 transform transition-transform text-gray-500" data-chevron
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.06z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </button>
-                        <ul class="mt-2 pl-4 space-y-1 hidden" data-submenu>
-                            <li><a class="block py-2 px-3 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors"
-                                    href="/AstrologerScheduler.aspx?id=115">Live Astrology Consultation</a></li>
-                            <li><a class="block py-2 px-3 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors"
-                                    href="/astrovedspeaks/talk-to-astrologer">Talk to Astrologer</a></li>
-                            <li><a class="block py-2 px-3 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors"
-                                    href="/astrovedspeaks/chat-with-astrologer">Chat with Astrologer</a></li>
-                            <li><a class="block py-2 px-3 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors"
-                                    href="/prasnaastrology.aspx">Instant Insight</a></li>
-                            <li><a class="block py-2 px-3 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors"
-                                    href="/us/specials/online-astrology-consultation">Consult &amp; Counsel with
-                                    Vijayalakshmi</a></li>
-                            <li><a class="block py-2 px-3 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors"
-                                    href="/nadi/nadi-astrology">Nadi Astrology</a></li>
-                            <li><a class="block py-2 px-3 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors"
-                                    href="/palm-reading">Palm Reading</a></li>
-                            <li><a class="block py-2 px-3 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors"
-                                    href="/AstrologerScheduler.aspx?id=50579">Agastya Live Channel Reading</a></li>
-                            <li><a class="block py-2 px-3 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors"
-                                    href="/us/specials/goddess-angali-reading">Goddess Angali Channel Reading</a></li>
-                            <li><a class="block py-2 px-3 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors"
-                                    href="/us/specials/karuppasamy-divine-reading-remedies-program">Karuppasamy Channel
-                                    Reading</a></li>
-                            <li><a class="block py-2 px-3 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors"
-                                    href="/reports">Personalized Astrology Reports</a></li>
-                            <li><a class="block py-2 px-3 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors"
-                                    href="/astrology-services#transit-report">Planetary Transit Reports</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Repeat for other items with optional submenus -->
-                    <li>
-                        <button class="w-full flex items-center gap-3 p-2 rounded hover:bg-gray-50"
-                            data-toggle="submenu" aria-expanded="false">
-                            <img src="https://cdn.astroved.com/images/images-av/wealth-remedies.jpg"
-                                alt="Wealth Remedies" class="w-20 h-14 object-cover rounded" loading="lazy">
-                            <span class="text-sm font-medium">Wealth Remedies</span>
-                            <svg class="ml-auto w-4 h-4 transform transition-transform" data-chevron
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.06z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </button>
-                        <ul class="mt-2 pl-6 hidden" data-submenu>
-                            <li><a class="block py-2 text-sm text-gray-700 hover:text-gray-900"
-                                    href="/us/specials/coconut-smash">Coconut Smashing</a></li>
-                            <li><a class="block py-2 text-sm text-gray-700 hover:text-gray-900"
-                                    href="/remedies/pradosham">Pradosham</a></li>
-                            <li><a class="block py-2 text-sm text-gray-700 hover:text-gray-900"
-                                    href="/remedies/rameswaram-rituals">Rameshwaram Remedies</a></li>
-                            <li><a class="block py-2 text-sm text-gray-700 hover:text-gray-900"
-                                    href="/service-fire-lab-homa--c7.aspx">Planetary Remedies</a></li>
-                            <li><a class="block py-2 text-sm text-gray-700 hover:text-gray-900"
-                                    href="/tarpanam-c49.aspx">Ancestral Remedies</a></li>
-                            <li><a class="block py-2 text-sm text-gray-700 hover:text-gray-900"
-                                    href="/us/specials/cow-feeding-program">Cow Feeding &amp; Donation</a></li>
-                            <li><a class="block py-2 text-sm text-gray-700 hover:text-gray-900"
-                                    href="/dosha-pariharam">Dosha Remedies</a></li>
-                            <li><a class="block py-2 text-sm text-gray-700 hover:text-gray-900"
-                                    href="/us/specials/kerala-remedies">Kerala Remedies</a></li>
-                            <li><a class="block py-2 text-sm text-gray-700 hover:text-gray-900"
-                                    href="/written-mantra-c51.aspx">Proxy Mantra Writing</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- A few more top-level items (non-collapsible) -->
-                    <li>
-                        <a href="/us/specials/grand-homas" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50">
-                            <img src="https://cdn.astroved.com/images/images-av/success-homa.jpg" alt="Success Homas"
-                                class="w-20 h-14 object-cover rounded" loading="lazy">
-                            <span class="text-sm font-medium">Success Homas</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="/rudraksha-beads?promo=SL_MM_Rudraksha"
-                            class="flex items-center gap-3 p-2 rounded hover:bg-gray-50">
-                            <img src="https://cdn.astroved.com/images/images-av/store.jpg" alt="Store"
-                                class="w-20 h-14 object-cover rounded" loading="lazy">
-                            <span class="text-sm font-medium">Store</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <button class="w-full flex items-center gap-3 p-2 rounded hover:bg-gray-50"
-                            data-toggle="submenu" aria-expanded="false">
-                            <img src="https://cdn.astroved.com/images/images-av/free-astrology.jpg" alt="Free Astrology"
-                                class="w-20 h-14 object-cover rounded" loading="lazy">
-                            <span class="text-sm font-medium">Free Astrology</span>
-                            <svg class="ml-auto w-4 h-4 transform transition-transform" data-chevron
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.06z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </button>
-                        <ul class="mt-2 pl-6 hidden" data-submenu>
-                            <li><a class="block py-2 text-sm text-gray-700 hover:text-gray-900" href="/horoscopes">Free
-                                    Horoscope</a></li>
-                            <li><a class="block py-2 text-sm text-gray-700 hover:text-gray-900"
-                                    href="/Report.aspx?type=chart">Free Birth Chart</a></li>
-                            <li><a class="block py-2 text-sm text-gray-700 hover:text-gray-900"
-                                    href="/Report.aspx?type=birthstar">Free Birth Star</a></li>
-                            <li><a class="block py-2 text-sm text-gray-700 hover:text-gray-900"
-                                    href="/Report.aspx?type=moonsign">Free Moon Sign</a></li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a href="/corporate-info/contact-us"
-                            class="flex items-center gap-3 p-2 rounded hover:bg-gray-50">
-                            <img src="https://cdn.astroved.com/images/images-av/resources.jpg" alt="Resources"
-                                class="w-20 h-14 object-cover rounded" loading="lazy">
-                            <span class="text-sm font-medium">Resources</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </aside>
-
-
-
-    </div>
 
     <!-- carousel -->
     <main class="w-full ">
@@ -451,7 +291,7 @@
                 <div id="carouselSlides" class="flex h-full transition-transform duration-700">
 
                     <div class="w-full flex-shrink-0 relative" style="background-size: 100% 100%;">
-                        <video class="w-full h-full object-cover" autoplay muted loop playsinline>
+                        <video class="w-full h-[86vh] object-cover" autoplay muted loop playsinline>
                             <source src="./imges/carousel/WhatsApp Video 2025-10-28 at 15.13.16_cc2b1e7f.mp4"
                                 type="video/mp4" style="background-size: 100% 100%;">
                             Your browser does not support the video tag.
@@ -460,24 +300,18 @@
                         </div>
                     </div>
 
-                    <div class="w-full  flex-shrink-0  bg-center"
-                        style="background-image:url('./imges/carousel/slide2.jpg') ; background-size: 100% 100%; ">
-                        <div class=" bg-black bg-opacity-20 sm:bg-opacity-30 flex items-center justify-center">
-                        </div>
-                    </div>
+                    <div class="w-full  flex-shrink-0  bg-center">
+                        <img src="./imges/carousel/slide2.jpg" alt="">
 
-                    <div class="w-full flex-shrink-0 bg-cover bg-center"
-                        style="background-image:url('./imges/carousel/screen01-Lewitt-DTP340REX-gradient-hirez-01-2912-02\ \(1\).jpg') ; background-size: cover; ">
-                        <div class=" bg-opacity-20 sm:bg-opacity-30 flex items-center justify-center">
-                        </div>
-                    </div>
-
-                    <div class="w-full flex-shrink-0 bg-cover bg-center"
-                        style="background-image:url('./imges/carousel/872-1600x900.jpg') ; background-size: cover; ">
-                        <div class="h-full bg-black bg-opacity-20 sm:bg-opacity-30 flex items-center justify-center">
-                        </div>
                     </div>
                 </div>
+
+                <!-- <div class="w-full  flex-shrink-0  bg-center">
+                    <img src="./imges/carousel/slide2.jpg" alt="">
+
+                </div> -->
+            </div>
+            </div>
             </div>
 
             <!-- Controls -->
@@ -500,19 +334,21 @@
             <div class="absolute left-1/2 transform -translate-x-1/2 bottom-4 sm:bottom-6 md:bottom-8 flex gap-2 z-50">
                 <button
                     class="carousel-indicator w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3 rounded-full bg-white bg-opacity-60 transition-all duration-300"
-                    data-index="0" aria-label="Go to slide 1"></button>
+                    data-index="0" aria-label="Go to slide 1">
+                </button>
                 <button
                     class="carousel-indicator w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3 rounded-full bg-white bg-opacity-40 transition-all duration-300"
-                    data-index="1" aria-label="Go to slide 2"></button>
-                <button
-                    class="carousel-indicator w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3 rounded-full bg-white bg-opacity-40 transition-all duration-300"
-                    data-index="2" aria-label="Go to slide 3"></button>
-                <button
-                    class="carousel-indicator w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3 rounded-full bg-white bg-opacity-40 transition-all duration-300"
-                    data-index="3" aria-label="Go to slide 4"></button>
+                    data-index="1" aria-label="Go to slide 2">
+                </button>
+
             </div>
         </section>
     </main>
+
+
+
+
+
 
 
     <!-- Consultation Banner Section -->
@@ -556,7 +392,7 @@
 
             <!-- Main Features Grid -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-                <!-- Left Column - Large Feature -->
+                <!-- Left Column  -->
                 <div class="bg-white rounded-3xl shadow-1xl border-2 border-[#FEA501] p-10 relative overflow-hidden">
                     <div
                         class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#FEA501] to-[#e69400] rounded-full -translate-y-16 translate-x-16 opacity-10">
@@ -568,13 +404,16 @@
                                 <i class="fas fa-users text-white text-2xl"></i>
                             </div>
                             <div>
-                                <h3 class="text-3xl font-bold text-gray-900">1M+ Satisfied Clients</h3>
+                                <h3 class="text-3xl font-bold text-gray-900">2k+ Satisfied Clients</h3>
                                 <p class="text-[#FEA501] font-semibold text-lg">Trusted Worldwide</p>
                             </div>
                         </div>
                         <p class="text-gray-600 text-lg leading-relaxed mb-6">
-                            Join over a million people worldwide who have found clarity, direction, and success through
-                            our personalized astrological consultations. Our proven track record speaks for itself.
+                            Your trust is our highest priority. We hold a safe, judgment-free space for you to explore
+                            your most
+                            personal questions—whether about love, career, or your life&#39;s purpose. All readings are
+                            100%
+                            private and confidential.
                         </p>
                         <div class="flex items-center text-[#FEA501] font-semibold">
                             <i class="fas fa-check-circle mr-2"></i>
@@ -583,7 +422,7 @@
                     </div>
                 </div>
 
-                <!-- Right Column - Two Features -->
+                <!-- Right Column -->
                 <div class="space-y-8">
                     <!-- Feature 1 -->
                     <div
@@ -594,10 +433,9 @@
                                 <i class="fas fa-star text-white text-xl"></i>
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-3">25+ Years Experience</h3>
-                                <p class="text-gray-600 leading-relaxed">
-                                    Our team of certified Vedic astrologers brings decades of expertise in traditional
-                                    Indian astrology, palmistry, and spiritual guidance.
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">5+ Years Experience</h3>
+                                <p class="text-gray-600 leading-relaxed">Our team of certified Vedic astrologers brings decades of expertise in traditional Indian astrology,
+                                    palmistry, and spiritual guidance.
                                 </p>
                             </div>
                         </div>
@@ -614,8 +452,8 @@
                             <div>
                                 <h3 class="text-xl font-bold text-gray-900 mb-3">100% Authentic</h3>
                                 <p class="text-gray-600 leading-relaxed">
-                                    We follow traditional Vedic principles and ancient scriptures to provide genuine
-                                    astrological guidance without any commercial compromises.
+                                    We practice authentic Vedic astrology as prescribed by the ancient scriptures, ensuring guidance
+that is genuine and principled.
                                 </p>
                             </div>
                         </div>
@@ -731,9 +569,9 @@
     <section class="max-w-8xl bg-[#fff8edbe] mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="max-w-[1320px] mx-auto">
             <h2 class="text-3xl font-bold  mb-3">Consult With Our Astrologers</h2>
-            <p class="mb-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint a praesentium illum debitis
-                nam temporibus! Quas perferendis distinctio maiores veniam. Veniam esse iste laboriosam! Tempora
-                eligendi sed accusamus ut blanditiis!</p>
+            <p class="mb-5">Book a personalized session with our experienced astrologers today, Gain clarity
+                and insight on life&#39;s most pressing questions. Get a detailed reading that illuminates
+                your past, present, and future path.</p>
 
             <!-- Team Section -->
 
@@ -1005,12 +843,11 @@
             <!-- Section Header -->
             <div class="text-center mb-12">
                 <h3 class="text-3xl font-bold text-gray-900 mb-4">Astrological Insights</h3>
-                <p class="text-1xl text-gray-600 max-w-6xl mx-auto">
-                    Astrology offers deep insights into all aspects of our life. It uses totally mathematical
-                    calculations and is scientific! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat est
-                    itaque fuga velit at, nostrum excepturi labore quae voluptatem aperiam nulla fugit voluptas
-                    molestiae? Perspiciatis dolores dolor .
-                </p>
+                <p class="text-1xl text-gray-600 max-w-6xl mx-auto">Astrology offers deep, personalized insights into all aspects of your life, providing a unique
+                    cosmic blueprint for self-understanding. It is an ancient, systematic discipline that utilizes the
+                    precise, mathematical movements and alignments of celestial bodies to map out energies and
+                    cycles. Explore the profound wisdom of the cosmos to navigate your path with greater
+                    purpose and confidence.</p>
             </div>
 
             <!-- Service Cards Grid -->

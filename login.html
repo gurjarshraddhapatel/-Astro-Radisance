@@ -213,7 +213,7 @@
 
     <!-- Main Container -->
     <div class="flex items-center w-full justify-center min-h-screen px-4 py-8">
-        <div class="main-container h-[90dvh] sm:w-[90%] lg:w-[95%] xl:w-[85%] w-full p-6 gap-8 rounded-3xl z-20 flex items-center justify-center lg:justify-between">
+        <div class="main-container h-[90dvh] sm:w-[90%] lg:w-[95%] xl:w-[85%] w-full p-4 sm:p-6 md:p-8 gap-8 rounded-3xl z-20 flex items-center justify-center lg:justify-between">
             
             <!-- Left Side - Image Carousel -->
             <div class="hidden w-[50%] h-full relative lg:block">
@@ -224,7 +224,7 @@
                             <div class="w-full max-w-md mx-auto">
                                 <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=500&h=400&fit=crop" 
                                      alt="Astrology Consultation" 
-                                     class="slide-image w-full h-100 object-cover mb-6">
+                                     class="slide-image w-full h-48 sm:h-56 md:h-72 lg:h-80 xl:h-96 object-cover mb-6">
                               
                             </div>
                         </div>
@@ -234,7 +234,7 @@
                             <div class="w-full max-w-md mx-auto">
                                 <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=400&fit=crop" 
                                      alt="Personalized Reading" 
-                                     class="slide-image w-full h-80 object-cover mb-6">
+                                     class="slide-image w-full h-48 sm:h-56 md:h-72 lg:h-80 xl:h-96 object-cover mb-6">
                                 
                             </div>
                         </div>
@@ -244,7 +244,7 @@
                             <div class="w-full max-w-md mx-auto">
                                 <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=500&h=400&fit=crop" 
                                      alt="Astrology Consultation" 
-                                     class="slide-image w-full h-100 object-cover mb-6">
+                                     class="slide-image w-full h-48 sm:h-56 md:h-72 lg:h-80 xl:h-96 object-cover mb-6">
                               
                             </div>
                         </div>
@@ -264,7 +264,7 @@
                 <div class="w-full flex items-center flex-col form-container">
                     <!-- Logo Section -->
                     <div class="logo-container mb-8">
-                        <div class="w-64 mx-auto ">
+                        <div class="w-40 sm:w-48 md:w-56 lg:w-64 mx-auto ">
                             <a href="./index.html">
                                 <img src="./imges/logo-removebg-preview.png" 
                                  alt="Astro Radisance Logo" 
@@ -282,10 +282,10 @@
                         
                             <!-- Username -->
                             <div class="relative">
-                                <div class="form-input rounded-xl p-3 flex items-center gap-3">
+                                <div class="form-input rounded-xl px-3 py-2.5 md:py-3 flex items-center gap-3">
                                     <i class="fas fa-user-circle text-gray-500 text-base"></i>
                                     <input placeholder="Enter your username" 
-                                           class="flex-1 bg-transparent text-gray-700 text-base focus:outline-none placeholder:text-gray-500" 
+                                           class="flex-1 bg-transparent text-gray-700 text-sm md:text-base focus:outline-none placeholder:text-gray-500" 
                                            required 
                                            type="text" 
                                            name="userName" />
@@ -294,10 +294,10 @@
 
                             <!-- Password -->
                             <div class="relative">
-                                <div class="form-input rounded-xl p-3 flex items-center gap-3">
+                                <div class="form-input rounded-xl px-3 py-2.5 md:py-3 flex items-center gap-3">
                                     <i class="fas fa-lock text-gray-500 text-base"></i>
                                     <input placeholder="Enter your password" 
-                                           class="flex-1 bg-transparent text-gray-700 text-base focus:outline-none placeholder:text-gray-500" 
+                                           class="flex-1 bg-transparent text-gray-700 text-sm md:text-base focus:outline-none placeholder:text-gray-500" 
                                            required 
                                            type="password" 
                                            name="password" 
@@ -311,7 +311,7 @@
                             </div>
 
                             <!-- Remember Me & Forgot -->
-                            <div class="flex items-center justify-between text-sm">
+                            <div class="flex items-center justify-between text-sm flex-wrap gap-2">
                                 <label class="flex items-center gap-2 text-gray-600 cursor-pointer">
                                     <input type="checkbox" class="rounded border-gray-300">
                                     <span>Remember me</span>
@@ -323,7 +323,7 @@
 
                             <!-- Login Button -->
                             <button type="submit" 
-                                    class="btn-primary w-full py-3 px-6 rounded-2xl text-white text-base font-medium shadow-lg">
+                                    class="btn-primary w-full py-2.5 md:py-3 px-5 md:px-6 rounded-2xl text-white text-sm md:text-base font-medium shadow-lg">
                                 <div class="flex items-center justify-center gap-2">
                                     <i class="fas fa-sign-in-alt"></i>
                                     <span>Sign In to Your Account</span>

@@ -77,6 +77,57 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 })();
 
+// Account dropdown behavior
+(function () {
+    const toggle = document.getElementById('accountToggle');
+    const dropdown = document.getElementById('accountDropdown');
+
+    if (!toggle || !dropdown) return;
+
+    function openDropdown() {
+        dropdown.classList.remove('hidden');
+        toggle.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeDropdown() {
+        dropdown.classList.add('hidden');
+        toggle.setAttribute('aria-expanded', 'false');
+    }
+
+    function toggleDropdown() {
+        if (dropdown.classList.contains('hidden')) openDropdown();
+        else closeDropdown();
+    }
+
+    // Click on toggle
+    toggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+        toggleDropdown();
+    });
+
+    // Keyboard support (Enter / Space)
+    toggle.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleDropdown();
+        } else if (e.key === 'Escape') {
+            closeDropdown();
+        }
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', function (e) {
+        if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
+            closeDropdown();
+        }
+    });
+
+    // Close on Escape key globally
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeDropdown();
+    });
+})();
+
 // Sidebar submenu and responsive toggle behavior
 (function () {
     // Submenu toggles
