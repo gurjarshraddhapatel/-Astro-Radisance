@@ -282,6 +282,217 @@
         </div>
     </header>
 
+    <!-- Sidebar -->
+    <div class="flex">
+        <!-- Sidebar backdrop overlay -->
+        <div id="sidebarOverlay"
+            class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300"></div>
+
+        <!-- Desktop sidebar toggle button -->
+        <button id="sidebarToggleBtn" aria-expanded="false" aria-controls="sidebar"
+            class="hidden lg:fixed top-8 right-12 inline-flex items-center px-3 py-1.5 bg-white border border-[#FEA501] rounded shadow-sm z-50 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+            <!-- <span class="ml-2 text-sm font-medium">Menu</span> -->
+        </button>
+
+        <!-- Mobile sidebar toggle button -->
+        <button id="mobileSidebarToggleBtn" aria-expanded="false" aria-controls="sidebar"
+            class="lg:hidden fixed top-6 right-4 inline-flex items-center px-3 py-2 bg-white border border-[#FEA501] rounded shadow-sm z-50 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+            <span class="ml-2 text-sm font-medium">Menu</span>
+        </button>
+
+        <aside id="sidebar"
+            class="fixed right-0 w-80 sm:w-96 bg-white shadow-xl h-full overflow-auto transform transition-all duration-300 ease-in-out translate-x-full z-50">
+            <!-- Sidebar Header -->
+            <div class="flex items-center justify-between p-4 border-b border-gray-200">
+                <h3 class="text-lg font-semibold text-gray-900">Navigation Menu</h3>
+                <button id="sidebarCloseBtn" class="p-2 rounded-lg hover:bg-gray-100 transition-colors lg:hidden">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <nav class="p-4">
+                <ul class="space-y-2">
+                    <li>
+                        <a href="/us/specials?promo=SL_MM_Specials"
+                            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                            <img src="https://cdn.astroved.com/images/images-av/monthly-specials.jpg"
+                                alt="Special Events" class="w-16 h-12 sm:w-20 sm:h-14 object-cover rounded"
+                                loading="lazy">
+                            <span class="text-sm font-medium text-gray-900">Special Events</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./About.html"
+                            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                            <img src="https://cdn.astroved.com/images/images-av/monthly-specials.jpg"
+                                alt="Special Events" class="w-16 h-12 sm:w-20 sm:h-14 object-cover rounded"
+                                loading="lazy">
+                            <span class="text-sm font-medium text-gray-900">About Us</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./Blog.html"
+                            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                            <img src="./imges/Blog.jpg" alt="Skanda Shasti 2025"
+                                class="w-16 h-12 sm:w-20 sm:h-14 object-cover rounded" loading="lazy">
+                            <span class="text-sm font-medium text-gray-900">Blogs</span>
+                        </a>
+                    </li>
+
+                    <!-- Item with submenu -->
+                    <li>
+                        <button class="w-full flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                            data-toggle="submenu" aria-expanded="false">
+                            <img src="https://cdn.astroved.com/images/images-av/astrospeaks.jpg"
+                                alt="Astrology Services" class="w-16 h-12 sm:w-20 sm:h-14 object-cover rounded"
+                                loading="lazy">
+                            <span class="text-sm font-medium text-gray-900">Astrology Services</span>
+                            <svg class="ml-auto w-4 h-4 transform transition-transform text-gray-500" data-chevron
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.06z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <ul class="mt-2 pl-4 space-y-1 hidden" data-submenu>
+                            <li><a class="block py-2 px-3 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors"
+                                    href="/AstrologerScheduler.aspx?id=115">Live Astrology Consultation</a></li>
+                            <li><a class="block py-2 px-3 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors"
+                                    href="/astrovedspeaks/talk-to-astrologer">Talk to Astrologer</a></li>
+                            <li><a class="block py-2 px-3 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors"
+                                    href="/astrovedspeaks/chat-with-astrologer">Chat with Astrologer</a></li>
+                            <li><a class="block py-2 px-3 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors"
+                                    href="/prasnaastrology.aspx">Instant Insight</a></li>
+                            <li><a class="block py-2 px-3 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors"
+                                    href="/us/specials/online-astrology-consultation">Consult &amp; Counsel with
+                                    Vijayalakshmi</a></li>
+                            <li><a class="block py-2 px-3 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors"
+                                    href="/nadi/nadi-astrology">Nadi Astrology</a></li>
+                            <li><a class="block py-2 px-3 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors"
+                                    href="/palm-reading">Palm Reading</a></li>
+                            <li><a class="block py-2 px-3 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors"
+                                    href="/AstrologerScheduler.aspx?id=50579">Agastya Live Channel Reading</a></li>
+                            <li><a class="block py-2 px-3 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors"
+                                    href="/us/specials/goddess-angali-reading">Goddess Angali Channel Reading</a></li>
+                            <li><a class="block py-2 px-3 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors"
+                                    href="/us/specials/karuppasamy-divine-reading-remedies-program">Karuppasamy Channel
+                                    Reading</a></li>
+                            <li><a class="block py-2 px-3 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors"
+                                    href="/reports">Personalized Astrology Reports</a></li>
+                            <li><a class="block py-2 px-3 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors"
+                                    href="/astrology-services#transit-report">Planetary Transit Reports</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Repeat for other items with optional submenus -->
+                    <li>
+                        <button class="w-full flex items-center gap-3 p-2 rounded hover:bg-gray-50"
+                            data-toggle="submenu" aria-expanded="false">
+                            <img src="https://cdn.astroved.com/images/images-av/wealth-remedies.jpg"
+                                alt="Wealth Remedies" class="w-20 h-14 object-cover rounded" loading="lazy">
+                            <span class="text-sm font-medium">Wealth Remedies</span>
+                            <svg class="ml-auto w-4 h-4 transform transition-transform" data-chevron
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.06z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <ul class="mt-2 pl-6 hidden" data-submenu>
+                            <li><a class="block py-2 text-sm text-gray-700 hover:text-gray-900"
+                                    href="/us/specials/coconut-smash">Coconut Smashing</a></li>
+                            <li><a class="block py-2 text-sm text-gray-700 hover:text-gray-900"
+                                    href="/remedies/pradosham">Pradosham</a></li>
+                            <li><a class="block py-2 text-sm text-gray-700 hover:text-gray-900"
+                                    href="/remedies/rameswaram-rituals">Rameshwaram Remedies</a></li>
+                            <li><a class="block py-2 text-sm text-gray-700 hover:text-gray-900"
+                                    href="/service-fire-lab-homa--c7.aspx">Planetary Remedies</a></li>
+                            <li><a class="block py-2 text-sm text-gray-700 hover:text-gray-900"
+                                    href="/tarpanam-c49.aspx">Ancestral Remedies</a></li>
+                            <li><a class="block py-2 text-sm text-gray-700 hover:text-gray-900"
+                                    href="/us/specials/cow-feeding-program">Cow Feeding &amp; Donation</a></li>
+                            <li><a class="block py-2 text-sm text-gray-700 hover:text-gray-900"
+                                    href="/dosha-pariharam">Dosha Remedies</a></li>
+                            <li><a class="block py-2 text-sm text-gray-700 hover:text-gray-900"
+                                    href="/us/specials/kerala-remedies">Kerala Remedies</a></li>
+                            <li><a class="block py-2 text-sm text-gray-700 hover:text-gray-900"
+                                    href="/written-mantra-c51.aspx">Proxy Mantra Writing</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- A few more top-level items (non-collapsible) -->
+                    <li>
+                        <a href="/us/specials/grand-homas" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50">
+                            <img src="https://cdn.astroved.com/images/images-av/success-homa.jpg" alt="Success Homas"
+                                class="w-20 h-14 object-cover rounded" loading="lazy">
+                            <span class="text-sm font-medium">Success Homas</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/rudraksha-beads?promo=SL_MM_Rudraksha"
+                            class="flex items-center gap-3 p-2 rounded hover:bg-gray-50">
+                            <img src="https://cdn.astroved.com/images/images-av/store.jpg" alt="Store"
+                                class="w-20 h-14 object-cover rounded" loading="lazy">
+                            <span class="text-sm font-medium">Store</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <button class="w-full flex items-center gap-3 p-2 rounded hover:bg-gray-50"
+                            data-toggle="submenu" aria-expanded="false">
+                            <img src="https://cdn.astroved.com/images/images-av/free-astrology.jpg" alt="Free Astrology"
+                                class="w-20 h-14 object-cover rounded" loading="lazy">
+                            <span class="text-sm font-medium">Free Astrology</span>
+                            <svg class="ml-auto w-4 h-4 transform transition-transform" data-chevron
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.06z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <ul class="mt-2 pl-6 hidden" data-submenu>
+                            <li><a class="block py-2 text-sm text-gray-700 hover:text-gray-900" href="/horoscopes">Free
+                                    Horoscope</a></li>
+                            <li><a class="block py-2 text-sm text-gray-700 hover:text-gray-900"
+                                    href="/Report.aspx?type=chart">Free Birth Chart</a></li>
+                            <li><a class="block py-2 text-sm text-gray-700 hover:text-gray-900"
+                                    href="/Report.aspx?type=birthstar">Free Birth Star</a></li>
+                            <li><a class="block py-2 text-sm text-gray-700 hover:text-gray-900"
+                                    href="/Report.aspx?type=moonsign">Free Moon Sign</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="/corporate-info/contact-us"
+                            class="flex items-center gap-3 p-2 rounded hover:bg-gray-50">
+                            <img src="https://cdn.astroved.com/images/images-av/resources.jpg" alt="Resources"
+                                class="w-20 h-14 object-cover rounded" loading="lazy">
+                            <span class="text-sm font-medium">Resources</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+
+
+    </div>
 
 
     <!-- Full Screen Carousel Container -->
@@ -348,23 +559,27 @@
             <a href="./Astro-about.html"
                 class="grid grid-cols-1 md:grid-cols-[280px_1fr] lg:grid-cols-[400px_1fr] xl:grid-cols-[450px_1fr] bg-cover bg-center bg-no-repeat h-auto min-h-[220px] sm:min-h-[240px] md:min-h-[180px] lg:min-h-[170px] rounded-lg overflow-hidden z-[99] transition-transform duration-300 hover:scale-[1.01] shadow-lg"
                 style="background-image: linear-gradient(to left, #F3CCB0, #DBC1CC, #B4A9EB)">
-                
+
                 <!-- Image Column -->
-                <div class="relative flex items-center justify-center md:justify-start order-1 h-[140px] sm:h-[160px] md:h-full overflow-hidden bg-black/10 md:bg-transparent">
-                    <img src="./imges/astro-img.png" alt="Astrology Consultation" 
-                        class="w-auto h-full sm:h-[90%] md:h-full max-h-[180px] object-contain"
-                        loading="lazy">
+                <div
+                    class="relative flex items-center justify-center md:justify-start order-1 h-[140px] sm:h-[160px] md:h-full overflow-hidden bg-black/10 md:bg-transparent">
+                    <img src="./imges/astro-img.png" alt="Astrology Consultation"
+                        class="w-auto h-full sm:h-[90%] md:h-full max-h-[180px] object-contain" loading="lazy">
                 </div>
-                
+
                 <!-- Content Column -->
-                <div class="flex flex-col items-center justify-center mt-5 sm:mt-0 p-4 sm:p-5 md:p-4 lg:p-6 relative  order-2">
-                    <p class="text-base sm:text-lg md:text-xl lg:text-[20px] xl:text-[22px] text-white font-semibold text-center md:text-left leading-tight sm:leading-snug md:leading-normal mb-2 sm:mb-2 md:mb-1 lg:mb-2 px-2 sm:px-0">
+                <div
+                    class="flex flex-col items-center justify-center mt-5 sm:mt-0 p-4 sm:p-5 md:p-4 lg:p-6 relative  order-2">
+                    <p
+                        class="text-base sm:text-lg md:text-xl lg:text-[20px] xl:text-[22px] text-white font-semibold text-center md:text-left leading-tight sm:leading-snug md:leading-normal mb-2 sm:mb-2 md:mb-1 lg:mb-2 px-2 sm:px-0">
                         CONSULT & COUNSEL WITH OUR AKASHIK READER EXPERT
                     </p>
-                    <p class="text-sm sm:text-base md:text-[15px] lg:text-base text-white font-semibold text-center md:text-left m-0 leading-relaxed sm:leading-[24px] md:leading-[27px] mb-3 sm:mb-3 md:mb-2 lg:mb-3 px-2 sm:px-0">
+                    <p
+                        class="text-sm sm:text-base md:text-[15px] lg:text-base text-white font-semibold text-center md:text-left m-0 leading-relaxed sm:leading-[24px] md:leading-[27px] mb-3 sm:mb-3 md:mb-2 lg:mb-3 px-2 sm:px-0">
                         Online Consultation with our Akashik Reader Take Solutions of your undergoing life problems
                     </p>
-                    <span class="bg-[#FEA500] text-white rounded-[5px] font-semibold px-4 sm:px-5 md:px-3 lg:px-4 py-2 sm:py-2.5 md:py-1.5 lg:py-2 text-sm sm:text-base md:text-sm lg:text-base mt-1 inline-block transition-all duration-300 hover:bg-[#e69500] hover:shadow-lg active:scale-95 whitespace-nowrap">
+                    <span
+                        class="bg-[#FEA500] text-white rounded-[5px] font-semibold px-4 sm:px-5 md:px-3 lg:px-4 py-2 sm:py-2.5 md:py-1.5 lg:py-2 text-sm sm:text-base md:text-sm lg:text-base mt-1 inline-block transition-all duration-300 hover:bg-[#e69500] hover:shadow-lg active:scale-95 whitespace-nowrap">
                         BOOK NOW
                     </span>
                 </div>
@@ -1624,13 +1839,14 @@
 
 
     <!-- Footer -->
-    <footer class="bg-[#FFF9ED] text-gray-200 mt-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer class="bg-[#FFF9ED] text-gray-200 mt-8 sm:mt-10 md:mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-8 sm:py-10 md:py-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10">
                 <!-- Company Info -->
-                <div class="lg:col-span-1">
-                    <a href="/" class="inline-flex items-center gap-3 mb-6">
-                        <img src="./imges/logo-removebg-preview.png" alt="Astro Radisance" class="w-42 -ml-10 h-auto">
+                <div class="sm:col-span-2 lg:col-span-1">
+                    <a href="/" class="inline-flex items-center gap-2 sm:gap-3 mb-4 sm:mb-5 md:mb-6">
+                        <img src="./imges/logo-removebg-preview.png" alt="Astro Radisance"
+                            class="w-32 h-auto sm:w-36 md:w-40 lg:w-44 xl:w-48 max-w-full">
                     </a>
                     <p class="text-sm text-gray-900 mb-6 leading-relaxed">
                         Your trusted guide to celestial wisdom. We provide accurate Vedic astrology services,
@@ -1673,24 +1889,24 @@
                 </div>
 
                 <!-- Quick Links -->
-                <div>
-                    <h4 class="text-lg font-bold text-[#000] mb-6">Quick Links</h4>
-                    <ul class="space-y-3 text-sm text-gray-300">
+                <div class="sm:col-span-1">
+                    <h4 class="text-base sm:text-lg md:text-xl font-bold text-[#000] mb-4 sm:mb-5 md:mb-6">Quick Links
+                    </h4>
+                    <ul class="space-y-2 sm:space-y-2.5 md:space-y-3 text-xs sm:text-sm md:text-base text-gray-300">
                         <li><a href="/horoscopes" class="hover:text-[#FEA500] text-[#000]">Free Horoscopes</a></li>
                         <li><a href="/panchang" class="hover:text-[#FEA500] text-[#000]">Daily Panchang</a></li>
                         <li><a href="/reports" class="hover:text-[#FEA500] text-[#000]">Astrology Reports</a></li>
                         <li><a href="/consultation" class="hover:text-[#FEA500] text-[#000]">Book Consultation</a></li>
                         <li><a href="/remedies" class="hover:text-[#FEA500] text-[#000]">Vedic Remedies</a></li>
                         <li><a href="/blog" class="hover:text-[#FEA500] text-[#000]">Astrology Blog</a></li>
-                        <li><a href="./tearms&codition.html" class="hover:text-[#FEA500] text-[#000]">Tearms &
-                                Codition</a></li>
                     </ul>
                 </div>
 
                 <!-- Services -->
-                <div>
-                    <h4 class="text-lg font-bold text-[#000] mb-6">Our Services</h4>
-                    <ul class="space-y-3 text-sm text-gray-300">
+                <div class="sm:col-span-1">
+                    <h4 class="text-base sm:text-lg md:text-xl font-bold text-[#000] mb-4 sm:mb-5 md:mb-6">Our Services
+                    </h4>
+                    <ul class="space-y-2 sm:space-y-2.5 md:space-y-3 text-xs sm:text-sm md:text-base text-gray-300">
                         <li><a href="/birth-chart" class="hover:text-[#FEA500] text-[#000]">Birth Chart Analysis</a>
                         </li>
                         <li><a href="/marriage-compatibility" class="hover:text-[#FEA500] text-[#000]">Marriage
@@ -1784,6 +2000,7 @@
             </div>
         </div>
     </footer>
+
 
 
 
@@ -1909,6 +2126,538 @@
 
         // Initial height update after a small delay to ensure elements are rendered
         setTimeout(updateCarouselHeight, 100);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // Horoscope Tab functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const tabs = ['daily-tab', 'weekly-tab', 'monthly-tab'];
+    
+    tabs.forEach(tabId => {
+        const tab = document.getElementById(tabId);
+        if (!tab) return;
+        
+        tab.addEventListener('click', () => {
+            // Remove active state from all tabs
+            tabs.forEach(id => {
+                const t = document.getElementById(id);
+                if (!t) return;
+                t.classList.remove('border-[#FEA501]', 'text-[#FEA501]');
+                t.classList.add('border-transparent');
+            });
+            
+            // Add active state to clicked tab
+            tab.classList.remove('border-transparent');
+            tab.classList.add('border-[#FEA501]', 'text-[#FEA501]');
+        });
+    });
+});
+
+
+
+
+
+{/* // Language dropdown behavior */}
+(function () {
+    const toggle = document.getElementById('langToggle');
+    const dropdown = document.getElementById('langDropdown');
+
+    if (!toggle || !dropdown) return;
+
+    function openDropdown() {
+        dropdown.classList.remove('hidden');
+        toggle.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeDropdown() {
+        dropdown.classList.add('hidden');
+        toggle.setAttribute('aria-expanded', 'false');
+    }
+
+    function toggleDropdown() {
+        if (dropdown.classList.contains('hidden')) openDropdown();
+        else closeDropdown();
+    }
+
+    // Click on toggle
+    toggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+        toggleDropdown();
+    });
+
+    // Keyboard support (Enter / Space)
+    toggle.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleDropdown();
+        } else if (e.key === 'Escape') {
+            closeDropdown();
+        }
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', function (e) {
+        if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
+            closeDropdown();
+        }
+    });
+
+    // Close on Escape key globally
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeDropdown();
+    });
+})();
+
+// Account dropdown behavior
+(function () {
+    const toggle = document.getElementById('accountToggle');
+    const dropdown = document.getElementById('accountDropdown');
+
+    if (!toggle || !dropdown) return;
+
+    function openDropdown() {
+        dropdown.classList.remove('hidden');
+        toggle.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeDropdown() {
+        dropdown.classList.add('hidden');
+        toggle.setAttribute('aria-expanded', 'false');
+    }
+
+    function toggleDropdown() {
+        if (dropdown.classList.contains('hidden')) openDropdown();
+        else closeDropdown();
+    }
+
+    // Click on toggle
+    toggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+        toggleDropdown();
+    });
+
+    // Keyboard support (Enter / Space)
+    toggle.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleDropdown();
+        } else if (e.key === 'Escape') {
+            closeDropdown();
+        }
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', function (e) {
+        if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
+            closeDropdown();
+        }
+    });
+
+    // Close on Escape key globally
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeDropdown();
+    });
+})();
+
+// Sidebar submenu and responsive toggle behavior
+(function () {
+    // Submenu toggles
+    document.querySelectorAll('[data-toggle="submenu"]').forEach(function (btn) {
+        const submenu = btn.nextElementSibling;
+        const chevron = btn.querySelector('[data-chevron]');
+        btn.addEventListener('click', function () {
+            const isOpen = submenu && !submenu.classList.contains('hidden');
+            if (submenu) submenu.classList.toggle('hidden');
+            if (btn && btn.getAttribute('aria-expanded')) btn.setAttribute('aria-expanded', String(!isOpen));
+            if (chevron) chevron.classList.toggle('rotate-180', !isOpen);
+        });
+    });
+
+    // Responsive sidebar toggle
+    const sidebar = document.getElementById('sidebar');
+    const desktopSidebarBtn = document.getElementById('sidebarToggleBtn');
+    const mobileSidebarBtn = document.getElementById('mobileSidebarToggleBtn');
+    const sidebarCloseBtn = document.getElementById('sidebarCloseBtn');
+    const overlay = document.getElementById('sidebarOverlay');
+
+    function openSidebar() {
+        // Check if sidebar and overlay exist
+        if (!sidebar || !overlay) return;
+        
+        // visible state is translate-x-0 (no translation)
+        sidebar.classList.remove('translate-x-full');
+        sidebar.classList.add('translate-x-0');
+        
+        // Update both buttons
+        if (desktopSidebarBtn) desktopSidebarBtn.setAttribute('aria-expanded', 'true');
+        if (mobileSidebarBtn) mobileSidebarBtn.setAttribute('aria-expanded', 'true');
+        
+        overlay.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeSidebar() {
+        // Check if sidebar and overlay exist
+        if (!sidebar || !overlay) return;
+        
+        // hidden state is translate-x-full (moved off-screen to right)
+        sidebar.classList.add('translate-x-full');
+        sidebar.classList.remove('translate-x-0');
+        
+        // Update both buttons
+        if (desktopSidebarBtn) desktopSidebarBtn.setAttribute('aria-expanded', 'false');
+        if (mobileSidebarBtn) mobileSidebarBtn.setAttribute('aria-expanded', 'false');
+        
+        overlay.classList.add('hidden');
+        document.body.style.overflow = '';
+    }
+
+    function toggleSidebar() {
+        if (!sidebar) return;
+        
+        const isOpen = !sidebar.classList.contains('translate-x-full');
+        if (isOpen) closeSidebar();
+        else openSidebar();
+    }
+
+    // Event listeners for desktop and mobile buttons
+    if (desktopSidebarBtn && sidebar) {
+        desktopSidebarBtn.addEventListener('click', toggleSidebar);
+    }
+
+    if (mobileSidebarBtn && sidebar) {
+        mobileSidebarBtn.addEventListener('click', toggleSidebar);
+    }
+
+    // Close button (mobile only)
+    if (sidebarCloseBtn) {
+        sidebarCloseBtn.addEventListener('click', closeSidebar);
+    }
+
+    // Overlay click to close
+    if (overlay) {
+        overlay.addEventListener('click', closeSidebar);
+    }
+
+    // Close on escape key
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && sidebar && !sidebar.classList.contains('translate-x-full')) {
+            closeSidebar();
+        }
+    });
+
+    // Initialize sidebar state
+    function initializeSidebar() {
+        // Check if sidebar and overlay exist before accessing them
+        if (!sidebar || !overlay) return;
+        
+        // Default: hidden on all screen sizes
+        sidebar.classList.add('translate-x-full');
+        sidebar.classList.remove('translate-x-0');
+        
+        if (desktopSidebarBtn) desktopSidebarBtn.setAttribute('aria-expanded', 'false');
+        if (mobileSidebarBtn) mobileSidebarBtn.setAttribute('aria-expanded', 'false');
+        
+        overlay.classList.add('hidden');
+        document.body.style.overflow = '';
+    }
+
+    // Handle responsive behavior
+    function handleResponsiveSidebar() {
+        if (!sidebar) return;
+        
+        const isLargeScreen = window.innerWidth >= 1024;
+        
+        // Show/hide appropriate toggle buttons
+        if (desktopSidebarBtn) {
+            desktopSidebarBtn.style.display = isLargeScreen ? 'inline-flex' : 'none';
+        }
+        if (mobileSidebarBtn) {
+            mobileSidebarBtn.style.display = isLargeScreen ? 'none' : 'inline-flex';
+        }
+        
+        // Close sidebar when switching between mobile and desktop
+        if (!sidebar.classList.contains('translate-x-full')) {
+            closeSidebar();
+        }
+    }
+
+    // Initialize on load
+    initializeSidebar();
+    handleResponsiveSidebar();
+
+    // Handle resize events
+    let lastWidth = window.innerWidth;
+    window.addEventListener('resize', function () {
+        const currentWidth = window.innerWidth;
+        const wasLargeScreen = lastWidth >= 1024;
+        const isLargeScreen = currentWidth >= 1024;
+        
+        // Only react to changes that cross the breakpoint
+        if (wasLargeScreen !== isLargeScreen) {
+            handleResponsiveSidebar();
+        }
+        
+        lastWidth = currentWidth;
+    });
+})();
+
+// Carousel behavior
+(function () {
+    function initCarousel() {
+        const slidesContainer = document.getElementById('carouselSlides');
+        const indicators = Array.from(document.querySelectorAll('.carousel-indicator'));
+        const prevBtn = document.getElementById('carouselPrev');
+        const nextBtn = document.getElementById('carouselNext');
+        
+        if (!slidesContainer) {
+            console.warn('Carousel: slidesContainer not found');
+            return;
+        }
+
+        // Count actual slides instead of relying on indicators
+        const slides = slidesContainer.querySelectorAll('> div');
+        const slideCount = slides.length || (indicators.length > 0 ? indicators.length : 2);
+        let current = 0;
+        let autoplayInterval = null;
+        const AUTOPLAY_MS = 4000;
+
+        function goTo(index) {
+            current = (index + slideCount) % slideCount;
+            const offset = -current * 100;
+            slidesContainer.style.transform = `translateX(${offset}%)`;
+            slidesContainer.style.transition = 'transform 0.7s ease';
+            indicators.forEach((btn, i) => {
+                if (i === current) {
+                    btn.classList.remove('bg-opacity-40');
+                    btn.classList.add('bg-opacity-60');
+                    btn.setAttribute('aria-current', 'true');
+                } else {
+                    btn.classList.remove('bg-opacity-60');
+                    btn.classList.add('bg-opacity-40');
+                    btn.removeAttribute('aria-current');
+                }
+            });
+        }
+
+        function next() { 
+            goTo(current + 1); 
+        }
+        
+        function prev() { 
+            goTo(current - 1); 
+        }
+
+        // Add event listeners to indicators if they exist
+        if (indicators.length > 0) {
+            indicators.forEach(btn => {
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const idx = Number(btn.dataset.index);
+                    goTo(idx);
+                    resetAutoplay();
+                });
+            });
+        }
+
+        // Add event listeners to navigation buttons
+        if (nextBtn) {
+            nextBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                next();
+                resetAutoplay();
+            });
+            console.log('Carousel: Next button event listener attached');
+        } else {
+            console.warn('Carousel: Next button not found');
+        }
+        
+        if (prevBtn) {
+            prevBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                prev();
+                resetAutoplay();
+            });
+            console.log('Carousel: Prev button event listener attached');
+        } else {
+            console.warn('Carousel: Prev button not found');
+        }
+
+        function startAutoplay() {
+            if (autoplayInterval) return;
+            autoplayInterval = setInterval(next, AUTOPLAY_MS);
+        }
+
+        function stopAutoplay() {
+            if (!autoplayInterval) return;
+            clearInterval(autoplayInterval);
+            autoplayInterval = null;
+        }
+
+        function resetAutoplay() {
+            stopAutoplay();
+            startAutoplay();
+        }
+
+        const carouselEl = document.getElementById('heroCarousel');
+        if (carouselEl) {
+            carouselEl.addEventListener('mouseenter', stopAutoplay);
+            carouselEl.addEventListener('mouseleave', startAutoplay);
+        }
+
+        // startup
+        goTo(0);
+        startAutoplay();
+    }
+
+    // Wait for DOM to be ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCarousel);
+    } else {
+        // DOM already loaded, run immediately
+        setTimeout(initCarousel, 100);
+    }
+})();
+
+// FAQ Accordion functionality
+(function () {
+    const faqToggles = document.querySelectorAll('.faq-toggle');
+    
+    faqToggles.forEach(toggle => {
+        toggle.addEventListener('click', function() {
+            const faqContent = this.nextElementSibling;
+            const faqIcon = this.querySelector('.faq-icon');
+            const isOpen = !faqContent.classList.contains('hidden');
+            
+            // Close all other FAQs
+            document.querySelectorAll('.faq-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+            document.querySelectorAll('.faq-icon').forEach(icon => {
+                icon.classList.remove('rotate-180');
+            });
+            
+            // Toggle current FAQ
+            if (isOpen) {
+                faqContent.classList.add('hidden');
+                faqIcon.classList.remove('rotate-180');
+            } else {
+                faqContent.classList.remove('hidden');
+                faqIcon.classList.add('rotate-180');
+            }
+        });
+    });
+})();
+
+// Mobile Menu functionality
+(function () {
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const mobileMenuClose = document.getElementById('mobileMenuClose');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+    const mobileSearch = document.getElementById('mobileSearch');
+    
+    // Toggle mobile menu
+    function toggleMobileMenu() {
+        const isOpen = !mobileMenu.classList.contains('hidden');
+        
+        if (isOpen) {
+            closeMobileMenu();
+        } else {
+            openMobileMenu();
+        }
+    }
+    
+    function openMobileMenu() {
+        mobileMenu.classList.remove('hidden');
+        mobileMenuOverlay.classList.remove('hidden');
+        mobileMenu.classList.remove('translate-x-full');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function closeMobileMenu() {
+        mobileMenu.classList.add('translate-x-full');
+        mobileMenuOverlay.classList.add('hidden');
+        setTimeout(() => {
+            mobileMenu.classList.add('hidden');
+        }, 300);
+        document.body.style.overflow = '';
+    }
+    
+    // Event listeners
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+    }
+    
+    if (mobileMenuClose) {
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+    }
+    
+    if (mobileMenuOverlay) {
+        mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+    }
+    
+    // Show mobile search on smaller screens
+    function toggleMobileSearch() {
+        if (window.innerWidth < 1024) {
+            mobileSearch.classList.remove('hidden');
+        } else {
+            mobileSearch.classList.add('hidden');
+        }
+    }
+    
+    // Initial check and resize listener
+    toggleMobileSearch();
+    window.addEventListener('resize', toggleMobileSearch);
+    
+    // Close mobile menu on escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+            closeMobileMenu();
+        }
+    });
+})();
+
+
+
+
+
     </script>
 </body>
 
