@@ -150,6 +150,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const overlay = document.getElementById('sidebarOverlay');
 
     function openSidebar() {
+        // Check if sidebar and overlay exist
+        if (!sidebar || !overlay) return;
+        
         // visible state is translate-x-0 (no translation)
         sidebar.classList.remove('translate-x-full');
         sidebar.classList.add('translate-x-0');
@@ -163,6 +166,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function closeSidebar() {
+        // Check if sidebar and overlay exist
+        if (!sidebar || !overlay) return;
+        
         // hidden state is translate-x-full (moved off-screen to right)
         sidebar.classList.add('translate-x-full');
         sidebar.classList.remove('translate-x-0');
@@ -176,6 +182,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function toggleSidebar() {
+        if (!sidebar) return;
+        
         const isOpen = !sidebar.classList.contains('translate-x-full');
         if (isOpen) closeSidebar();
         else openSidebar();
@@ -202,13 +210,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Close on escape key
     document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && !sidebar.classList.contains('translate-x-full')) {
+        if (e.key === 'Escape' && sidebar && !sidebar.classList.contains('translate-x-full')) {
             closeSidebar();
         }
     });
 
     // Initialize sidebar state
     function initializeSidebar() {
+        // Check if sidebar and overlay exist before accessing them
+        if (!sidebar || !overlay) return;
+        
         // Default: hidden on all screen sizes
         sidebar.classList.add('translate-x-full');
         sidebar.classList.remove('translate-x-0');
@@ -222,6 +233,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Handle responsive behavior
     function handleResponsiveSidebar() {
+        if (!sidebar) return;
+        
         const isLargeScreen = window.innerWidth >= 1024;
         
         // Show/hide appropriate toggle buttons
