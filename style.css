@@ -146,6 +146,7 @@
 @media (min-width: 768px) {
   .responsive-carousel {
     height: 80vh;
+    
   }
 }
 
@@ -185,5 +186,38 @@
 @media (max-width: 768px) and (orientation: landscape) {
   .responsive-carousel {
     height: 100vh;
+  }
+}
+
+/* Marquee Banner Styles */
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-content {
+  display: flex;
+  animation: marquee-scroll 20s linear infinite;
+  white-space: nowrap;
+}
+
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+/* Responsive marquee text */
+@media (max-width: 640px) {
+  .marquee-content {
+    animation-duration: 15s;
   }
 }

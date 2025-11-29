@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Astro Radisance</title>
+    <link rel="icon" type="image/png" class="" href="imges/titlelogo.png">
+    <title>Astro Radiance</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
@@ -14,113 +15,28 @@
 
 <body class="bg-gray-50">
 
-    <header class="shadow-[0_2px_8px_0_rgba(99,99,99,0.2)] py-3 bg-[#fff] sticky top-0 z-50">
-        <div class="max-w-[1320px] px-3 mx-auto w-full">
-            <!-- Main Header Row -->
-            <div class="flex items-center justify-between">
-                <!-- Logo -->
-                <div class="flex-shrink-0">
-                    <a href="/" class="text-blue-600">
-                        <img src="./imges/logo-removebg-preview.png" fetchpriority="high" width="136" height="48"
-                            alt="Astro Radisance" title="Astro Radisance" class="max-w-full h-auto align-middle" />
-                    </a>
-                </div>
+   <!-- header section -->
 
-                <!-- Desktop Search Bar -->
-                <div class="hidden lg:block flex-1 max-w-2xl mx-0 ">
-                    <form id="searchForm" class="relative">
-                        <input id="searchInput" name="search" type="text" autofocus
-                            placeholder="Search for Destinations"
-                            class="w-full pl-4 pr-12 py-3 rounded-full bg-gray-100 text-sm focus:outline-none focus:ring-2 focus:ring-[#FEA501] focus:bg-white transition-all" />
-                        <button id="searchSubmit" type="submit" disabled
-                            class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#FEA501] text-white rounded-full p-2 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[#e69400] transition-colors">
-                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
-                            </svg>
-                        </button>
-                    </form>
-                </div>
+   <header class="shadow-[0_2px_8px_0_rgba(99,99,99,0.2)] pt-3 bg-[#fff] sticky top-0 z-50">
+    <div class="max-w-[1320px] px-3 mx-auto w-full">
+        <!-- Main Header Row -->
+        <div class="flex items-center justify-between">
 
-                <!-- Desktop Actions -->
-                <div class="hidden md:flex items-center space-x-4  ">
-                    <!-- Language Toggle -->
-                    <div id="langToggle"
-                        class="relative cursor-pointer px-3  py-2 rounded-lg hover:bg-gray-100 transition-colors"
-                        aria-haspopup="true" aria-expanded="false" role="button" tabindex="0">
-                        <span class="flex items-center text-sm font-medium">
-                            EN
-                            <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </span>
-                        <div id="langDropdown"
-                            class="hidden absolute border border-gray-200 rounded-lg p-2 top-full mt-1 bg-white w-40 shadow-lg z-50 left-0"
-                            role="menu" aria-labelledby="langToggle">
-                            <ul class="space-y-1">
-                                <li class="px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">
-                                    English - EN</li>
-                                <li class="px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">
-                                    <a href="#" class="block">हिंदी - HI</a>
-                                </li>
-                                <li class="px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">
-                                    <a href="#" class="block">தமிழ் - TA</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Cart -->
-                    <!-- <div class="relative py-2 px-3 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer"
-                        onclick="redirectCheckout()">
-                        <div class="flex items-center">
-                            <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
-                            </svg>
-                            <span class="ml-2 text-sm font-medium">Cart</span>
-                        </div>
-                    </div> -->
-
-                    <!-- Account -->
-                    <div class="relative">
-                        <div
-                            class="flex items-center py-2 px-3 bg-[#FEA501] text-white rounded-lg hover:bg-[#e69400] transition-colors cursor-pointer">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                            </svg>
-                            <span class="ml-2 text-sm font-medium">Account</span>
-                        </div>
-                        <div
-                            class="hidden absolute border border-gray-200 rounded-lg p-2 top-full mt-1 bg-white w-40 shadow-lg z-50 right-0">
-                            <ul class="space-y-1">
-                                <li class="px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">
-                                    Sign In</li>
-                                <li class="px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">
-                                    <a href="/Register.aspx?ReturnUrl=Default.aspx" class="block">Register</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <button id="mobileMenuToggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+                <a href="/" class="text-blue-600">
+                    <img src="./imges/logo-removebg-preview.png" fetchpriority="high" width="186" height="48"
+                        alt="Astro Radiance" title="Astro Radiance" class="max-w-full h-auto align-middle" />
+                </a>
             </div>
 
-            <!-- Mobile Search Bar -->
-            <div id="mobileSearch" class="hidden lg:hidden mt-4">
-                <form id="mobileSearchForm" class="relative">
-                    <input id="mobileSearchInput" name="search" type="text" placeholder="Search for Destinations"
+            <!-- Desktop Search Bar -->
+            <div class="hidden lg:block w-[40%] mx-0 ">
+                <form id="searchForm" class="relative">
+                    <input id="searchInput" name="search" type="text" autofocus
+                        placeholder="Search for Destinations"
                         class="w-full pl-4 pr-12 py-3 rounded-full bg-gray-100 text-sm focus:outline-none focus:ring-2 focus:ring-[#FEA501] focus:bg-white transition-all" />
-                    <button id="mobileSearchSubmit" type="submit" disabled
+                    <button id="searchSubmit" type="submit" disabled
                         class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#FEA501] text-white rounded-full p-2 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[#e69400] transition-colors">
                         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -129,105 +45,217 @@
                     </button>
                 </form>
             </div>
+
+            <!-- Desktop Actions -->
+            <div class="hidden md:flex items-center space-x-4  ">
+                <!-- Language Toggle -->
+                <div id="langToggle"
+                    class="relative cursor-pointer px-3  py-2 rounded-lg hover:bg-gray-100 transition-colors"
+                    aria-haspopup="true" aria-expanded="false" role="button" tabindex="0">
+                    <span class="flex items-center text-sm font-medium">
+                        EN
+                        <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </span>
+                    <div id="langDropdown"
+                        class="hidden absolute border border-gray-200 rounded-lg p-2 top-full mt-1 bg-white w-40 shadow-lg z-50 left-0"
+                        role="menu" aria-labelledby="langToggle">
+                        <ul class="space-y-1">
+                            <li class="px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">
+                                English - EN</li>
+                            <li class="px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">
+                                <a href="#" class="block">हिंदी - HI</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Cart -->
+                <!-- <div class="relative py-2 px-3 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer"
+                    onclick="redirectCheckout()">
+                    <div class="flex items-center">
+                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
+                        </svg>
+                        <span class="ml-2 text-sm font-medium">Cart</span>
+                    </div>
+                </div> -->
+
+                <!-- Account -->
+                <div id="accountToggle" class="relative cursor-pointer" aria-haspopup="true" aria-expanded="false"
+                    role="button" tabindex="0">
+                    <div
+                        class="flex items-center py-1.5 sm:py-2 px-2 sm:px-3 bg-[#FEA501] text-white rounded-lg hover:bg-[#e69400] transition-all duration-300 active:scale-95">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                        <span class="ml-1 sm:ml-2 text-xs sm:text-sm font-medium hidden sm:inline">Account</span>
+                        <svg class="w-2.5 h-2.5 sm:w-3 sm:h-3 ml-1 sm:ml-2" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+                    <div id="accountDropdown"
+                        class="hidden absolute border border-gray-200 rounded-lg p-2 top-full mt-1 bg-white w-36 sm:w-40 shadow-lg z-50 right-0"
+                        role="menu" aria-labelledby="accountToggle">
+                        <ul class="space-y-1">
+                            <li
+                                class="px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer transition-colors">
+                                <a href="./comingsoon.html" class="block">Sign In</a>
+                            </li>
+                            <li
+                                class="px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer transition-colors">
+                                <a href="./comingsoon.html" class="block">Sign Up</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Desktop sidebar toggle button -->
+                <button id="sidebarToggleBtn" aria-expanded="false" aria-controls="sidebar"
+                    class="hidden  inline-flex items-center px-3 py-1.5 bg-white border border-[#FEA501] rounded shadow-sm z-50 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16">
+                        </path>
+                    </svg>
+                    <!-- <span class="ml-2 text-sm font-medium">Menu</span> -->
+                </button>
+            </div>
+
+            <!-- Mobile Account Button (visible on smaller screens, hidden on desktop) -->
+
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuToggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
         </div>
 
-        <!-- Mobile Menu Overlay -->
-        <div id="mobileMenuOverlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"></div>
+        <!-- Mobile Search Bar -->
+        <div id="mobileSearch" class="hidden lg:hidden mt-4 px-12 pb-5  mx-auto rounded-full">
+            <form id="mobileSearchForm" class="relative">
+                <input id="mobileSearchInput" name="search" type="text" placeholder="Search for Destinations"
+                    class="w-[100%] pl-4 pr-12 py-3 rounded-full bg-gray-100 text-sm focus:outline-none focus:ring-2 focus:ring-[#FEA501] focus:bg-white transition-all" />
+                <button id="mobileSearchSubmit" type="submit" disabled
+                    class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#FEA501] text-white rounded-full p-2 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[#e69400] transition-colors">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
+                    </svg>
+                </button>
+            </form>
+        </div>
 
-        <!-- Mobile Menu -->
-        <div id="mobileMenu"
-            class="hidden fixed top-0 right-0 h-full w-80 bg-white shadow-xl z-50 transform translate-x-full transition-transform duration-300">
-            <div class="p-6">
-                <!-- Mobile Menu Header -->
-                <div class="flex items-center justify-between mb-6">
-                    <h3 class="text-lg font-semibold">Menu</h3>
-                    <button id="mobileMenuClose" class="p-2 rounded-lg hover:bg-gray-100 transition-colors">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileMenuOverlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"></div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu"
+        class="hidden fixed top-0 right-0 h-full w-80 bg-white shadow-xl z-50 transform translate-x-full transition-transform duration-300">
+        <div class="p-6">
+            <!-- Mobile Menu Header -->
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-lg font-semibold">Menu</h3>
+                <button id="mobileMenuClose" class="p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Search -->
+            <div class="mb-6">
+                <form id="mobileMenuSearchForm" class="relative">
+                    <input id="mobileMenuSearchInput" name="search" type="text"
+                        placeholder="Search for Destinations"
+                        class="w-full pl-4 pr-12 py-3 rounded-full bg-gray-100 text-sm focus:outline-none focus:ring-2 focus:ring-[#FEA501] focus:bg-white transition-all" />
+                    <button id="mobileMenuSearchSubmit" type="submit" disabled
+                        class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#FEA501] text-white rounded-full p-2 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[#e69400] transition-colors">
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M6 18L18 6M6 6l12 12" />
+                                d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
                         </svg>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Mobile Menu Items -->
+            <div class="space-y-4">
+                <!-- Language Selection -->
+                <div class="border-b border-gray-200 pb-4">
+                    <h4 class="text-sm font-semibold text-gray-700 mb-3">Language</h4>
+                    <div class="space-y-2">
+                        <button
+                            class="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">English
+                            - EN</button>
+                        <button
+                            class="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">हिंदी
+                            - HI</button>
+                        <button
+                            class="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">தமிழ்
+                            - TA</button>
+                    </div>
+                </div>
+
+                <!-- Account Actions -->
+                <div class="border-b border-gray-200 pb-4">
+                    <h4 class="text-sm font-semibold text-gray-700 mb-3">Account</h4>
+                    <div class="space-y-2">
+                        <a href="./login.html"
+                            class="block w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">Sign
+                            In</a>
+                        <a href="./Registration.html"
+                            class="block w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">Sign
+                            Up</a>
+                    </div>
+                </div>
+
+                <!-- Cart -->
+                <div class="border-b border-gray-200 pb-4 ">
+                    <button onclick="redirectCheckout()"
+                        class="w-full flex items-center px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">
+                        <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
+                        </svg>
+                        Cart
                     </button>
                 </div>
 
-                <!-- Mobile Search -->
-                <div class="mb-6">
-                    <form id="mobileMenuSearchForm" class="relative">
-                        <input id="mobileMenuSearchInput" name="search" type="text"
-                            placeholder="Search for Destinations"
-                            class="w-full pl-4 pr-12 py-3 rounded-full bg-gray-100 text-sm focus:outline-none focus:ring-2 focus:ring-[#FEA501] focus:bg-white transition-all" />
-                        <button id="mobileMenuSearchSubmit" type="submit" disabled
-                            class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#FEA501] text-white rounded-full p-2 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[#e69400] transition-colors">
-                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
-                            </svg>
-                        </button>
-                    </form>
-                </div>
-
-                <!-- Mobile Menu Items -->
-                <div class="space-y-4">
-                    <!-- Language Selection -->
-                    <div class="border-b border-gray-200 pb-4">
-                        <h4 class="text-sm font-semibold text-gray-700 mb-3">Language</h4>
-                        <div class="space-y-2">
-                            <button
-                                class="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">English
-                                - EN</button>
-                            <button
-                                class="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">हिंदी
-                                - HI</button>
-                            <button
-                                class="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">தமிழ்
-                                - TA</button>
-                        </div>
-                    </div>
-
-                    <!-- Account Actions -->
-                    <div class="border-b border-gray-200 pb-4">
-                        <h4 class="text-sm font-semibold text-gray-700 mb-3">Account</h4>
-                        <div class="space-y-2">
-                            <button
-                                class="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">Sign
-                                In</button>
-                            <button
-                                class="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">Register</button>
-                        </div>
-                    </div>
-
-                    <!-- Cart -->
-                    <div class="border-b border-gray-200 pb-4 ">
-                        <button onclick="redirectCheckout()"
-                            class="w-full flex items-center px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">
-                            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
-                            </svg>
-                            Cart
-                        </button>
-                    </div>
-
-                    <!-- Quick Links -->
-                    <div>
-                        <h4 class="text-sm font-semibold text-gray-700 mb-3">Quick Links</h4>
-                        <div class="space-y-2">
-                            <a href="/horoscopes"
-                                class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">Free
-                                Horoscopes</a>
-                            <a href="/panchang"
-                                class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">Daily
-                                Panchang</a>
-                            <a href="/reports"
-                                class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">Astrology
-                                Reports</a>
-                            <a href="/consultation"
-                                class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">Book
-                                Consultation</a>
-                        </div>
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-sm font-semibold text-gray-700 mb-3">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="/horoscopes"
+                            class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">Free
+                            Horoscopes</a>
+                        <a href="/panchang"
+                            class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">Daily
+                            Panchang</a>
+                        <a href="/reports"
+                            class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">Astrology
+                            Reports</a>
+                        <a href="/consultation"
+                            class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">Book
+                            Consultation</a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </header>
 
     <!-- Sidebar -->
@@ -235,17 +263,6 @@
         <!-- Sidebar backdrop overlay -->
         <div id="sidebarOverlay"
             class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300"></div>
-
-        <!-- Desktop sidebar toggle button -->
-        <button id="sidebarToggleBtn" aria-expanded="false" aria-controls="sidebar"
-            class="hidden lg:fixed top-5 right-12 inline-flex items-center px-3 py-2 bg-white border border-[#FEA501] rounded shadow-sm z-50 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                </path>
-            </svg>
-            <!-- <span class="ml-2 text-sm font-medium">Menu</span> -->
-        </button>
 
         <!-- Mobile sidebar toggle button -->
         <button id="mobileSidebarToggleBtn" aria-expanded="false" aria-controls="sidebar"
@@ -272,23 +289,21 @@
             </div>
 
             <nav class="p-4">
+
+
                 <ul class="space-y-2">
                     <li>
-                        <a href="/us/specials?promo=SL_MM_Specials"
+                        <a href="./index.html"
                             class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                            <img src="https://cdn.astroved.com/images/images-av/monthly-specials.jpg"
-                                alt="Special Events" class="w-16 h-12 sm:w-20 sm:h-14 object-cover rounded"
-                                loading="lazy">
-                            <span class="text-sm font-medium text-gray-900">Special Events</span>
+                            <img src="./imges/sidebar-logo/home.png" alt="home" class="w-12 h-12 sm:w-15 sm:h-15 object-cover rounded">
+                            <span class="text-sm font-medium text-gray-900">Home</span>
                         </a>
                     </li>
 
                     <li>
                         <a href="./About.html"
                             class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                            <img src="https://cdn.astroved.com/images/images-av/monthly-specials.jpg"
-                                alt="Special Events" class="w-16 h-12 sm:w-20 sm:h-14 object-cover rounded"
-                                loading="lazy">
+                            <img src="./imges/sidebar-logo/about-us.png" alt="Special Events" class="w-12 h-12 sm:w-15 sm:h-15 object-cover rounded">
                             <span class="text-sm font-medium text-gray-900">About Us</span>
                         </a>
                     </li>
@@ -296,15 +311,23 @@
                     <li>
                         <a href="./Blog.html"
                             class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                            <img src="./imges/Blog.jpg"
-                                alt="Skanda Shasti 2025" class="w-16 h-12 sm:w-20 sm:h-14 object-cover rounded"
-                                loading="lazy">
+                            <img src="./imges/sidebar-logo/blogs.png" alt="Skanda Shasti 2025"
+                                class="w-12 h-12 sm:w-15 sm:h-15 object-cover rounded">
                             <span class="text-sm font-medium text-gray-900">Blogs</span>
                         </a>
                     </li>
 
-                    <!-- Item with submenu -->
                     <li>
+                        <a href="./contact.html"
+                            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                            <img src="./imges/sidebar-logo/contact-us.png" alt="Skanda Shasti 2025"
+                                class="w-12 h-12 sm:w-15 sm:h-15 object-cover rounded">
+                            <span class="text-sm font-medium text-gray-900">Contact us</span>
+                        </a>
+                    </li>
+
+                    <!-- Item with submenu -->
+                    <!-- <li>
                         <button class="w-full flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
                             data-toggle="submenu" aria-expanded="false">
                             <img src="https://cdn.astroved.com/images/images-av/astrospeaks.jpg"
@@ -346,10 +369,10 @@
                             <li><a class="block py-2 px-3 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors"
                                     href="/astrology-services#transit-report">Planetary Transit Reports</a></li>
                         </ul>
-                    </li>
+                    </li> -->
 
                     <!-- Repeat for other items with optional submenus -->
-                    <li>
+                    <!-- <li>
                         <button class="w-full flex items-center gap-3 p-2 rounded hover:bg-gray-50"
                             data-toggle="submenu" aria-expanded="false">
                             <img src="https://cdn.astroved.com/images/images-av/wealth-remedies.jpg"
@@ -382,59 +405,45 @@
                             <li><a class="block py-2 text-sm text-gray-700 hover:text-gray-900"
                                     href="/written-mantra-c51.aspx">Proxy Mantra Writing</a></li>
                         </ul>
-                    </li>
+                    </li> -->
 
                     <!-- A few more top-level items (non-collapsible) -->
-                    <li>
-                        <a href="/us/specials/grand-homas" class="flex items-center gap-3 p-2 rounded hover:bg-gray-50">
-                            <img src="https://cdn.astroved.com/images/images-av/success-homa.jpg" alt="Success Homas"
-                                class="w-20 h-14 object-cover rounded" loading="lazy">
-                            <span class="text-sm font-medium">Success Homas</span>
-                        </a>
-                    </li>
 
-                    <li>
-                        <a href="/rudraksha-beads?promo=SL_MM_Rudraksha"
-                            class="flex items-center gap-3 p-2 rounded hover:bg-gray-50">
-                            <img src="https://cdn.astroved.com/images/images-av/store.jpg" alt="Store"
-                                class="w-20 h-14 object-cover rounded" loading="lazy">
-                            <span class="text-sm font-medium">Store</span>
-                        </a>
-                    </li>
 
-                    <li>
-                        <button class="w-full flex items-center gap-3 p-2 rounded hover:bg-gray-50"
-                            data-toggle="submenu" aria-expanded="false">
-                            <img src="https://cdn.astroved.com/images/images-av/free-astrology.jpg" alt="Free Astrology"
-                                class="w-20 h-14 object-cover rounded" loading="lazy">
-                            <span class="text-sm font-medium">Free Astrology</span>
-                            <svg class="ml-auto w-4 h-4 transform transition-transform" data-chevron
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.06z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </button>
-                        <ul class="mt-2 pl-6 hidden" data-submenu>
-                            <li><a class="block py-2 text-sm text-gray-700 hover:text-gray-900" href="/horoscopes">Free
-                                    Horoscope</a></li>
-                            <li><a class="block py-2 text-sm text-gray-700 hover:text-gray-900"
-                                    href="/Report.aspx?type=chart">Free Birth Chart</a></li>
-                            <li><a class="block py-2 text-sm text-gray-700 hover:text-gray-900"
-                                    href="/Report.aspx?type=birthstar">Free Birth Star</a></li>
-                            <li><a class="block py-2 text-sm text-gray-700 hover:text-gray-900"
-                                    href="/Report.aspx?type=moonsign">Free Moon Sign</a></li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a href="/corporate-info/contact-us"
-                            class="flex items-center gap-3 p-2 rounded hover:bg-gray-50">
-                            <img src="https://cdn.astroved.com/images/images-av/resources.jpg" alt="Resources"
-                                class="w-20 h-14 object-cover rounded" loading="lazy">
-                            <span class="text-sm font-medium">Resources</span>
-                        </a>
-                    </li>
+                    <!-- Account Section in Sidebar -->
+                    <div class="mb-6 pb-4 border-b border-gray-200 hidden">
+                        <h4 class="text-sm font-semibold text-gray-700 mb-3">Account</h4>
+                        <div class="space-y-2">
+                            <a href="./login.html"
+                                class="flex items-center gap-3 p-3 rounded-lg bg-[#FEA501] bg-opacity-10 hover:bg-[#FEA501] hover:bg-opacity-20 transition-all duration-300 group">
+                                <div
+                                    class="w-10 h-10 bg-gradient-to-br from-[#FEA501] to-[#e69400] rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                                    </svg>
+                                </div>
+                                <span
+                                    class="text-sm font-medium text-gray-900 group-hover:text-[#FEA501] transition-colors">Sign
+                                    In</span>
+                            </a>
+                            <a href="./Registration.html"
+                                class="flex items-center gap-3 p-3 rounded-lg bg-[#FEA501] bg-opacity-10 hover:bg-[#FEA501] hover:bg-opacity-20 transition-all duration-300 group">
+                                <div
+                                    class="w-10 h-10 bg-gradient-to-br from-[#FEA501] to-[#e69400] rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+                                    </svg>
+                                </div>
+                                <span
+                                    class="text-sm font-medium text-gray-900 group-hover:text-[#FEA501] transition-colors">Sign
+                                    Up</span>
+                            </a>
+                        </div>
+                    </div>
                 </ul>
             </nav>
         </aside>
@@ -447,7 +456,7 @@
     <section class="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <h1 class="text-5xl font-bold mb-6">About Astro Radisance</h1>
+                <h1 class="text-5xl font-bold mb-6">About Astro Radiance</h1>
                 <p class="text-1xl text-gray-300 max-w-3xl mx-auto">
                     Discover the ancient wisdom of Vedic astrology and spiritual guidance through our experienced team
                     of certified astrologers and spiritual guides.
@@ -471,9 +480,9 @@
                 <div class="relative">
                     <!-- Main Image with Decorative Elements -->
                     <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+                        <img src="./imges/astrologers/aoutus.jpg" 
                              alt="Our Story" 
-                             class="rounded-3xl shadow-2xl w-full">
+                             class="rounded-3xl shadow-2xl w-full ">
                         
                         <!-- Floating Decorative Elements -->
                         <!-- <div class="absolute -top-6 -left-6 w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center shadow-lg">
@@ -488,23 +497,23 @@
                     </div>
 
                     <!-- Timeline Cards -->
-                    <div class="mt-8 space-y-4">
-                        <div class="bg-white rounded-xl shadow-lg p-4 flex items-center">
+                    <div class="mt-8 space-y-10">
+                        <div class="bg-white rounded-xl shadow-lg px-4 py-8 flex items-center">
                             <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center mr-4">
                                 <i class="fas fa-seedling text-white"></i>
                             </div>
                             <div>
-                                <h4 class="font-semibold text-gray-900">1999 - The Beginning</h4>
-                                <p class="text-sm text-gray-600">Founded with a vision to make astrology accessible</p>
+                                <h4 class="font-semibold text-gray-900">2021 - The Beginning</h4>
+                                <p class="text-sm text-gray-600 pt-2">Founded with a vision to make astrology accessible</p>
                             </div>
                         </div>
-                        <div class="bg-white rounded-xl shadow-lg p-4 flex items-center">
+                        <div class="bg-white rounded-xl shadow-lg px-4 py-8 flex items-center">
                             <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mr-4">
                                 <i class="fas fa-globe text-white"></i>
                             </div>
                             <div>
-                                <h4 class="font-semibold text-gray-900">2010 - Global Expansion</h4>
-                                <p class="text-sm text-gray-600">Reached clients worldwide through digital platform</p>
+                                <h4 class="font-semibold text-gray-900">2025 - Global Expansion</h4>
+                                <p class="text-sm text-gray-600 pt-2">Reached clients worldwide through digital platform</p>
                             </div>
                         </div>
                     </div>
@@ -512,12 +521,12 @@
 
                 <div class="space-y-8">
                     <!-- Main Story Content -->
-                    <div class="bg-white rounded-2xl shadow-lg p-8 relative overflow-hidden">
+                    <div class="bg-white rounded-2xl shadow-lg px-8 py-4 relative overflow-hidden">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#FEA501] to-[#e69400] rounded-full -translate-y-16 translate-x-16 opacity-10"></div>
                         <div class="relative z-10">
                             <h3 class="text-2xl font-bold text-gray-900 mb-4">A Legacy of Wisdom</h3>
-                            <p class="text-lg text-gray-600 mb-6 leading-relaxed">Founded in 2021, Astro Radiance was established with a singular mission: to be a beacon of light for all those seeking direction through the profound wisdom of Vedic astrology (Jyotish). Astro Radiance is your trusted source for timeless celestial wisdom. We are dedicated to illuminating your life path through the profound, ancient science of Vedic astrology (Jyotish) and holistic spiritual guidance.Our foundation is built upon an experienced team of certified astrologers and compassionate spiritual guides who combine deep textual knowledge with intuitive insight. We use totally precise calculations and traditional methods to deliver clear, practical, and transformative readings.</p>
-                            <p class="text-lg text-gray-600 leading-relaxed">In just a few short years, we are proud to have helped over 15,000 people worldwide discover their true potential and navigate life's toughest challenges. Through personalized astrological consultations, spiritual guidance, and proven ancient remedies, we empower you to find clarity, success, and lasting inner peace.</p>
+                            <p class="text-base text-gray-600 mb-6 leading-relaxed">Founded in 2021, Astro Radiance was established with a singular mission: to be a beacon of light for all those seeking direction through the profound wisdom of Vedic astrology (Jyotish). Astro Radiance is your trusted source for timeless celestial wisdom. We are dedicated to illuminating your life path through the profound, ancient science of Vedic astrology (Jyotish) and holistic spiritual guidance.Our foundation is built upon an experienced team of certified astrologers and compassionate spiritual guides who combine deep textual knowledge with intuitive insight. We use totally precise calculations and traditional methods to deliver clear, practical, and transformative readings.</p>
+                            <p class="text-base text-gray-600 leading-relaxed">In just a few short years, we are proud to have helped over 15,000 people worldwide discover their true potential and navigate life's toughest challenges. Through personalized astrological consultations, spiritual guidance, and proven ancient remedies, we empower you to find clarity, success, and lasting inner peace.</p>
                         </div>
                     </div>
 
@@ -558,13 +567,13 @@
                     </div>
 
                     <!-- Call to Action -->
-                    <div class="bg-gradient-to-r from-[#FEA501] to-[#e69400] rounded-xl p-6 text-white text-center">
+                    <!-- <div class="bg-gradient-to-r from-[#FEA501] to-[#e69400] rounded-xl p-6 text-white text-center">
                         <h4 class="text-1xl font-bold mb-2">Join Our Journey</h4>
                         <p class="text-sm mb-4">Be part of our growing community of spiritual seekers</p>
                         <a href="#consultation" class="bg-white text-[#FEA501] px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">
                             Start Your Journey
                         </a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -622,67 +631,37 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 md:gap-8">
                 <!-- Team Member 1 -->
                 <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                        alt="Mrs. Santwana Johari" class="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover">
+                    <img src="./imges/astrologers/Santwana-aboutus.jpg"
+                        alt="Mrs. Santwana Johari" class="w-full h-auto max-h-72 sm:h-56 md:h-64 lg:h-72 object-cover">
                     <div class="p-4 sm:p-5 md:p-6">
                         <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-2">Mrs. Santwana Johari</h3>
                         <p class="text-[#FEA501] font-semibold text-xs sm:text-sm md:text-base mb-2 sm:mb-3 leading-snug">Founder/Certified Vedic Astrologer/Spiritual Counsellor/Trainer</p>
                         <p class="text-gray-600 text-sm sm:text-base mb-3 sm:mb-4 leading-relaxed">6+ years of experience in Vedic astrology and spiritual counselling. Expert in birth chart analysis, prediction and life guidance.</p>
-                        <div class="flex space-x-3 sm:space-x-4">
-                            <a href="#" class="text-gray-400 hover:text-[#FEA501] transition-colors text-base sm:text-lg md:text-xl" aria-label="Facebook">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-[#FEA501] transition-colors text-base sm:text-lg md:text-xl" aria-label="Twitter">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-[#FEA501] transition-colors text-base sm:text-lg md:text-xl" aria-label="LinkedIn">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </div>
+                       
                     </div>
                 </div>
 
                 <!-- Team Member 2 -->
                 <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
-                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                        alt="Nishant Sinha" class="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover">
+                    <img src="./imges/astrologers/NishantSinhap.jpg"
+                        alt="Nishant Sinha" class="w-full h-auto max-h-72 sm:h-56 md:h-64 lg:h-72 object-cover">
                     <div class="p-4 sm:p-5 md:p-6">
                         <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-2">Nishant Sinha</h3>
                         <p class="text-[#FEA501] font-semibold text-xs sm:text-sm md:text-base mb-2 sm:mb-3 leading-snug">Co-Founder/Chief Technical Officer/Spiritual Guide</p>
                         <p class="text-gray-600 text-sm sm:text-base mb-3 sm:mb-4 leading-relaxed">Leveraging 8+ years in IT to lead technical strategy and driving our cutting-edge application development.</p>
-                        <div class="flex space-x-3 sm:space-x-4">
-                            <a href="#" class="text-gray-400 hover:text-[#FEA501] transition-colors text-base sm:text-lg md:text-xl" aria-label="Facebook">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-[#FEA501] transition-colors text-base sm:text-lg md:text-xl" aria-label="Twitter">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-[#FEA501] transition-colors text-base sm:text-lg md:text-xl" aria-label="LinkedIn">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </div>
+                        
                     </div>
                 </div>
 
                 <!-- Team Member 3 -->
                 <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-[1.02] sm:col-span-2 lg:col-span-1">
-                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                        alt="Mrs. Jyoti Virley" class="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover">
+                    <img src="./imges/astrologers/jyotimam.jpg"
+                        alt="Mrs. Jyoti Virley" class="w-full h-auto max-h-72 sm:h-56 md:h-64 lg:h-72 object-cover">
                     <div class="p-4 sm:p-5 md:p-6">
                         <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-2">Mrs. Jyoti Virley</h3>
                         <p class="text-[#FEA501] font-semibold text-xs sm:text-sm md:text-base mb-2 sm:mb-3 leading-snug">Akashik Reader/Spiritual Guide/Trainer</p>
                         <p class="text-gray-600 text-sm sm:text-base mb-3 sm:mb-4 leading-relaxed">Specializing in accessing the Akashic Records to deliver profound clarity and transformative healing education. A seasoned Akashic Reader and Spiritual Guide dedicated to training the next generation of healers.</p>
-                        <div class="flex space-x-3 sm:space-x-4">
-                            <a href="#" class="text-gray-400 hover:text-[#FEA501] transition-colors text-base sm:text-lg md:text-xl" aria-label="Facebook">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-[#FEA501] transition-colors text-base sm:text-lg md:text-xl" aria-label="Twitter">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-[#FEA501] transition-colors text-base sm:text-lg md:text-xl" aria-label="LinkedIn">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -762,10 +741,10 @@
                 <!-- Testimonial 1 -->
                 <div class="bg-white rounded-xl shadow-lg p-6">
                     <div class="flex items-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                        <img src="./imges/testimonial/Bindu-1.jpg"
                             alt="Sarah Johnson" class="w-12 h-12 rounded-full object-cover mr-4">
                         <div>
-                            <h4 class="font-semibold text-gray-900">Sarah Johnson</h4>
+                            <h4 class="font-semibold text-gray-900">Mrs. Bindu Srivastava</h4>
                             <div class="flex text-[#FEA501]">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -775,17 +754,16 @@
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-600 italic">"The birth chart analysis helped me understand my career path
-                        better. I'm now in my dream job thanks to their guidance!"</p>
+                    <p class="text-gray-600 italic">"AstroRadiance truly changed my life! The birth chart analysis was so specific and illuminating—it helped me understand where my true professional strengths lie. I finally gained the confidence and clarity I needed to pursue a career I genuinely love. I'm now in my dream job, and it's all thanks to the incredible guidance and deep insights from AstroRadiance!"</p>
                 </div>
 
                 <!-- Testimonial 2 -->
                 <div class="bg-white rounded-xl shadow-lg p-6">
                     <div class="flex items-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                        <img src="./imges/testimonial/TarunSingh-2.jpg"
                             alt="Michael Chen" class="w-12 h-12 rounded-full object-cover mr-4">
                         <div>
-                            <h4 class="font-semibold text-gray-900">Michael Chen</h4>
+                            <h4 class="font-semibold text-gray-900">Mr. Tarun Singh</h4>
                             <div class="flex text-[#FEA501]">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -795,17 +773,16 @@
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-600 italic">"The gemstone recommendations have brought so much positive energy
-                        into my life. Highly recommend their services!"</p>
+                    <p class="text-gray-600 italic">"I approached AstroRadiance seeking help with persistent challenges in my personal life. The precise gemstone they recommended, based on my birth chart, has been an incredible anchor. I feel more grounded, my confidence has soared, and I've seen tangible positive changes in my daily interactions. Their guidance is genuine and highly effective. Thank you, AstroRadiance!"</p>
                 </div>
 
                 <!-- Testimonial 3 -->
                 <div class="bg-white rounded-xl shadow-lg p-6">
                     <div class="flex items-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                        <img src="./imges/testimonial/ParitoshSingh-3.jpg"
                             alt="Priya Patel" class="w-12 h-12 rounded-full object-cover mr-4">
                         <div>
-                            <h4 class="font-semibold text-gray-900">Priya Patel</h4>
+                            <h4 class="font-semibold text-gray-900">Mr. Paritosh Singh</h4>
                             <div class="flex text-[#FEA501]">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -815,8 +792,7 @@
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-600 italic">"Their palmistry reading was incredibly accurate. It helped me make
-                        important life decisions with confidence."</p>
+                    <p class="text-gray-600 italic">"I had been feeling incredibly lost about my life direction, especially regarding a major career change. The personalized consultation I received from AstroRadiance was like being handed a blueprint to my own potential. Their analysis was insightful, compassionate, and most importantly, actionable. I left the session with a renewed sense of purpose and the confidence to take the leap. It didn't just tell me my future—it gave me the tools to build it"</p>
                 </div>
             </div>
         </div>
@@ -843,14 +819,14 @@
         </div>
     </section>
 
-   <!-- Footer -->
+    <!-- Footer -->
     <footer class="bg-[#FFF9ED] text-gray-200 mt-8 sm:mt-10 md:mt-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-8 sm:py-10 md:py-12">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10">
                 <!-- Company Info -->
                 <div class="sm:col-span-2 lg:col-span-1">
                     <a href="/" class="inline-flex items-center gap-2 sm:gap-3 mb-4 sm:mb-5 md:mb-6">
-                        <img src="./imges/logo-removebg-preview.png" alt="Astro Radisance" 
+                        <img src="./imges/logo-removebg-preview.png" alt="Astro Radiance"
                             class="w-32 h-auto sm:w-36 md:w-40 lg:w-44 xl:w-48 max-w-full">
                     </a>
                     <p class="text-sm text-gray-900 mb-6 leading-relaxed">
@@ -858,7 +834,7 @@
                         personalized horoscopes, and spiritual remedies to help you navigate life's journey.
                     </p>
                     <div class="flex items-center gap-4">
-                        <a href="#"
+                        <a href="https://www.facebook.com/astroradiance2021"
                             class="p-3 bg-[#111827] rounded-full hover:bg-[#FEA500] hover:text-black transition-colors"
                             aria-label="Facebook">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -874,7 +850,7 @@
                                     d="M19.633 7.581c.013.176.013.352.013.529 0 5.386-4.1 11.599-11.599 11.599-2.305 0-4.446-.675-6.246-1.837.32.038.64.051.969.051 1.905 0 3.657-.65 5.054-1.743-1.785-.038-3.292-1.214-3.812-2.836.25.038.5.064.776.064.376 0 .752-.051 1.1-.139-1.87-.376-3.281-2.03-3.281-4.013v-.051c.551.308 1.184.494 1.885.518-1.111-.742-1.842-2.01-1.842-3.446 0-.757.203-1.466.551-2.078 2.04 2.506 5.09 4.16 8.526 4.33-.064-.303-.101-.625-.101-.949 0-2.287 1.85-4.136 4.136-4.136 1.188 0 2.262.494 3.016 1.285.949-.176 1.836-.53 2.635-.999-.313.975-.975 1.792-1.842 2.306.839-.101 1.64-.323 2.387-.651-.551.825-1.25 1.55-2.058 2.128z" />
                             </svg>
                         </a>
-                        <a href="#"
+                        <a href="https://www.instagram.com/astroradiance?utm_source=qr&igsh=MWc0cm94ZjI0MTdxeQ=="
                             class="p-3 bg-[#111827] rounded-full hover:bg-[#FEA500] hover:text-black transition-colors"
                             aria-label="Instagram">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -882,7 +858,7 @@
                                     d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 2h10c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z" />
                             </svg>
                         </a>
-                        <a href="#"
+                        <a href="https://youtube.com/@astroradiance?si=66Q7E7pBcExM5qzR"
                             class="p-3 bg-[#111827] rounded-full hover:bg-[#FEA500] hover:text-black transition-colors"
                             aria-label="YouTube">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -895,30 +871,36 @@
 
                 <!-- Quick Links -->
                 <div class="sm:col-span-1">
-                    <h4 class="text-base sm:text-lg md:text-xl font-bold text-[#000] mb-4 sm:mb-5 md:mb-6">Quick Links</h4>
+                    <h4 class="text-base sm:text-lg md:text-xl font-bold text-[#000] mb-4 sm:mb-5 md:mb-6">Quick Links
+                    </h4>
                     <ul class="space-y-2 sm:space-y-2.5 md:space-y-3 text-xs sm:text-sm md:text-base text-gray-300">
-                        <li><a href="/horoscopes" class="hover:text-[#FEA500] text-[#000]">Free Horoscopes</a></li>
-                        <li><a href="/panchang" class="hover:text-[#FEA500] text-[#000]">Daily Panchang</a></li>
-                        <li><a href="/reports" class="hover:text-[#FEA500] text-[#000]">Astrology Reports</a></li>
-                        <li><a href="/consultation" class="hover:text-[#FEA500] text-[#000]">Book Consultation</a></li>
-                        <li><a href="/remedies" class="hover:text-[#FEA500] text-[#000]">Vedic Remedies</a></li>
-                        <li><a href="/blog" class="hover:text-[#FEA500] text-[#000]">Astrology Blog</a></li>
+                        <li><a href="./index.html" class="hover:text-[#FEA500] text-[#000]">Home</a></li>
+                        <li><a href="./About.html" class="hover:text-[#FEA500] text-[#000]">About us</a></li>
+                        <li><a href="./Blog.html" class="hover:text-[#FEA500] text-[#000]">Blogs</a></li>
+                        <li><a href="./contact.html" class="hover:text-[#FEA500] text-[#000]">Contact us</a></li>
+                        <li><a href="#ConsultWithOurAstrologers" class="hover:text-[#FEA500] text-[#000]">Consult With
+                                Our Astrologers</a></li>
+                        <li><a href="#promotions" class="hover:text-[#FEA500] text-[#000]">promotions</a></li>
                     </ul>
                 </div>
 
                 <!-- Services -->
                 <div class="sm:col-span-1">
-                    <h4 class="text-base sm:text-lg md:text-xl font-bold text-[#000] mb-4 sm:mb-5 md:mb-6">Our Services</h4>
+                    <h4 class="text-base sm:text-lg md:text-xl font-bold text-[#000] mb-4 sm:mb-5 md:mb-6">Our Services
+                    </h4>
                     <ul class="space-y-2 sm:space-y-2.5 md:space-y-3 text-xs sm:text-sm md:text-base text-gray-300">
-                        <li><a href="/birth-chart" class="hover:text-[#FEA500] text-[#000]">Birth Chart Analysis</a>
+                        <li><a href="./comingsoon.html" class="hover:text-[#FEA500] text-[#000]">Birth Chart
+                                Analysis</a>
                         </li>
-                        <li><a href="/marriage-compatibility" class="hover:text-[#FEA500] text-[#000]">Marriage
+                        <li><a href="./comingsoon.html" class="hover:text-[#FEA500] text-[#000]">Marriage
                                 Compatibility</a></li>
-                        <li><a href="/career-guidance" class="hover:text-[#FEA500] text-[#000]">Career Guidance</a></li>
-                        <li><a href="/gemstone-consultation" class="hover:text-[#FEA500] text-[#000]">Gemstone
+                        <li><a href="./comingsoon.html" class="hover:text-[#FEA500] text-[#000]">Career Guidance</a>
+                        </li>
+                        <li><a href="./comingsoon.html" class="hover:text-[#FEA500] text-[#000]">Gemstone
                                 Consultation</a></li>
-                        <li><a href="/vastu-shastra" class="hover:text-[#FEA500] text-[#000]">Vastu Shastra</a></li>
-                        <li><a href="/numerology" class="hover:text-[#FEA500] text-[#000]">Numerology</a></li>
+                        <li><a href="./comingsoon.html" class="hover:text-[#FEA500] text-[#000]">Vastu Shastra</a></li>
+                        <li><a href="./tearms&codition.html" class="hover:text-[#FEA500] text-[#000]">Tearms &
+                                Codition</a></li>
                     </ul>
                 </div>
 
@@ -927,10 +909,8 @@
                     <h4 class="text-lg font-bold text-[#000] mb-6">Contact Us</h4>
                     <div class="space-y-4 text-sm text-gray-300">
                         <div class="flex items-start gap-3">
-                            <svg class="w-5 h-5 text-[#FEA500] mt-1 flex-shrink-0" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                            <svg class="w-5 h-5 text-[#FEA500] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
                                 </path>
                             </svg>
                             <div>
@@ -948,8 +928,8 @@
                             </svg>
                             <div>
                                 <p class="text-[#000] font-medium">Phone</p>
-                                <p class="text-[#000]">+91 98765 43210</p>
-                                <p class="text-[#000]">+91 87654 32109</p>
+                                <a href="https://wa.me/919911186787" class="text-[#000]">+91 9911186787</a>
+                                <!-- <p class="text-[#000]">+91 9876543210</p> -->
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
@@ -963,7 +943,7 @@
                             </svg>
                             <div>
                                 <p class="text-[#000] font-medium">Address</p>
-                                <p class="text-[#000]">123 Astrology Lane<br>Mystic City, MC 12345<br>India</p>
+                                <p class="text-[#000]">Panchsheel Green<br> Near ek murti, Greater Noida West, 201318 India</p>
                             </div>
                         </div>
                     </div>
@@ -991,7 +971,7 @@
             <div class="border-t border-gray-800 mt-8 pt-6">
                 <div class="flex flex-col md:flex-row justify-between items-center gap-4">
                     <div class="text-sm text-gray-500">
-                        © <span id="year">2025</span> Astro Radisance. All rights reserved.
+                        © <span id="year">2025</span> Astro Radiance. All rights reserved.
                     </div>
                     <div class="flex flex-wrap gap-6 text-sm text-gray-400">
                         <a href="/privacy-policy" class="hover:text-[#FEA500] transition-colors">Privacy Policy</a>
@@ -1004,7 +984,11 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+
+
+
+   
+    <script src="./script.js"></script>
 </body>
 
 </html>

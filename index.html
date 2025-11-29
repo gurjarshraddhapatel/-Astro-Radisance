@@ -4,27 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astro Radisance</title>
+    <link rel="icon" type="image/png" class="" href="imges/titlelogo.png">
+    <title>Astro Radiance</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script src="./script.js"></script>
+
     <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
+    <!-- header section -->
+
     <header class="shadow-[0_2px_8px_0_rgba(99,99,99,0.2)] pt-3 bg-[#fff] sticky top-0 z-50">
         <div class="max-w-[1320px] px-3 mx-auto w-full">
             <!-- Main Header Row -->
             <div class="flex items-center justify-between">
+
                 <!-- Logo -->
                 <div class="flex-shrink-0">
                     <a href="/" class="text-blue-600">
                         <img src="./imges/logo-removebg-preview.png" fetchpriority="high" width="186" height="48"
-                            alt="Astro Radisance" title="Astro Radisance" class="max-w-full h-auto align-middle" />
+                            alt="Astro Radiance" title="Astro Radiance" class="max-w-full h-auto align-middle" />
                     </a>
                 </div>
 
@@ -66,9 +71,7 @@
                                 <li class="px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">
                                     <a href="#" class="block">हिंदी - HI</a>
                                 </li>
-                                <li class="px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer">
-                                    <a href="#" class="block">தமிழ் - TA</a>
-                                </li>
+
                             </ul>
                         </div>
                     </div>
@@ -107,19 +110,29 @@
                             <ul class="space-y-1">
                                 <li
                                     class="px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer transition-colors">
-                                    <a href="./login.html" class="block">Sign In</a>
+                                    <a href="./comingsoon.html" class="block">Sign In</a>
                                 </li>
                                 <li
                                     class="px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm text-gray-700 hover:bg-gray-100 rounded cursor-pointer transition-colors">
-                                    <a href="./Registration.html" class="block">Sign Up</a>
+                                    <a href="./comingsoon.html" class="block">Sign Up</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
+                    <!-- Desktop sidebar toggle button -->
+                    <button id="sidebarToggleBtn" aria-expanded="false" aria-controls="sidebar"
+                        class="hidden  inline-flex items-center px-3 py-1.5 bg-white border border-[#FEA501] rounded shadow-sm z-50 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16">
+                            </path>
+                        </svg>
+                        <!-- <span class="ml-2 text-sm font-medium">Menu</span> -->
+                    </button>
                 </div>
 
                 <!-- Mobile Account Button (visible on smaller screens, hidden on desktop) -->
-              
 
                 <!-- Mobile Menu Button -->
                 <button id="mobileMenuToggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
@@ -145,47 +158,7 @@
                 </form>
             </div>
 
-            <!-- Navigation Bar -->
-            <nav class="hidden md:block border-t border-gray-200 mt-4 py-4">
-                <ul class="flex items-center justify-center space-x-8">
-                    <li>
-                        <a href="./index.html"
-                            class="text-gray-700 hover:text-[#fff] hover:bg-[#FEA501] px-2 py-2 rounded transition-colors font-medium text-sm">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./About.html"
-                            class="text-gray-700 hover:text-[#fff] hover:bg-[#FEA501] px-2 py-2 rounded transition-colors font-medium text-sm">
-                            About Us
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./Blog.html"
-                            class="text-gray-700 hover:text-[#fff] hover:bg-[#FEA501] px-2 py-2 rounded transition-colors font-medium text-sm">
-                            Blog
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="text-gray-700 hover:text-[#fff] hover:bg-[#FEA501] px-2 py-2 rounded transition-colors font-medium text-sm">
-                            Services
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="text-gray-700 hover:text-[#fff] hover:bg-[#FEA501] px-2 py-2 rounded transition-colors font-medium text-sm">
-                            Consultation
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./contact.html"
-                            class="text-gray-700 hover:text-[#fff] hover:bg-[#FEA501] px-2 py-2 rounded transition-colors font-medium text-sm">
-                            Contact
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+
         </div>
 
         <!-- Mobile Menu Overlay -->
@@ -294,17 +267,6 @@
         <div id="sidebarOverlay"
             class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300"></div>
 
-        <!-- Desktop sidebar toggle button -->
-        <button id="sidebarToggleBtn" aria-expanded="false" aria-controls="sidebar"
-            class="hidden lg:fixed top-8 right-12 inline-flex items-center px-3 py-1.5 bg-white border border-[#FEA501] rounded shadow-sm z-50 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                </path>
-            </svg>
-            <!-- <span class="ml-2 text-sm font-medium">Menu</span> -->
-        </button>
-
         <!-- Mobile sidebar toggle button -->
         <button id="mobileSidebarToggleBtn" aria-expanded="false" aria-controls="sidebar"
             class="lg:hidden fixed top-6 right-4 inline-flex items-center px-3 py-2 bg-white border border-[#FEA501] rounded shadow-sm z-50 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors">
@@ -330,25 +292,21 @@
             </div>
 
             <nav class="p-4">
-                
+
 
                 <ul class="space-y-2">
                     <li>
-                        <a href="/us/specials?promo=SL_MM_Specials"
+                        <a href="./index.html"
                             class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                            <img src="https://cdn.astroved.com/images/images-av/monthly-specials.jpg"
-                                alt="Special Events" class="w-16 h-12 sm:w-20 sm:h-14 object-cover rounded"
-                                loading="lazy">
-                            <span class="text-sm font-medium text-gray-900">Special Events</span>
+                            <img src="./imges/sidebar-logo/home.png" alt="home" class="w-12 h-12 sm:w-15 sm:h-15 object-cover rounded">
+                            <span class="text-sm font-medium text-gray-900">Home</span>
                         </a>
                     </li>
 
                     <li>
                         <a href="./About.html"
                             class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                            <img src="https://cdn.astroved.com/images/images-av/monthly-specials.jpg"
-                                alt="Special Events" class="w-16 h-12 sm:w-20 sm:h-14 object-cover rounded"
-                                loading="lazy">
+                            <img src="./imges/sidebar-logo/about-us.png" alt="Special Events" class="w-12 h-12 sm:w-15 sm:h-15 object-cover rounded">
                             <span class="text-sm font-medium text-gray-900">About Us</span>
                         </a>
                     </li>
@@ -356,14 +314,23 @@
                     <li>
                         <a href="./Blog.html"
                             class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                            <img src="./imges/Blog.jpg" alt="Skanda Shasti 2025"
-                                class="w-16 h-12 sm:w-20 sm:h-14 object-cover rounded" loading="lazy">
+                            <img src="./imges/sidebar-logo/blogs.png" alt="Skanda Shasti 2025"
+                                class="w-12 h-12 sm:w-15 sm:h-15 object-cover rounded">
                             <span class="text-sm font-medium text-gray-900">Blogs</span>
                         </a>
                     </li>
 
-                    <!-- Item with submenu -->
                     <li>
+                        <a href="./contact.html"
+                            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                            <img src="./imges/sidebar-logo/contact-us.png" alt="Skanda Shasti 2025"
+                                class="w-12 h-12 sm:w-15 sm:h-15 object-cover rounded">
+                            <span class="text-sm font-medium text-gray-900">Contact us</span>
+                        </a>
+                    </li>
+
+                    <!-- Item with submenu -->
+                    <!-- <li>
                         <button class="w-full flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
                             data-toggle="submenu" aria-expanded="false">
                             <img src="https://cdn.astroved.com/images/images-av/astrospeaks.jpg"
@@ -405,10 +372,10 @@
                             <li><a class="block py-2 px-3 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-colors"
                                     href="/astrology-services#transit-report">Planetary Transit Reports</a></li>
                         </ul>
-                    </li>
+                    </li> -->
 
                     <!-- Repeat for other items with optional submenus -->
-                    <li>
+                    <!-- <li>
                         <button class="w-full flex items-center gap-3 p-2 rounded hover:bg-gray-50"
                             data-toggle="submenu" aria-expanded="false">
                             <img src="https://cdn.astroved.com/images/images-av/wealth-remedies.jpg"
@@ -441,44 +408,45 @@
                             <li><a class="block py-2 text-sm text-gray-700 hover:text-gray-900"
                                     href="/written-mantra-c51.aspx">Proxy Mantra Writing</a></li>
                         </ul>
-                    </li>
+                    </li> -->
 
                     <!-- A few more top-level items (non-collapsible) -->
 
 
-                   
                     <!-- Account Section in Sidebar -->
-                <div class="mb-6 pb-4 border-b border-gray-200">
-                    <h4 class="text-sm font-semibold text-gray-700 mb-3">Account</h4>
-                    <div class="space-y-2">
-                        <a href="./login.html"
-                            class="flex items-center gap-3 p-3 rounded-lg bg-[#FEA501] bg-opacity-10 hover:bg-[#FEA501] hover:bg-opacity-20 transition-all duration-300 group">
-                            <div
-                                class="w-10 h-10 bg-gradient-to-br from-[#FEA501] to-[#e69400] rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
-                                </svg>
-                            </div>
-                            <span
-                                class="text-sm font-medium text-gray-900 group-hover:text-[#FEA501] transition-colors">Sign
-                                In</span>
-                        </a>
-                        <a href="./Registration.html"
-                            class="flex items-center gap-3 p-3 rounded-lg bg-[#FEA501] bg-opacity-10 hover:bg-[#FEA501] hover:bg-opacity-20 transition-all duration-300 group">
-                            <div
-                                class="w-10 h-10 bg-gradient-to-br from-[#FEA501] to-[#e69400] rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
-                                </svg>
-                            </div>
-                            <span
-                                class="text-sm font-medium text-gray-900 group-hover:text-[#FEA501] transition-colors">Sign
-                                Up</span>
-                        </a>
+                    <div class="mb-6 pb-4 border-b border-gray-200 hidden">
+                        <h4 class="text-sm font-semibold text-gray-700 mb-3">Account</h4>
+                        <div class="space-y-2">
+                            <a href="./login.html"
+                                class="flex items-center gap-3 p-3 rounded-lg bg-[#FEA501] bg-opacity-10 hover:bg-[#FEA501] hover:bg-opacity-20 transition-all duration-300 group">
+                                <div
+                                    class="w-10 h-10 bg-gradient-to-br from-[#FEA501] to-[#e69400] rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                                    </svg>
+                                </div>
+                                <span
+                                    class="text-sm font-medium text-gray-900 group-hover:text-[#FEA501] transition-colors">Sign
+                                    In</span>
+                            </a>
+                            <a href="./Registration.html"
+                                class="flex items-center gap-3 p-3 rounded-lg bg-[#FEA501] bg-opacity-10 hover:bg-[#FEA501] hover:bg-opacity-20 transition-all duration-300 group">
+                                <div
+                                    class="w-10 h-10 bg-gradient-to-br from-[#FEA501] to-[#e69400] rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+                                    </svg>
+                                </div>
+                                <span
+                                    class="text-sm font-medium text-gray-900 group-hover:text-[#FEA501] transition-colors">Sign
+                                    Up</span>
+                            </a>
+                        </div>
                     </div>
-                </div>
                 </ul>
             </nav>
         </aside>
@@ -487,6 +455,25 @@
 
     </div>
 
+    <!-- Beta Version Marquee Banner -->
+    <div class=" text-[#fe0101] py-2 sm:py-2.5 md:py-3 overflow-hidden relative z-40">
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <span class="inline-block whitespace-nowrap text-xs sm:text-sm md:text-base font-semibold px-4">
+                    🚀 This is Beta Version of AstroRadiance Website. The Stable Version of the same will be coming
+                    soon. 🚀
+                </span>
+                <span class="inline-block whitespace-nowrap text-xs sm:text-sm md:text-base font-semibold px-4">
+                    🚀 This is Beta Version of AstroRadiance Website. The Stable Version of the same will be coming
+                    soon. 🚀
+                </span>
+                <span class="inline-block whitespace-nowrap text-xs sm:text-sm md:text-base font-semibold px-4">
+                    🚀 This is Beta Version of AstroRadiance Website. The Stable Version of the same will be coming
+                    soon. 🚀
+                </span>
+            </div>
+        </div>
+    </div>
 
     <!-- Full Screen Carousel Container -->
     <div class="relative w-full overflow-hidden" id="carousel-container" style="height: auto;">
@@ -494,15 +481,14 @@
         <div class="relative w-full overflow-hidden" id="carousel-wrapper" style="height: auto;">
             <div class="flex transition-transform duration-700 ease-in-out" id="carousel-slides"
                 style="height: auto; width: 200%;">
-
-
                 <!-- Slide 2 -->
                 <div class="relative" style="flex-shrink: 0; width: 50%; position: relative;">
-                    <video id="carousel-video" src="./imges/carousel/WhatsApp Video 2025-10-28 at 15.13.16_cc2b1e7f.mp4"
+                    <!-- <video id="carousel-video" src="./imges/carousel/WhatsApp Video 2025-10-28 at 15.13.16_cc2b1e7f.mp4"
                         autoplay muted loop playsinline class="w-full h-auto"
                         style="display: block; object-fit: cover;">
-                    </video>
-
+                    </video> -->
+                    <img id="carousel-image" src="./imges/carousel/slide.jpg" alt="Slide 1" class="w-full h-auto"
+                    style="display: block; object-fit: cover;" />
                 </div>
                 <!-- Slide 1 -->
                 <div class="relative" style="flex-shrink: 0; width: 50%;">
@@ -511,20 +497,15 @@
                 </div>
 
             </div>
-
             <!-- Navigation Buttons -->
-            <button id="prev-btn"
-                class="absolute left-6 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-sm text-white rounded-full p-4 md:p-5 shadow-2xl transition-all duration-300 hover:scale-110 z-10"
-                aria-label="Previous slide">
-                <svg class="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button id="prev-btn" class="absolute left-6 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-sm text-white rounded-full p-0 md:p-3 shadow-2xl transition-all duration-300 hover:scale-110 z-10" aria-label="Previous slide">
+                <svg class="w-4 h-4 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                 </svg>
             </button>
 
-            <button id="next-btn"
-                class="absolute right-6 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-sm text-white rounded-full p-4 md:p-5 shadow-2xl transition-all duration-300 hover:scale-110 z-10"
-                aria-label="Next slide">
-                <svg class="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button id="next-btn" class="absolute right-6 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-sm text-white rounded-full p-0 md:p-3 shadow-2xl transition-all duration-300 hover:scale-110 z-10" aria-label="Next slide">
+                <svg class="w-4 h-4 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                 </svg>
             </button>
@@ -543,19 +524,16 @@
     </div>
 
 
-
-
-
     <!-- Consultation Banner Section -->
     <section class="py-2 sm:py-4 md:py-6">
         <div class="max-w-[1320px] px-3 sm:px-4 md:px-6 lg:px-8 mx-auto w-full">
-            <a href="./Astro-about.html"
+            <a href="https://wa.me/919911186787" target="_blank"
                 class="grid grid-cols-1 md:grid-cols-[280px_1fr] lg:grid-cols-[400px_1fr] xl:grid-cols-[450px_1fr] bg-cover bg-center bg-no-repeat h-auto min-h-[220px] sm:min-h-[240px] md:min-h-[180px] lg:min-h-[170px] rounded-lg overflow-hidden z-[99] transition-transform duration-300 hover:scale-[1.01] shadow-lg"
-                style="background-image: linear-gradient(to left, #F3CCB0, #DBC1CC, #B4A9EB)">
+                style="background-image: linear-gradient(to left, #1A93F0, #1A93F0, #1a93f08a)">
 
                 <!-- Image Column -->
                 <div
-                    class="relative flex items-center justify-center md:justify-start order-1 h-[140px] sm:h-[160px] md:h-full overflow-hidden bg-black/10 md:bg-transparent">
+                    class="relative flex items-center justify-center md:justify-center order-1 h-[140px] sm:h-[160px] md:h-full overflow-hidden bg-black/10 md:bg-transparent">
                     <img src="./imges/astro-img.png" alt="Astrology Consultation"
                         class="w-auto h-full sm:h-[90%] md:h-full max-h-[180px] object-contain" loading="lazy">
                 </div>
@@ -586,7 +564,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 ">
             <div class="text-center mb-10">
 
-                <h2 class="text-3xl font-bold text-gray-900 mb-6">Why Choose Astro Radisance?</h2>
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Why Choose Astro Radiance?</h2>
                 <!-- <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
                     Experience the power of authentic Vedic astrology with our expert guidance, personalized solutions, and proven track record of helping thousands find their path to success.
                 </p> -->
@@ -716,52 +694,44 @@
 
 
     <!-- Promotional Banners Section -->
-    <section class="text-center py-8">
+    <section id="promotions" class="text-center py-8">
         <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <!-- Banner 1: Ask an Expert Astrologer -->
-                <a href="https://www.astroved.com/astrovedspeaks/?promo=SL_snip_AstroVedSpeaks" class="block">
+                
+                <a href="https://wa.me/919911186787" class="block">
                     <picture>
-                        <source srcset="https://cdn.astroved.com/images/images-av/ask-an-expert-astrologer.webp"
-                            type="image/webp" />
-                        <img src="https://cdn.astroved.com/images/images-av/ask-an-expert-astrologer.jpg" loading="lazy"
-                            alt="Ask an expert astrologer" width="720" height="200"
+                        <source srcset="./imges/promostions/promo3.jpg" type="image/webp" />
+                        <img src="./imges/promostions/promo3.jpg" loading="lazy"
+                            alt="Rudraksha Sacred Seeds of Shiva's Grace" width="720" height="200"
                             class="w-full h-auto max-w-full align-middle rounded-lg" />
                     </picture>
                 </a>
-
                 <!-- Banner 2: Nadi Astrology -->
-                <a href="https://www.astroved.com/nadi/nadi-astrology?promo=SL_snip_NADI" class="block">
+                <a href="https://wa.me/919911186787" class="block">
                     <picture>
-                        <source srcset="https://cdn.astroved.com/images/images-av/av-nadi-astrology.webp"
-                            type="image/webp" />
-                        <img src="https://cdn.astroved.com/images/images-av/av-nadi-astrology.jpg" loading="lazy"
-                            alt="Nadi Astrology" width="720" height="200"
-                            class="w-full h-auto max-w-full align-middle rounded-lg" />
+                        <source srcset="./imges/promostions/promo2.jpg" type="image/webp" />
+                        <img src="./imges/promostions/promo2.jpg" loading="lazy" alt="Nadi Astrology" width="720"
+                            height="200" class="w-full h-auto max-w-full align-middle rounded-lg" />
                     </picture>
                 </a>
             </div>
 
             <!-- Banner 3: Rudraksha Sacred Seeds - Full Width -->
             <div class="mt-5 grid grid-cols-1 md:grid-cols-2 gap-5">
-                <a href="https://www.astroved.com/rudraksha-beads?promo=SL_Snip_Rudraksha" class="block">
+                <a href="https://wa.me/919911186787" class="block">
                     <picture>
-                        <source
-                            srcset="https://cdn.astroved.com/images/images-av/rudraksha-sacred-seeds-of-shiva-grace.webp"
-                            type="image/webp" />
-                        <img src="https://cdn.astroved.com/images/images-av/rudraksha-sacred-seeds-of-shiva-grace.jpg"
-                            loading="lazy" alt="Rudraksha Sacred Seeds of Shiva's Grace" width="720" height="200"
-                            class="w-full h-auto max-w-full align-middle rounded-lg" />
+                        <source srcset="./imges/promostions/promo1.jpg" type="image/webp" />
+                        <img src="./imges/promostions/promo1.jpg" loading="lazy" alt="Ask an expert astrologer"
+                            width="720" height="200" class="w-full h-auto max-w-full align-middle rounded-lg" />
                     </picture>
                 </a>
 
-                <a href="https://www.astroved.com/astrovedspeaks/?promo=SL_snip_AstroVedSpeaks" class="block">
+                <a href="https://wa.me/919911186787" class="block">
                     <picture>
-                        <source srcset="https://cdn.astroved.com/images/images-av/ask-an-expert-astrologer.webp"
-                            type="image/webp" />
-                        <img src="https://cdn.astroved.com/images/images-av/ask-an-expert-astrologer.jpg" loading="lazy"
-                            alt="Ask an expert astrologer" width="720" height="200"
-                            class="w-full h-auto max-w-full align-middle rounded-lg" />
+                        <source srcset="./imges/promostions/promo4.jpg" type="image/webp" />
+                        <img src="./imges/promostions/promo4.jpg" loading="lazy" alt="Ask an expert astrologer"
+                            width="720" height="200" class="w-full h-auto max-w-full align-middle rounded-lg" />
                     </picture>
                 </a>
             </div>
@@ -769,11 +739,11 @@
     </section>
 
 
-    <!--  Services Consult With Our Astrologers -->
-    <section class="max-w-8xl bg-[#fff8edbe] mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!--  Services Consult With Our Astrologers section -->
+    <section id="ConsultWithOurAstrologers" class="max-w-8xl bg-[#fff8edbe] mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="max-w-[1320px] mx-auto">
-            <h2 class="text-3xl font-bold  mb-3">Consult With Our Astrologers</h2>
-            <p class="mb-5">Book a personalized session with our experienced astrologers today, Gain clarity
+            <h2 class="text-3xl text-center font-bold  mb-3">Consult With Our Astrologers</h2>
+            <p class="mb-5 text-center">Book a personalized session with our experienced astrologers today, Gain clarity
                 and insight on life&#39;s most pressing questions. Get a detailed reading that illuminates
                 your past, present, and future path.</p>
 
@@ -781,30 +751,26 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
                 <!-- Team Card 1 -->
-                <div>
-                    <div
-                        class="relative w-[300px] h-[400px] bg-gradient-to-b from-white shadow-lg to-[#FFF8ED] to-[30%] to-indgo-800 from-[30%] rounded-[20px] overflow-hidden group cursor-pointer">
-                        <!-- Image Container -->
+                <a href="https://wa.me/919911186787">
+                    <div class="relative w-[300px] h-[400px] bg-gradient-to-b from-white shadow-lg to-[#FFF8ED] to-[30%] to-indgo-800 from-[30%] rounded-[20px] overflow-hidden group cursor-pointer">
                         <div class=" top-0 left-0 w-full h-full">
-                            <img src="./imges/Consult-img1.jpg" alt="Cleo McDowell"
+                            <img src="./imges/astrologers/JyotiVirley.jpg" alt="Cleo McDowell"
                                 class="absolute top-0 left-0 w-full h-full object-cover" />
                         </div>
-
-
                     </div>
                     <!-- Content -->
                     <div class="text-center">
-                        <h1 class="text-[#000] text-2xl font-medium">AKASHIK READER</h1>
+                        <!-- <h1 class="text-[#000] text-2xl font-medium">AKASHIK READER</h1> -->
 
                     </div>
-                </div>
+                </a>
                 <!-- Team Card 2 -->
-                <div>
+                <a href="https://wa.me/919911186787">
                     <div
                         class="relative w-[300px] h-[400px] bg-gradient-to-b from-white shadow-lg to-[#FFF8ED] to-[30%] to-indgo-800 from-[30%] rounded-[20px] overflow-hidden group cursor-pointer">
                         <!-- Image Container -->
                         <div class=" top-0 left-0 w-full h-full">
-                            <img src="./imges/Consult-img1.jpg" alt="Cleo McDowell"
+                            <img src="./imges/astrologers/SantwanaJohari.jpg" alt="Cleo McDowell"
                                 class="absolute top-0 left-0 w-full h-full object-cover" />
                         </div>
 
@@ -812,18 +778,17 @@
                     </div>
                     <!-- Content -->
                     <div class="text-center">
-                        <h1 class="text-[#000] text-2xl font-medium">Cleo McDowell</h1>
+                        <!-- <h1 class="text-[#000] text-2xl font-medium">Cleo McDowell</h1> -->
 
                     </div>
-                </div>
-
+                </a>
                 <!-- Team Card 3 -->
-                <div>
+                <a href="https://wa.me/919911186787">
                     <div
                         class="relative w-[300px] h-[400px] bg-gradient-to-b from-white shadow-lg to-[#FFF8ED] to-[30%] to-indgo-800 from-[30%] rounded-[20px] overflow-hidden group cursor-pointer">
                         <!-- Image Container -->
                         <div class=" top-0 left-0 w-full h-full">
-                            <img src="./imges/Consult-img1.jpg" alt="Cleo McDowell"
+                            <img src="./imges/astrologers/ManishSingh.jpg" alt="Cleo McDowell"
                                 class="absolute top-0 left-0 w-full h-full object-cover" />
                         </div>
 
@@ -831,18 +796,18 @@
                     </div>
                     <!-- Content -->
                     <div class="text-center">
-                        <h1 class="text-[#000] text-2xl font-medium">Cleo McDowell</h1>
+                        <!-- <h1 class="text-[#000] text-2xl font-medium">Cleo McDowell</h1> -->
 
                     </div>
-                </div>
+                </a>
 
                 <!-- Team Card 4 -->
-                <div>
+                <a href="https://wa.me/919911186787">
                     <div
                         class="relative w-[300px] h-[400px] bg-gradient-to-b from-white shadow-lg to-[#FFF8ED] to-[30%] to-indgo-800 from-[30%] rounded-[20px] overflow-hidden group cursor-pointer">
                         <!-- Image Container -->
                         <div class=" top-0 left-0 w-full h-full">
-                            <img src="./imges/Consult-img1.jpg" alt="Cleo McDowell"
+                            <img src="./imges/astrologers/SantwanaJohari.jpg" alt="Cleo McDowell"
                                 class="absolute top-0 left-0 w-full h-full object-cover" />
                         </div>
 
@@ -850,10 +815,10 @@
                     </div>
                     <!-- Content -->
                     <div class="text-center">
-                        <h1 class="text-[#000] text-2xl font-medium">Cleo McDowell</h1>
+                        <!-- <h1 class="text-[#000] text-2xl font-medium">Cleo McDowell</h1> -->
 
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -961,7 +926,7 @@
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Ask Questions Card -->
                 <div class="group">
-                    <a href="#"
+                    <a href="./comingsoon.html"
                         class="block bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
                         <div class="relative">
                             <img src="https://astropatri.com/wp-content/themes/AstroP/images/ask-question-img1.png"
@@ -988,7 +953,7 @@
 
                 <!-- Career Report Card -->
                 <div class="group">
-                    <a href="https://astropatri.com/consult/vedic_astrology/personalized_report/1-Year-career-report"
+                    <a href="./comingsoon.html"
                         class="block bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
                         <div class="relative">
                             <img src="https://astropatri.com/wp-content/themes/AstroP/images/career.jpg"
@@ -1018,7 +983,7 @@
 
                 <!-- Marriage Report Card -->
                 <div class="group">
-                    <a href="https://astropatri.com/consult/vedic_astrology/personalized_report/marriage-prospects-report"
+                    <a href="./comingsoon.html"
                         class="block bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
                         <div class="relative">
                             <img src="https://astropatri.com/wp-content/themes/AstroP/images/marriage-img-1.jpg"
@@ -1046,22 +1011,18 @@
                     </a>
                 </div>
             </div>
-
-
         </div>
     </section>
 
     <!-- Horoscope Section -->
     <section class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-[#fff8edbe]">
         <h1 class="text-3xl font-bold text-center ">Free Daily Horoscopes</h1>
-
-
         <div class="space-y-8 pt-5">
             <!--  Signs Grid -->
             <div class="flex flex-wrap justify-center">
                 <!-- Aries -->
                 <div class="w-1/2 sm:w-1/3 md:w-1/4 lg:w-[13%] p-2 cursor-pointer">
-                    <a href="/horoscopes/daily/aries/" class="block">
+                    <a href="./comingsoon.html" class="block">
                         <div class="border border-[#fee3e2] text-center p-2 transition-transform hover:scale-105">
                             <img src="https://astropatri.com/wp-content/uploads/2023/06/Aries.png" alt="Aries"
                                 class="w-[74%] mx-auto py-2">
@@ -1071,7 +1032,7 @@
                 </div>
                 <!-- Taurus -->
                 <div class="w-1/2 sm:w-1/3 md:w-1/4 lg:w-[13%] p-2 cursor-pointer">
-                    <a href="/horoscopes/daily/taurus/" class="block">
+                    <a href="./comingsoon.html" class="block">
                         <div class="border border-[#fee3e2] text-center p-2 transition-transform hover:scale-105">
                             <img src="https://astropatri.com/wp-content/uploads/2023/06/TAURUS.png" alt="Taurus"
                                 class="w-[74%] mx-auto py-2">
@@ -1081,7 +1042,7 @@
                 </div>
                 <!-- Gemini -->
                 <div class="w-1/2 sm:w-1/3 md:w-1/4 lg:w-[13%] p-2 cursor-pointer">
-                    <a href="/horoscopes/daily/gemini/" class="block">
+                    <a href="./comingsoon.html" class="block">
                         <div class="border border-[#fee3e2] text-center p-2 transition-transform hover:scale-105">
                             <img src="https://astropatri.com/wp-content/uploads/2023/06/GEMINI.png" alt="Gemini"
                                 class="w-[74%] mx-auto py-2">
@@ -1091,7 +1052,7 @@
                 </div>
                 <!-- Cancer -->
                 <div class="w-1/2 sm:w-1/3 md:w-1/4 lg:w-[13%] p-2 cursor-pointer">
-                    <a href="/horoscopes/daily/cancer/" class="block">
+                    <a href="./comingsoon.html" class="block">
                         <div class="border border-[#fee3e2] text-center p-2 transition-transform hover:scale-105">
                             <img src="https://astropatri.com/wp-content/uploads/2023/06/CANCER.png" alt="Cancer"
                                 class="w-[74%] mx-auto py-2">
@@ -1101,7 +1062,7 @@
                 </div>
                 <!-- Leo -->
                 <div class="w-1/2 sm:w-1/3 md:w-1/4 lg:w-[13%] p-2 cursor-pointer">
-                    <a href="/horoscopes/daily/leo/" class="block">
+                    <a href="./comingsoon.html" class="block">
                         <div class="border border-[#fee3e2] text-center p-2 transition-transform hover:scale-105">
                             <img src="https://astropatri.com/wp-content/uploads/2023/06/leo.png" alt="Leo"
                                 class="w-[74%] mx-auto py-2">
@@ -1111,7 +1072,7 @@
                 </div>
                 <!-- Virgo -->
                 <div class="w-1/2 sm:w-1/3 md:w-1/4 lg:w-[13%] p-2 cursor-pointer">
-                    <a href="/horoscopes/daily/virgo/" class="block">
+                    <a href="./comingsoon.html" class="block">
                         <div class="border border-[#fee3e2] text-center p-2 transition-transform hover:scale-105">
                             <img src="https://astropatri.com/wp-content/uploads/2023/06/VIRGO.png" alt="Virgo"
                                 class="w-[74%] mx-auto py-2">
@@ -1121,7 +1082,7 @@
                 </div>
                 <!-- Libra -->
                 <div class="w-1/2 sm:w-1/3 md:w-1/4 lg:w-[13%] p-2 cursor-pointer">
-                    <a href="/horoscopes/daily/libra/" class="block">
+                    <a href="./comingsoon.html" class="block">
                         <div class="border border-[#fee3e2] text-center p-2 transition-transform hover:scale-105">
                             <img src="https://astropatri.com/wp-content/uploads/2023/06/LIBRA.png" alt="Libra"
                                 class="w-[74%] mx-auto py-2">
@@ -1131,7 +1092,7 @@
                 </div>
                 <!-- Scorpio -->
                 <div class="w-1/2 sm:w-1/3 md:w-1/4 lg:w-[13%] p-2 cursor-pointer">
-                    <a href="/horoscopes/daily/scorpio/" class="block">
+                    <a href="./comingsoon.html" class="block">
                         <div class="border border-[#fee3e2] text-center p-2 transition-transform hover:scale-105">
                             <img src="https://astropatri.com/wp-content/uploads/2023/06/SCORPIO.png" alt="Scorpio"
                                 class="w-[74%] mx-auto py-2">
@@ -1141,7 +1102,7 @@
                 </div>
                 <!-- Sagittarius -->
                 <div class="w-1/2 sm:w-1/3 md:w-1/4 lg:w-[13%] p-2 cursor-pointer">
-                    <a href="/horoscopes/daily/sagittarius/" class="block">
+                    <a href="./comingsoon.html" class="block">
                         <div class="border border-[#fee3e2] text-center p-2 transition-transform hover:scale-105">
                             <img src="https://astropatri.com/wp-content/uploads/2023/06/Sagittarius.png"
                                 alt="Sagittarius" class="w-[74%] mx-auto py-2">
@@ -1151,7 +1112,7 @@
                 </div>
                 <!-- Capricorn -->
                 <div class="w-1/2 sm:w-1/3 md:w-1/4 lg:w-[13%] p-2 cursor-pointer">
-                    <a href="/horoscopes/daily/capricorn/" class="block">
+                    <a href="./comingsoon.html" class="block">
                         <div class="border border-[#fee3e2] text-center p-2 transition-transform hover:scale-105">
                             <img src="https://astropatri.com/wp-content/uploads/2023/06/Capricorn.png" alt="Capricorn"
                                 class="w-[74%] mx-auto py-2">
@@ -1161,7 +1122,7 @@
                 </div>
                 <!-- Aquarius -->
                 <div class="w-1/2 sm:w-1/3 md:w-1/4 lg:w-[13%] p-2 cursor-pointer">
-                    <a href="/horoscopes/daily/aquarius/" class="block">
+                    <a href="./comingsoon.html" class="block">
                         <div class="border border-[#fee3e2] text-center p-2 transition-transform hover:scale-105">
                             <img src="https://astropatri.com/wp-content/uploads/2023/06/Aquarius.png" alt="Aquarius"
                                 class="w-[74%] mx-auto py-2">
@@ -1171,7 +1132,7 @@
                 </div>
                 <!-- Pisces -->
                 <div class="w-1/2 sm:w-1/3 md:w-1/4 lg:w-[13%] p-2 cursor-pointer">
-                    <a href="/horoscopes/daily/pisces/" class="block">
+                    <a href="./comingsoon.html" class="block">
                         <div class="border border-[#fee3e2] text-center p-2 transition-transform hover:scale-105">
                             <img src="https://astropatri.com/wp-content/uploads/2023/06/PISCES.png" alt="Pisces"
                                 class="w-[74%] mx-auto py-2">
@@ -1182,22 +1143,21 @@
             </div>
         </div>
 
-
     </section>
 
 
     <!-- Today's Panchang and Nakshatra Section -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class=" mb-12">
             <h2 class="text-4xl font-bold text-gray-900 mb-4">Today's Panchang & Nakshatra</h2>
 
         </div>
 
         <div class="grid lg:grid-cols-3 gap-8">
-            <!-- Main Panchang Card -->
+            Main Panchang Card
             <div class="lg:col-span-2">
                 <div class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-                    <!-- Header -->
+                    Header
                     <div class="bg-gradient-to-r from-[#FEA500] to-[#e69400] p-6 text-white">
                         <div class="flex items-center justify-between">
                             <div class="flex items-center space-x-4">
@@ -1220,9 +1180,9 @@
                         </div>
                     </div>
 
-                    <!-- Panchang Details -->
+                    Panchang Details
                     <div class="p-6">
-                        <!-- Sun Timings -->
+                        Sun Timings
                         <div class="grid md:grid-cols-2 gap-6 mb-8">
                             <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 text-center">
                                 <div class="flex items-center justify-center mb-3">
@@ -1250,7 +1210,7 @@
                             </div>
                         </div>
 
-                        <!-- Panchang Information -->
+                        Panchang Information
                         <div class="grid md:grid-cols-2 gap-6">
                             <div class="space-y-4">
                                 <div class="bg-blue-50 rounded-lg p-4">
@@ -1337,9 +1297,9 @@
                 </div>
             </div>
 
-            <!-- Sidebar with Muhurta and Auspicious Times -->
+            Sidebar with Muhurta and Auspicious Times
             <div class="space-y-6">
-                <!-- Muhurta Card -->
+                Muhurta Card
                 <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-6">
                     <div class="flex items-center mb-6">
                         <div class="p-3 bg-indigo-100 rounded-full mr-4">
@@ -1406,7 +1366,7 @@
                     </div>
                 </div>
 
-                <!-- Planetary Positions -->
+                Planetary Positions
                 <div class="bg-gradient-to-br from-[#FEA500] to-[#e69400] rounded-2xl shadow-xl p-6 text-white">
                     <div class="flex items-center mb-6">
                         <div class="p-3 bg-white/20 rounded-full mr-4">
@@ -1451,24 +1411,10 @@
                     </div>
                 </div>
 
-                <!-- Quick Actions -->
-                <!-- <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-6">
-                    <h3 class="text-lg font-bold text-gray-900 mb-4">Quick Actions</h3>
-                    <div class="space-y-3">
-                        <button class="w-full bg-[#FEA500] text-white py-3 px-4 rounded-lg hover:bg-[#e69400] transition-colors">
-                            Get Personal Panchang
-                        </button>
-                        <button class="w-full border border-[#FEA500] text-[#FEA500] py-3 px-4 rounded-lg hover:bg-[#FEA500] hover:text-white transition-colors">
-                            Check Muhurta for Events
-                        </button>
-                        <button class="w-full border border-gray-300 text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors">
-                            Download Panchang PDF
-                        </button>
-                    </div>
-                </div> -->
+               
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Blog Section -->
     <section class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-[#fff8edbe]">
@@ -1482,29 +1428,26 @@
             <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
                 <div class="md:flex">
                     <div class="md:w-1/2">
-                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Featured Blog Post" class="w-full h-64 md:h-full object-cover">
+                        <img src="./imges/blogs/moon-in-vedic-astrology.webp" alt="Featured Blog Post"
+                            class="w-full h-auto max-h-96 md:h-full object-cover">
                     </div>
                     <div class="md:w-1/2 p-8">
                         <div class="flex items-center mb-4">
                             <span
                                 class="bg-[#FEA500] text-white px-3 py-1 rounded-full text-sm font-medium">Featured</span>
-                            <span class="text-gray-500 text-sm ml-4">Dec 15, 2024</span>
+                            <span class="text-gray-500 text-sm ml-4">Aug 8, 2024</span>
                         </div>
                         <h3 class="text-2xl font-bold text-gray-900 mb-4">
-                            Understanding the Power of Planetary Transits in 2025
+                            Moon in Vedic Astrology: Impact and Interpretations
+
                         </h3>
                         <p class="text-gray-600 mb-6 leading-relaxed">
-                            Explore how the major planetary transits of 2025 will impact your life and discover
-                            the best times for important decisions, relationships, and personal growth.
-                        </p>
+                            In Vedic astrology, the Moon is considered the most important of the nine planets
+                            influencing human life. It is regarded as a female planet and holds the title of ‘Queen’ in
+                            Vedic astrology. The Moon signifies the mother, mind, and emotions in one’s chart. </p>
                         <div class="flex items-center justify-between">
-                            <div class="flex items-center">
-                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=32&q=80"
-                                    alt="Author" class="w-8 h-8 rounded-full mr-3">
-                                <span class="text-sm text-gray-600">Dr. Sarah Johnson</span>
-                            </div>
-                            <a href="#"
+                            <a href="https://astroradiance.com/moon-in-vedic-astrology/" target="_blank"
+                                rel="noopener noreferrer"
                                 class="bg-[#FEA500] text-white px-6 py-2 rounded-lg hover:bg-[#e69400] transition-colors">
                                 Read More
                             </a>
@@ -1518,67 +1461,75 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Blog Post 1 -->
             <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <img src="https://images.unsplash.com/photo-1446776877081-d282a0f896e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                <img src="./imges/blogs/canva-please-create-beautiful-a-image-of-lord-shiva-in-meditative-state-sitting-on-tiger-skin-with-nature-background-including-trees-flowers-birds-and-rainbow-1536x860.webp"
                     alt="Blog Post" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <div class="flex items-center mb-3">
-                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-medium">Horoscope</span>
-                        <span class="text-gray-500 text-sm ml-3">Dec 12, 2024</span>
+                        <!-- <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-medium">Horoscope</span> -->
+                        <span class="text-gray-500 text-sm ml-3">Sep 16, 2025</span>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 mb-3">
-                        Weekly Horoscope: What the Stars Have in Store
+                        Buy Best Lord Shiva Images Posters Wallpaper Online
                     </h3>
                     <p class="text-gray-600 text-sm mb-4">
-                        Discover what the upcoming week holds for each zodiac sign and how to make the most of celestial
-                        energies.
+                        Looking to purchase Lord Shiva images online? Our carefully curated affiliate program connects
+                        you with a wide range of Lord Shiva posters, devotional paintings, digital prints, and wall art.
                     </p>
                     <div class="flex items-center justify-between">
                         <span class="text-sm text-gray-500">5 min read</span>
-                        <a href="#" class="text-[#FEA500] hover:text-[#e69400] font-medium">Read More →</a>
+                        <a href="https://astroradiance.com/buy-best-lord-shiva-images/" target="_blank"
+                            rel="noopener noreferrer" class="text-[#FEA500] hover:text-[#e69400] font-medium">Read More
+                            →</a>
                     </div>
                 </div>
             </article>
 
             <!-- Blog Post 2 -->
             <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <img src="./imges/Dwadasha-Namavali-380.jpg" alt="Blog Post" class="w-full h-48 object-cover">
+                <img src="./imges/blogs/Vimshopaka-Bala-Cover.webp" alt="Blog Post" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <div class="flex items-center mb-3">
-                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs font-medium">Remedies</span>
-                        <span class="text-gray-500 text-sm ml-3">Dec 10, 2024</span>
+                        <!-- <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs font-medium">Remedies</span> -->
+                        <span class="text-gray-500 text-sm ml-3">April 15, 2024</span>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 mb-3">
-                        Vedic Remedies for Career Success
+                        Decoding Planetary Strength: Vimshopaka Bala
                     </h3>
                     <p class="text-gray-600 text-sm mb-4">
-                        Learn powerful Vedic remedies and rituals that can help overcome career obstacles and attract
-                        professional success.
+
+                        Vimshopaka Bala is a way to measure the strength of the planets. Just as the strength of the
+                        planets is determined by the Shadbala, similarly, the strength of the planets is also determined
+                        by Vimshopaka Bala.
                     </p>
                     <div class="flex items-center justify-between">
                         <span class="text-sm text-gray-500">7 min read</span>
-                        <a href="#" class="text-[#FEA500] hover:text-[#e69400] font-medium">Read More →</a>
+                        <a href="https://astroradiance.com/decoding-planetary-strength-vimshopaka-bala" target="_blank"
+                            rel="noopener noreferrer" class="text-[#FEA500] hover:text-[#e69400] font-medium">Read More
+                            →</a>
                     </div>
                 </div>
             </article>
 
             <!-- Blog Post 3 -->
             <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <img src="./imges/Who-is-Ashwatthama-380.jpg" alt="Blog Post" class="w-full h-48 object-cover">
+                <img src="./imges/blogs/blog3.webp" alt="Blog Post" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <div class="flex items-center mb-3">
-                        <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs font-medium">Love</span>
-                        <span class="text-gray-500 text-sm ml-3">Dec 8, 2024</span>
+                        <!-- <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs font-medium">Love</span> -->
+                        <span class="text-gray-500 text-sm ml-3">June 27, 2024</span>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 mb-3">
-                        Finding Your Soulmate Through Astrology
+                        Radha Ji Ke 16 Naam Hindi Arth Sahit
                     </h3>
                     <p class="text-gray-600 text-sm mb-4">
-                        Discover how Venus and Mars placements can guide you to your perfect match and strengthen
-                        existing relationships.
+                        इस लेख के माध्यम से हम आपको राधा जी के 16 नाम और उनका अर्थ बतायेंगे। ब्रह्म वैवर्त पुराण में
+                        नारायण द्वारा नारद जी को वर्णित श्रीराधारानी जी के 16 नाम इस प्रकार है।
                     </p>
                     <div class="flex items-center justify-between">
                         <span class="text-sm text-gray-500">6 min read</span>
-                        <a href="#" class="text-[#FEA500] hover:text-[#e69400] font-medium">Read More →</a>
+                        <a href="https://astroradiance.com/radha-ji-ke-16-naam-hindi-arth-sahit/" target="_blank"
+                            rel="noopener noreferrer" class="text-[#FEA500] hover:text-[#e69400] font-medium">Read More
+                            →</a>
                     </div>
                 </div>
             </article>
@@ -1618,6 +1569,76 @@
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Testimonials</h2>
+                <p class="text-1xl text-gray-600 max-w-3xl mx-auto">
+                    Hear from some of the millions of people whose lives have been transformed through our guidance.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="./imges/testimonial/Bindu-1.jpg"
+                            alt="Sarah Johnson" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-900">Mrs. Bindu Srivastava</h4>
+                            <div class="flex text-[#FEA501]">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"AstroRadiance truly changed my life! The birth chart analysis was so specific and illuminating—it helped me understand where my true professional strengths lie. I finally gained the confidence and clarity I needed to pursue a career I genuinely love. I'm now in my dream job, and it's all thanks to the incredible guidance and deep insights from AstroRadiance!"</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="./imges/testimonial/TarunSingh-2.jpg"
+                            alt="Michael Chen" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-900">Mr. Tarun Singh</h4>
+                            <div class="flex text-[#FEA501]">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"I approached AstroRadiance seeking help with persistent challenges in my personal life. The precise gemstone they recommended, based on my birth chart, has been an incredible anchor. I feel more grounded, my confidence has soared, and I've seen tangible positive changes in my daily interactions. Their guidance is genuine and highly effective. Thank you, AstroRadiance!"</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="./imges/testimonial/ParitoshSingh-3.jpg"
+                            alt="Priya Patel" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-900">Mr. Paritosh Singh</h4>
+                            <div class="flex text-[#FEA501]">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"I had been feeling incredibly lost about my life direction, especially regarding a major career change. The personalized consultation I received from AstroRadiance was like being handed a blueprint to my own potential. Their analysis was insightful, compassionate, and most importantly, actionable. I left the session with a renewed sense of purpose and the confidence to take the leap. It didn't just tell me my future—it gave me the tools to build it"</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- FAQs Section -->
     <section class="py-16 bg-white">
@@ -1838,7 +1859,7 @@
                 <!-- Company Info -->
                 <div class="sm:col-span-2 lg:col-span-1">
                     <a href="/" class="inline-flex items-center gap-2 sm:gap-3 mb-4 sm:mb-5 md:mb-6">
-                        <img src="./imges/logo-removebg-preview.png" alt="Astro Radisance"
+                        <img src="./imges/logo-removebg-preview.png" alt="Astro Radiance"
                             class="w-32 h-auto sm:w-36 md:w-40 lg:w-44 xl:w-48 max-w-full">
                     </a>
                     <p class="text-sm text-gray-900 mb-6 leading-relaxed">
@@ -1846,7 +1867,7 @@
                         personalized horoscopes, and spiritual remedies to help you navigate life's journey.
                     </p>
                     <div class="flex items-center gap-4">
-                        <a href="#"
+                        <a href="https://www.facebook.com/astroradiance2021"
                             class="p-3 bg-[#111827] rounded-full hover:bg-[#FEA500] hover:text-black transition-colors"
                             aria-label="Facebook">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -1862,7 +1883,7 @@
                                     d="M19.633 7.581c.013.176.013.352.013.529 0 5.386-4.1 11.599-11.599 11.599-2.305 0-4.446-.675-6.246-1.837.32.038.64.051.969.051 1.905 0 3.657-.65 5.054-1.743-1.785-.038-3.292-1.214-3.812-2.836.25.038.5.064.776.064.376 0 .752-.051 1.1-.139-1.87-.376-3.281-2.03-3.281-4.013v-.051c.551.308 1.184.494 1.885.518-1.111-.742-1.842-2.01-1.842-3.446 0-.757.203-1.466.551-2.078 2.04 2.506 5.09 4.16 8.526 4.33-.064-.303-.101-.625-.101-.949 0-2.287 1.85-4.136 4.136-4.136 1.188 0 2.262.494 3.016 1.285.949-.176 1.836-.53 2.635-.999-.313.975-.975 1.792-1.842 2.306.839-.101 1.64-.323 2.387-.651-.551.825-1.25 1.55-2.058 2.128z" />
                             </svg>
                         </a>
-                        <a href="#"
+                        <a href="https://www.instagram.com/astroradiance?utm_source=qr&igsh=MWc0cm94ZjI0MTdxeQ=="
                             class="p-3 bg-[#111827] rounded-full hover:bg-[#FEA500] hover:text-black transition-colors"
                             aria-label="Instagram">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -1870,7 +1891,7 @@
                                     d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm0 2h10c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z" />
                             </svg>
                         </a>
-                        <a href="#"
+                        <a href="https://youtube.com/@astroradiance?si=66Q7E7pBcExM5qzR"
                             class="p-3 bg-[#111827] rounded-full hover:bg-[#FEA500] hover:text-black transition-colors"
                             aria-label="YouTube">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -1886,12 +1907,13 @@
                     <h4 class="text-base sm:text-lg md:text-xl font-bold text-[#000] mb-4 sm:mb-5 md:mb-6">Quick Links
                     </h4>
                     <ul class="space-y-2 sm:space-y-2.5 md:space-y-3 text-xs sm:text-sm md:text-base text-gray-300">
-                        <li><a href="/horoscopes" class="hover:text-[#FEA500] text-[#000]">Free Horoscopes</a></li>
-                        <li><a href="/panchang" class="hover:text-[#FEA500] text-[#000]">Daily Panchang</a></li>
-                        <li><a href="/reports" class="hover:text-[#FEA500] text-[#000]">Astrology Reports</a></li>
-                        <li><a href="/consultation" class="hover:text-[#FEA500] text-[#000]">Book Consultation</a></li>
-                        <li><a href="/remedies" class="hover:text-[#FEA500] text-[#000]">Vedic Remedies</a></li>
-                        <li><a href="/blog" class="hover:text-[#FEA500] text-[#000]">Astrology Blog</a></li>
+                        <li><a href="./index.html" class="hover:text-[#FEA500] text-[#000]">Home</a></li>
+                        <li><a href="./About.html" class="hover:text-[#FEA500] text-[#000]">About us</a></li>
+                        <li><a href="./Blog.html" class="hover:text-[#FEA500] text-[#000]">Blogs</a></li>
+                        <li><a href="./contact.html" class="hover:text-[#FEA500] text-[#000]">Contact us</a></li>
+                        <li><a href="#ConsultWithOurAstrologers" class="hover:text-[#FEA500] text-[#000]">Consult With
+                                Our Astrologers</a></li>
+                        <li><a href="#promotions" class="hover:text-[#FEA500] text-[#000]">promotions</a></li>
                     </ul>
                 </div>
 
@@ -1900,15 +1922,18 @@
                     <h4 class="text-base sm:text-lg md:text-xl font-bold text-[#000] mb-4 sm:mb-5 md:mb-6">Our Services
                     </h4>
                     <ul class="space-y-2 sm:space-y-2.5 md:space-y-3 text-xs sm:text-sm md:text-base text-gray-300">
-                        <li><a href="/birth-chart" class="hover:text-[#FEA500] text-[#000]">Birth Chart Analysis</a>
+                        <li><a href="./comingsoon.html" class="hover:text-[#FEA500] text-[#000]">Birth Chart
+                                Analysis</a>
                         </li>
-                        <li><a href="/marriage-compatibility" class="hover:text-[#FEA500] text-[#000]">Marriage
+                        <li><a href="./comingsoon.html" class="hover:text-[#FEA500] text-[#000]">Marriage
                                 Compatibility</a></li>
-                        <li><a href="/career-guidance" class="hover:text-[#FEA500] text-[#000]">Career Guidance</a></li>
-                        <li><a href="/gemstone-consultation" class="hover:text-[#FEA500] text-[#000]">Gemstone
+                        <li><a href="./comingsoon.html" class="hover:text-[#FEA500] text-[#000]">Career Guidance</a>
+                        </li>
+                        <li><a href="./comingsoon.html" class="hover:text-[#FEA500] text-[#000]">Gemstone
                                 Consultation</a></li>
-                        <li><a href="/vastu-shastra" class="hover:text-[#FEA500] text-[#000]">Vastu Shastra</a></li>
-                        <li><a href="/numerology" class="hover:text-[#FEA500] text-[#000]">Numerology</a></li>
+                        <li><a href="./comingsoon.html" class="hover:text-[#FEA500] text-[#000]">Vastu Shastra</a></li>
+                        <li><a href="./tearms&codition.html" class="hover:text-[#FEA500] text-[#000]">Tearms &
+                                Codition</a></li>
                     </ul>
                 </div>
 
@@ -1917,10 +1942,8 @@
                     <h4 class="text-lg font-bold text-[#000] mb-6">Contact Us</h4>
                     <div class="space-y-4 text-sm text-gray-300">
                         <div class="flex items-start gap-3">
-                            <svg class="w-5 h-5 text-[#FEA500] mt-1 flex-shrink-0" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                            <svg class="w-5 h-5 text-[#FEA500] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
                                 </path>
                             </svg>
                             <div>
@@ -1938,8 +1961,8 @@
                             </svg>
                             <div>
                                 <p class="text-[#000] font-medium">Phone</p>
-                                <p class="text-[#000]">+91 98765 43210</p>
-                                <p class="text-[#000]">+91 87654 32109</p>
+                                <a href="https://wa.me/919911186787" class="text-[#000]">+91 9911186787</a>
+                                <!-- <p class="text-[#000]">+91 9876543210</p> -->
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
@@ -1953,7 +1976,7 @@
                             </svg>
                             <div>
                                 <p class="text-[#000] font-medium">Address</p>
-                                <p class="text-[#000]">123 Astrology Lane<br>Mystic City, MC 12345<br>India</p>
+                                <p class="text-[#000]">Panchsheel Green<br> Near ek murti, Greater Noida West, 201318 India</p>
                             </div>
                         </div>
                     </div>
@@ -1981,7 +2004,7 @@
             <div class="border-t border-gray-800 mt-8 pt-6">
                 <div class="flex flex-col md:flex-row justify-between items-center gap-4">
                     <div class="text-sm text-gray-500">
-                        © <span id="year">2025</span> Astro Radisance. All rights reserved.
+                        © <span id="year">2025</span> Astro Radiance. All rights reserved.
                     </div>
                     <div class="flex flex-wrap gap-6 text-sm text-gray-400">
                         <a href="/privacy-policy" class="hover:text-[#FEA500] transition-colors">Privacy Policy</a>
@@ -1995,716 +2018,7 @@
     </footer>
 
 
-
-
-
-
-    <script>
-        let currentSlide = 0;
-        const totalSlides = 2;
-        const slides = document.getElementById('carousel-slides');
-        const dots = document.querySelectorAll('.carousel-dot');
-        const container = document.getElementById('carousel-container');
-        const wrapper = document.getElementById('carousel-wrapper');
-        const video = document.getElementById('carousel-video');
-        const firstImage = document.getElementById('carousel-image');
-
-        // Function to update carousel height based on current slide
-        function updateCarouselHeight() {
-            if (container && wrapper && slides) {
-                const currentSlideEl = slides.children[currentSlide];
-                if (currentSlideEl) {
-                    if (currentSlide === 0 && firstImage) {
-                        // For image slide (slide 1)
-                        const height = firstImage.offsetHeight || firstImage.clientHeight || firstImage.naturalHeight;
-                        if (height > 0) {
-                            container.style.height = height + 'px';
-                            wrapper.style.height = height + 'px';
-                        }
-                    } else if (currentSlide === 1 && video) {
-                        // For video slide with features strip overlay (slide 2)
-                        // The features strip is absolutely positioned, so it doesn't affect height
-                        // We need to get the actual rendered height of the slide container
-                        setTimeout(() => {
-                            const videoHeight = video.offsetHeight || video.clientHeight || video.videoHeight;
-                            const slide2El = slides.children[1];
-                            const slide2Height = slide2El ? (slide2El.offsetHeight || slide2El.clientHeight) : 0;
-                            // Use the slide element height which includes the features strip overlay
-                            const totalHeight = Math.max(videoHeight, slide2Height);
-                            if (totalHeight > 0) {
-                                container.style.height = totalHeight + 'px';
-                                wrapper.style.height = totalHeight + 'px';
-                            }
-                        }, 100);
-                    }
-                }
-            }
-        }
-
-        // Update carousel position
-        function updateCarousel() {
-            // Each slide is 50% of the 200% wide container, so move by 50% per slide
-            slides.style.transform = `translateX(-${currentSlide * 50}%)`;
-
-            // Update indicator dots
-            dots.forEach((dot, index) => {
-                if (index === currentSlide) {
-                    dot.classList.remove('bg-white/50', 'w-3', 'h-3', 'md:w-4', 'md:h-4');
-                    dot.classList.add('bg-white', 'w-8', 'h-3', 'md:w-10', 'md:h-4', 'rounded-full');
-                } else {
-                    dot.classList.remove('bg-white', 'w-8', 'h-3', 'md:w-10', 'md:h-4');
-                    dot.classList.add('bg-white/50', 'w-3', 'h-3', 'md:w-4', 'md:h-4');
-                }
-            });
-
-            // Update height after transition
-            setTimeout(updateCarouselHeight, 700);
-        }
-
-        // Next slide
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            updateCarousel();
-        }
-
-        // Previous slide
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            updateCarousel();
-        }
-
-        // Go to specific slide
-        function goToSlide(slideIndex) {
-            currentSlide = slideIndex;
-            updateCarousel();
-        }
-
-        // Event listeners
-        document.getElementById('next-btn').addEventListener('click', nextSlide);
-        document.getElementById('prev-btn').addEventListener('click', prevSlide);
-
-        // Indicator dots
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => goToSlide(index));
-        });
-
-        // Update height when video loads
-        if (video) {
-            video.addEventListener('loadedmetadata', function () {
-                updateCarouselHeight();
-            });
-            video.addEventListener('loadeddata', function () {
-                updateCarouselHeight();
-            });
-        }
-
-        // Update height when image loads
-        if (firstImage) {
-            if (firstImage.complete) {
-                updateCarouselHeight();
-            } else {
-                firstImage.addEventListener('load', function () {
-                    updateCarouselHeight();
-                });
-            }
-        }
-
-        // Update height on window resize
-        window.addEventListener('resize', function () {
-            updateCarouselHeight();
-        });
-
-        // Initialize
-        updateCarousel();
-
-        // Initial height update after a small delay to ensure elements are rendered
-        setTimeout(updateCarouselHeight, 100);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // Horoscope Tab functionality
-        document.addEventListener('DOMContentLoaded', function () {
-            const tabs = ['daily-tab', 'weekly-tab', 'monthly-tab'];
-
-            tabs.forEach(tabId => {
-                const tab = document.getElementById(tabId);
-                if (!tab) return;
-
-                tab.addEventListener('click', () => {
-                    // Remove active state from all tabs
-                    tabs.forEach(id => {
-                        const t = document.getElementById(id);
-                        if (!t) return;
-                        t.classList.remove('border-[#FEA501]', 'text-[#FEA501]');
-                        t.classList.add('border-transparent');
-                    });
-
-                    // Add active state to clicked tab
-                    tab.classList.remove('border-transparent');
-                    tab.classList.add('border-[#FEA501]', 'text-[#FEA501]');
-                });
-            });
-        });
-
-
-
-
-
-        {/* // Language dropdown behavior */ }
-        (function () {
-            const toggle = document.getElementById('langToggle');
-            const dropdown = document.getElementById('langDropdown');
-
-            if (!toggle || !dropdown) return;
-
-            function openDropdown() {
-                dropdown.classList.remove('hidden');
-                toggle.setAttribute('aria-expanded', 'true');
-            }
-
-            function closeDropdown() {
-                dropdown.classList.add('hidden');
-                toggle.setAttribute('aria-expanded', 'false');
-            }
-
-            function toggleDropdown() {
-                if (dropdown.classList.contains('hidden')) openDropdown();
-                else closeDropdown();
-            }
-
-            // Click on toggle
-            toggle.addEventListener('click', function (e) {
-                e.stopPropagation();
-                toggleDropdown();
-            });
-
-            // Keyboard support (Enter / Space)
-            toggle.addEventListener('keydown', function (e) {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    toggleDropdown();
-                } else if (e.key === 'Escape') {
-                    closeDropdown();
-                }
-            });
-
-            // Close when clicking outside
-            document.addEventListener('click', function (e) {
-                if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
-                    closeDropdown();
-                }
-            });
-
-            // Close on Escape key globally
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape') closeDropdown();
-            });
-        })();
-
-        // Account dropdown behavior
-        (function () {
-            const toggle = document.getElementById('accountToggle');
-            const dropdown = document.getElementById('accountDropdown');
-
-            if (!toggle || !dropdown) return;
-
-            function openDropdown() {
-                dropdown.classList.remove('hidden');
-                toggle.setAttribute('aria-expanded', 'true');
-            }
-
-            function closeDropdown() {
-                dropdown.classList.add('hidden');
-                toggle.setAttribute('aria-expanded', 'false');
-            }
-
-            function toggleDropdown() {
-                if (dropdown.classList.contains('hidden')) openDropdown();
-                else closeDropdown();
-            }
-
-            // Click on toggle
-            toggle.addEventListener('click', function (e) {
-                e.stopPropagation();
-                toggleDropdown();
-            });
-
-            // Keyboard support (Enter / Space)
-            toggle.addEventListener('keydown', function (e) {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    toggleDropdown();
-                } else if (e.key === 'Escape') {
-                    closeDropdown();
-                }
-            });
-
-            // Close when clicking outside
-            document.addEventListener('click', function (e) {
-                if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
-                    closeDropdown();
-                }
-            });
-
-            // Close on Escape key globally
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape') closeDropdown();
-            });
-        })();
-
-        // Mobile Account dropdown behavior
-        (function () {
-            const mobileToggle = document.getElementById('mobileAccountToggle');
-            const mobileDropdown = document.getElementById('mobileAccountDropdown');
-
-            if (!mobileToggle || !mobileDropdown) return;
-
-            function openDropdown() {
-                mobileDropdown.classList.remove('hidden');
-                mobileToggle.setAttribute('aria-expanded', 'true');
-            }
-
-            function closeDropdown() {
-                mobileDropdown.classList.add('hidden');
-                mobileToggle.setAttribute('aria-expanded', 'false');
-            }
-
-            function toggleDropdown() {
-                if (mobileDropdown.classList.contains('hidden')) openDropdown();
-                else closeDropdown();
-            }
-
-            // Click on toggle
-            mobileToggle.addEventListener('click', function (e) {
-                e.stopPropagation();
-                toggleDropdown();
-            });
-
-            // Keyboard support (Enter / Space)
-            mobileToggle.addEventListener('keydown', function (e) {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    toggleDropdown();
-                } else if (e.key === 'Escape') {
-                    closeDropdown();
-                }
-            });
-
-            // Close when clicking outside
-            document.addEventListener('click', function (e) {
-                if (!mobileToggle.contains(e.target) && !mobileDropdown.contains(e.target)) {
-                    closeDropdown();
-                }
-            });
-
-            // Close on Escape key globally
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape' && !mobileDropdown.classList.contains('hidden')) {
-                    closeDropdown();
-                }
-            });
-        })();
-
-        // Sidebar submenu and responsive toggle behavior
-        (function () {
-            // Submenu toggles
-            document.querySelectorAll('[data-toggle="submenu"]').forEach(function (btn) {
-                const submenu = btn.nextElementSibling;
-                const chevron = btn.querySelector('[data-chevron]');
-                btn.addEventListener('click', function () {
-                    const isOpen = submenu && !submenu.classList.contains('hidden');
-                    if (submenu) submenu.classList.toggle('hidden');
-                    if (btn && btn.getAttribute('aria-expanded')) btn.setAttribute('aria-expanded', String(!isOpen));
-                    if (chevron) chevron.classList.toggle('rotate-180', !isOpen);
-                });
-            });
-
-            // Responsive sidebar toggle
-            const sidebar = document.getElementById('sidebar');
-            const desktopSidebarBtn = document.getElementById('sidebarToggleBtn');
-            const mobileSidebarBtn = document.getElementById('mobileSidebarToggleBtn');
-            const sidebarCloseBtn = document.getElementById('sidebarCloseBtn');
-            const overlay = document.getElementById('sidebarOverlay');
-
-            function openSidebar() {
-                // Check if sidebar and overlay exist
-                if (!sidebar || !overlay) return;
-
-                // visible state is translate-x-0 (no translation)
-                sidebar.classList.remove('translate-x-full');
-                sidebar.classList.add('translate-x-0');
-
-                // Update both buttons
-                if (desktopSidebarBtn) desktopSidebarBtn.setAttribute('aria-expanded', 'true');
-                if (mobileSidebarBtn) mobileSidebarBtn.setAttribute('aria-expanded', 'true');
-
-                overlay.classList.remove('hidden');
-                document.body.style.overflow = 'hidden';
-            }
-
-            function closeSidebar() {
-                // Check if sidebar and overlay exist
-                if (!sidebar || !overlay) return;
-
-                // hidden state is translate-x-full (moved off-screen to right)
-                sidebar.classList.add('translate-x-full');
-                sidebar.classList.remove('translate-x-0');
-
-                // Update both buttons
-                if (desktopSidebarBtn) desktopSidebarBtn.setAttribute('aria-expanded', 'false');
-                if (mobileSidebarBtn) mobileSidebarBtn.setAttribute('aria-expanded', 'false');
-
-                overlay.classList.add('hidden');
-                document.body.style.overflow = '';
-            }
-
-            function toggleSidebar() {
-                if (!sidebar) return;
-
-                const isOpen = !sidebar.classList.contains('translate-x-full');
-                if (isOpen) closeSidebar();
-                else openSidebar();
-            }
-
-            // Event listeners for desktop and mobile buttons
-            if (desktopSidebarBtn && sidebar) {
-                desktopSidebarBtn.addEventListener('click', toggleSidebar);
-            }
-
-            if (mobileSidebarBtn && sidebar) {
-                mobileSidebarBtn.addEventListener('click', toggleSidebar);
-            }
-
-            // Close button (mobile only)
-            if (sidebarCloseBtn) {
-                sidebarCloseBtn.addEventListener('click', closeSidebar);
-            }
-
-            // Overlay click to close
-            if (overlay) {
-                overlay.addEventListener('click', closeSidebar);
-            }
-
-            // Close on escape key
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape' && sidebar && !sidebar.classList.contains('translate-x-full')) {
-                    closeSidebar();
-                }
-            });
-
-            // Initialize sidebar state
-            function initializeSidebar() {
-                // Check if sidebar and overlay exist before accessing them
-                if (!sidebar || !overlay) return;
-
-                // Default: hidden on all screen sizes
-                sidebar.classList.add('translate-x-full');
-                sidebar.classList.remove('translate-x-0');
-
-                if (desktopSidebarBtn) desktopSidebarBtn.setAttribute('aria-expanded', 'false');
-                if (mobileSidebarBtn) mobileSidebarBtn.setAttribute('aria-expanded', 'false');
-
-                overlay.classList.add('hidden');
-                document.body.style.overflow = '';
-            }
-
-            // Handle responsive behavior
-            function handleResponsiveSidebar() {
-                if (!sidebar) return;
-
-                const isLargeScreen = window.innerWidth >= 1024;
-
-                // Show/hide appropriate toggle buttons
-                if (desktopSidebarBtn) {
-                    desktopSidebarBtn.style.display = isLargeScreen ? 'inline-flex' : 'none';
-                }
-                if (mobileSidebarBtn) {
-                    mobileSidebarBtn.style.display = isLargeScreen ? 'none' : 'inline-flex';
-                }
-
-                // Close sidebar when switching between mobile and desktop
-                if (!sidebar.classList.contains('translate-x-full')) {
-                    closeSidebar();
-                }
-            }
-
-            // Initialize on load
-            initializeSidebar();
-            handleResponsiveSidebar();
-
-            // Handle resize events
-            let lastWidth = window.innerWidth;
-            window.addEventListener('resize', function () {
-                const currentWidth = window.innerWidth;
-                const wasLargeScreen = lastWidth >= 1024;
-                const isLargeScreen = currentWidth >= 1024;
-
-                // Only react to changes that cross the breakpoint
-                if (wasLargeScreen !== isLargeScreen) {
-                    handleResponsiveSidebar();
-                }
-
-                lastWidth = currentWidth;
-            });
-        })();
-
-        // Carousel behavior
-        (function () {
-            function initCarousel() {
-                const slidesContainer = document.getElementById('carouselSlides');
-                const indicators = Array.from(document.querySelectorAll('.carousel-indicator'));
-                const prevBtn = document.getElementById('carouselPrev');
-                const nextBtn = document.getElementById('carouselNext');
-
-                if (!slidesContainer) {
-                    console.warn('Carousel: slidesContainer not found');
-                    return;
-                }
-
-                // Count actual slides instead of relying on indicators
-                const slides = slidesContainer.querySelectorAll('> div');
-                const slideCount = slides.length || (indicators.length > 0 ? indicators.length : 2);
-                let current = 0;
-                let autoplayInterval = null;
-                const AUTOPLAY_MS = 4000;
-
-                function goTo(index) {
-                    current = (index + slideCount) % slideCount;
-                    const offset = -current * 100;
-                    slidesContainer.style.transform = `translateX(${offset}%)`;
-                    slidesContainer.style.transition = 'transform 0.7s ease';
-                    indicators.forEach((btn, i) => {
-                        if (i === current) {
-                            btn.classList.remove('bg-opacity-40');
-                            btn.classList.add('bg-opacity-60');
-                            btn.setAttribute('aria-current', 'true');
-                        } else {
-                            btn.classList.remove('bg-opacity-60');
-                            btn.classList.add('bg-opacity-40');
-                            btn.removeAttribute('aria-current');
-                        }
-                    });
-                }
-
-                function next() {
-                    goTo(current + 1);
-                }
-
-                function prev() {
-                    goTo(current - 1);
-                }
-
-                // Add event listeners to indicators if they exist
-                if (indicators.length > 0) {
-                    indicators.forEach(btn => {
-                        btn.addEventListener('click', function (e) {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            const idx = Number(btn.dataset.index);
-                            goTo(idx);
-                            resetAutoplay();
-                        });
-                    });
-                }
-
-                // Add event listeners to navigation buttons
-                if (nextBtn) {
-                    nextBtn.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        next();
-                        resetAutoplay();
-                    });
-                    console.log('Carousel: Next button event listener attached');
-                } else {
-                    console.warn('Carousel: Next button not found');
-                }
-
-                if (prevBtn) {
-                    prevBtn.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        prev();
-                        resetAutoplay();
-                    });
-                    console.log('Carousel: Prev button event listener attached');
-                } else {
-                    console.warn('Carousel: Prev button not found');
-                }
-
-                function startAutoplay() {
-                    if (autoplayInterval) return;
-                    autoplayInterval = setInterval(next, AUTOPLAY_MS);
-                }
-
-                function stopAutoplay() {
-                    if (!autoplayInterval) return;
-                    clearInterval(autoplayInterval);
-                    autoplayInterval = null;
-                }
-
-                function resetAutoplay() {
-                    stopAutoplay();
-                    startAutoplay();
-                }
-
-                const carouselEl = document.getElementById('heroCarousel');
-                if (carouselEl) {
-                    carouselEl.addEventListener('mouseenter', stopAutoplay);
-                    carouselEl.addEventListener('mouseleave', startAutoplay);
-                }
-
-                // startup
-                goTo(0);
-                startAutoplay();
-            }
-
-            // Wait for DOM to be ready
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', initCarousel);
-            } else {
-                // DOM already loaded, run immediately
-                setTimeout(initCarousel, 100);
-            }
-        })();
-
-        // FAQ Accordion functionality
-        (function () {
-            const faqToggles = document.querySelectorAll('.faq-toggle');
-
-            faqToggles.forEach(toggle => {
-                toggle.addEventListener('click', function () {
-                    const faqContent = this.nextElementSibling;
-                    const faqIcon = this.querySelector('.faq-icon');
-                    const isOpen = !faqContent.classList.contains('hidden');
-
-                    // Close all other FAQs
-                    document.querySelectorAll('.faq-content').forEach(content => {
-                        content.classList.add('hidden');
-                    });
-                    document.querySelectorAll('.faq-icon').forEach(icon => {
-                        icon.classList.remove('rotate-180');
-                    });
-
-                    // Toggle current FAQ
-                    if (isOpen) {
-                        faqContent.classList.add('hidden');
-                        faqIcon.classList.remove('rotate-180');
-                    } else {
-                        faqContent.classList.remove('hidden');
-                        faqIcon.classList.add('rotate-180');
-                    }
-                });
-            });
-        })();
-
-        // Mobile Menu functionality
-        (function () {
-            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-            const mobileMenuClose = document.getElementById('mobileMenuClose');
-            const mobileMenu = document.getElementById('mobileMenu');
-            const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
-            const mobileSearch = document.getElementById('mobileSearch');
-
-            // Toggle mobile menu
-            function toggleMobileMenu() {
-                const isOpen = !mobileMenu.classList.contains('hidden');
-
-                if (isOpen) {
-                    closeMobileMenu();
-                } else {
-                    openMobileMenu();
-                }
-            }
-
-            function openMobileMenu() {
-                mobileMenu.classList.remove('hidden');
-                mobileMenuOverlay.classList.remove('hidden');
-                mobileMenu.classList.remove('translate-x-full');
-                document.body.style.overflow = 'hidden';
-            }
-
-            function closeMobileMenu() {
-                mobileMenu.classList.add('translate-x-full');
-                mobileMenuOverlay.classList.add('hidden');
-                setTimeout(() => {
-                    mobileMenu.classList.add('hidden');
-                }, 300);
-                document.body.style.overflow = '';
-            }
-
-            // Event listeners
-            if (mobileMenuToggle) {
-                mobileMenuToggle.addEventListener('click', toggleMobileMenu);
-            }
-
-            if (mobileMenuClose) {
-                mobileMenuClose.addEventListener('click', closeMobileMenu);
-            }
-
-            if (mobileMenuOverlay) {
-                mobileMenuOverlay.addEventListener('click', closeMobileMenu);
-            }
-
-            // Show mobile search on smaller screens
-            function toggleMobileSearch() {
-                if (window.innerWidth < 1024) {
-                    mobileSearch.classList.remove('hidden');
-                } else {
-                    mobileSearch.classList.add('hidden');
-                }
-            }
-
-            // Initial check and resize listener
-            toggleMobileSearch();
-            window.addEventListener('resize', toggleMobileSearch);
-
-            // Close mobile menu on escape key
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
-                    closeMobileMenu();
-                }
-            });
-        })();
-
-
-
-
-
-    </script>
+<script src="./script.js"></script>
 </body>
 
 </html>

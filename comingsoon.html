@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" class="" href="imges/titlelogo.png">
+    <title>Astro Radiance</title>
+ 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class=" min-h-screen">
+    <!-- Header -->
+    <header class="shadow-[0_2px_8px_0_rgba(99,99,99,0.2)] py-3 bg-[#fff] sticky top-0 z-50">
+        <div class="max-w-[1320px] px-3 sm:px-4 md:px-6 mx-auto w-full">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-blue-600">
+                        <img src="./imges/logo-removebg-preview.png" fetchpriority="high" width="136" height="48"
+                            alt="Astro Radiance" title="Astro Radiance" class="max-w-full h-auto align-middle" />
+                    </a>
+                </div>
+
+                <!-- Back to Home Button -->
+                <a href="index.html"
+                    class="flex items-center gap-2 px-4 py-2 bg-[#FEA501] text-white rounded-lg hover:bg-[#e69400] transition-all duration-300 active:scale-95 text-sm sm:text-base font-semibold">
+                    <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                    <span class="hidden sm:inline">Back to Home</span>
+                    <span class="sm:hidden">Home</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex items-center justify-center min-h-[calc(100vh-80px)] px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20">
+        <div class="max-w-4xl mx-auto text-center w-full">
+            <!-- Animated Background Elements -->
+            <!-- <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                <div class="absolute top-20 left-10 w-72 h-72 bg-[#FEA501] opacity-10 rounded-full blur-3xl animate-pulse"></div>
+                <div class="absolute bottom-20 right-10 w-96 h-96 bg-purple-500 opacity-10 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+            </div> -->
+
+            <!-- Main Content Container -->
+            <div class="relative z-10">
+                <!-- Icon/Logo -->
+                <div class="mb-6 sm:mb-8 md:mb-10 flex justify-center">
+                    <div class="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 bg-gradient-to-br from-[#FEA501] to-[#e69400] rounded-full flex items-center justify-center shadow-2xl animate-pulse">
+                        <i class="fas fa-star text-white text-4xl sm:text-5xl md:text-6xl"></i>
+                    </div>
+                </div>
+
+                <!-- Heading -->
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 animate-fade-in">
+                    Coming Soon
+                </h1>
+
+                <!-- Subheading -->
+                <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-800 mb-2 sm:mb-4 font-medium">
+                    We're Building Something Amazing
+                </p>
+
+                <!-- Description -->
+                <p class="text-sm sm:text-base md:text-lg text-gray-800 max-w-2xl mx-auto mb-8 sm:mb-10 md:mb-12 leading-relaxed px-4">
+                    The stable version of Astro Radiance is currently under development. We're working hard to bring you an enhanced experience with improved features, better performance, and a more intuitive interface. Stay tuned for updates!
+                </p>
+
+
+               
+
+                
+
+                <!-- Additional Info -->
+                <div class="text-center">
+                    <p class="text-sm sm:text-base text-gray-400 mb-2">
+                        For any inquiries, please contact us at
+                    </p>
+                    <a href="mailto:i@astroradiance.com" class="text-[#FEA501] hover:text-[#e69400] transition-colors text-sm sm:text-base font-semibold">
+                        support@astroradiance.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+   
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            // Set target date (30 days from now as example - you can change this)
+            const targetDate = new Date();
+            targetDate.setDate(targetDate.getDate() + 30);
+            targetDate.setHours(0, 0, 0, 0);
+
+            const now = new Date().getTime();
+            const distance = targetDate.getTime() - now;
+
+            if (distance < 0) {
+                // Countdown finished
+                document.getElementById('days').textContent = '00';
+                document.getElementById('hours').textContent = '00';
+                document.getElementById('minutes').textContent = '00';
+                document.getElementById('seconds').textContent = '00';
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = String(days).padStart(2, '0');
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+        }
+
+        // Update countdown every second
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // Newsletter Form Handler
+        document.getElementById('notifyForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('notifyEmail').value;
+            
+            // Here you would typically send the email to your backend
+            // For now, we'll just show an alert
+            alert('Thank you! We will notify you at ' + email + ' when we launch.');
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Update copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
+
