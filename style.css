@@ -189,6 +189,74 @@
   }
 }
 
+/* Custom breakpoint for 991px and tablet optimization */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Optimize header spacing for tablets */
+  header > div[class*="max-w"] {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* Account button optimization */
+  #accountToggle > div {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  
+  #accountToggle > div span {
+    font-size: 0.75rem !important;
+  }
+  
+  /* Language toggle optimization */
+  #langToggle {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+}
+
+/* iPad Pro and 1024px breakpoint optimization */
+@media (min-width: 991px) and (max-width: 1024px) {
+  /* Ensure proper spacing for iPad Pro */
+  header > div[class*="max-w"] {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* Compact account button for iPad Pro */
+  #accountToggle > div {
+    padding-left: 0.625rem !important;
+    padding-right: 0.625rem !important;
+  }
+  
+  #accountToggle > div span {
+    font-size: 0.75rem !important;
+  }
+  
+  /* Ensure sidebar toggle button is properly sized */
+  #sidebarToggleBtn {
+    padding: 0.375rem 0.625rem !important;
+  }
+  
+  /* Desktop actions spacing */
+  header .hidden.md\:flex {
+    gap: 0.5rem !important;
+  }
+  
+  /* Search bar width adjustment for iPad Pro */
+  header .hidden.lg\:block {
+    width: 32% !important;
+  }
+}
+
+/* 1024px and above - iPad Pro landscape and desktop */
+@media (min-width: 1024px) {
+  /* Ensure proper spacing at 1024px */
+  header > div[class*="max-w"] {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+}
+
 /* Marquee Banner Styles */
 .marquee-container {
   width: 100%;
